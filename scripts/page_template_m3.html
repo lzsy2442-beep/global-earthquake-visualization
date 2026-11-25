@@ -204,6 +204,17 @@ b,strong{font-weight:700;}
 .fresh-line.on{display:flex;}
 .fresh-dot{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:#19b36b;box-shadow:0 0 0 3px rgba(25,179,107,.18);}
 .fresh-line b{color:var(--navy2);}
+/* 历史分段加载 */
+.archive-line{display:none;margin-top:8px;}
+.archive-line.on{display:block;}
+.archive-line button{
+  display:inline-flex;align-items:center;gap:7px;border:1px dashed #b9cbdc;background:#f7fafd;
+  color:var(--navy2);font-size:12px;padding:8px 14px;border-radius:9px;cursor:pointer;
+  transition:border-color .15s,color .15s,background .15s;
+}
+.archive-line button:hover{border-color:var(--teal);color:var(--teal);background:#f2fbfc;}
+.archive-line button:disabled{cursor:default;opacity:.65;}
+.archive-line.loading button{border-style:solid;border-color:var(--teal);color:var(--teal);}
 /* 移动端浏览器工具栏适配：dvh 支持时优先用动态视口高度 */
 @supports (height: 100dvh){
   .map-wrap.fs{height:100dvh!important;}
@@ -545,6 +556,12 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
       </div>
     </div>
     <div class="fresh-line" id="freshLine"><span class="fresh-dot"></span><span id="freshText"></span></div>
+    <div class="archive-line" id="archiveLine">
+      <button type="button" id="archiveBtn">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        <span id="archiveText">加载更早的历史数据</span>
+      </button>
+    </div>
   </section>
 
   <!-- ==========================================================
@@ -878,10 +895,13 @@ function glyphProtocol(params){
 /* 内联二进制包 {b:base64, mt:震级类型表, n:条数, stride:步长}，解码为统一记录数组。
    为控制体积，本版不含中英文地名，位置以经纬度呈现。 */
 var EQ_PACK = __EQ_DATA__;
-/* 网页版二进制元信息（条数、步长、震级类型表）；单文件离线版为 null，走内联 Base64 */
+/* 网页版二进制元信息（步长、震级类型表）；单文件离线版为 null，走内联 Base64 */
 var M3_META = __M3_META__;
 /* 网页版外置数据地址；离线版为空字符串 */
 var DATA_URL = "__DATA_URL__";
+/* 历史分段数据（1995–N 年），按需加载；离线版为空字符串 */
+var ARCHIVE_URL = "__ARCHIVE_URL__";
+var ARCHIVE_LABEL = "__ARCHIVE_LABEL__";
 function decodeEq(p){
   var s = atob(p.b), u8 = new Uint8Array(s.length);
   for (var k=0;k<s.length;k++) u8[k] = s.charCodeAt(k);
@@ -898,9 +918,11 @@ function decodeEq(p){
   }
   return out;
 }
-/* 直接解析 ArrayBuffer，跳过 Base64 与逐字符转换（省内存、省时间） */
-function decodeBuffer(ab){
-  var dv = new DataView(ab), n = M3_META.n, st = M3_META.stride, mt = M3_META.mt, out = new Array(n);
+/* 直接解析 ArrayBuffer，跳过 Base64 与逐字符转换（省内存、省时间）。
+   记录条数由字节长度推导，因此同一解码函数可用于「近期」与「历史」两个分段。 */
+function decodeBuffer(ab, stride, mt){
+  var st = stride || M3_META.stride, table = mt || M3_META.mt;
+  var n = Math.floor(ab.byteLength / st), dv = new DataView(ab), out = new Array(n);
   for (var j=0;j<n;j++){
     var o = j*st;
     var t = dv.getUint32(o,true) + dv.getUint16(o+4,true)*4294967296;
@@ -909,7 +931,7 @@ function decodeBuffer(ab){
     var dpr = dv.getInt16(o+14,true);
     var dp = dpr === -32768 ? null : dpr/10;
     var mg = (dv.getUint8(o+16)+30)/10;
-    out[j] = [t, la, ln, dp, mg, mt[dv.getUint8(o+17)], '', ''];
+    out[j] = [t, la, ln, dp, mg, table[dv.getUint8(o+17)], '', ''];
   }
   return out;
 }
@@ -1861,6 +1883,16 @@ function boot(){
   document.querySelectorAll('[data-preset]').forEach(function(b){
     b.addEventListener('click', function(){ applyPreset(b.dataset.preset); });
   });
+  /* 预设按钮会被 buildPresets() 重建，改用事件委托，避免重建后失效 */
+  ['presetArea','mPresetArea'].forEach(function(id){
+    var box = document.getElementById(id);
+    if (box) box.addEventListener('click', function(e){
+      var chip = e.target.closest('[data-preset]');
+      if (chip) applyPreset(chip.dataset.preset);
+    });
+  });
+  var archiveBtn = document.getElementById('archiveBtn');
+  if (archiveBtn) archiveBtn.addEventListener('click', loadArchive);
   document.querySelectorAll('#basemapSwitch button').forEach(function(b){
     b.addEventListener('click', function(){ switchBasemap(b.dataset.bm); });
   });
@@ -1937,10 +1969,65 @@ function boot(){
     switchView(location.hash.slice(1));
   }
   loadRecent();
+  if (ARCHIVE_URL) showArchivePrompt();
 }
 
 /* ============================================================
-   13. 外置数据加载（网页版）
+   13. 历史分段按需加载（默认只拉近期，历史点击后再下）
+   ============================================================ */
+var archiveState = 'idle';
+function showArchivePrompt(){
+  var line = document.getElementById('archiveLine');
+  if (!line) return;
+  var txt = document.getElementById('archiveText');
+  if (txt) txt.textContent = ARCHIVE_LABEL;
+  line.classList.add('on');
+  line.classList.remove('loading');
+}
+function loadArchive(){
+  if (archiveState !== 'idle' || !ARCHIVE_URL) return;
+  var line = document.getElementById('archiveLine');
+  var txt = document.getElementById('archiveText');
+  var btn = document.getElementById('archiveBtn');
+  if (!line || !txt || !btn) return;
+  archiveState = 'loading';
+  line.classList.add('loading');
+  btn.disabled = true;
+  txt.textContent = '正在加载历史数据 0%';
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', ARCHIVE_URL, true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onprogress = function(e){
+    if (e.lengthComputable) txt.textContent = '正在加载历史数据 ' + Math.round(e.loaded / e.total * 100) + '%';
+  };
+  xhr.onload = function(){
+    if (xhr.status < 200 || xhr.status >= 300){
+      archiveState = 'idle'; line.classList.remove('loading'); btn.disabled = false;
+      txt.textContent = '历史数据加载失败，点击重试';
+      return;
+    }
+    var older = decodeBuffer(xhr.response);
+    if (!older || !older.length){ archiveState = 'done'; line.classList.remove('on'); return; }
+    EQ_DATA = older.concat(EQ_DATA);          // 历史在前、近期在后，时间仍为升序
+    DATA_MIN = EQ_DATA[0][0];
+    archiveState = 'done';
+    line.classList.remove('on');
+    line.classList.remove('loading');
+    buildPresets();
+    state.startMs = DATA_MIN;
+    state.endMs = DATA_MAX + 1;
+    syncDateInputs();
+    markPresetActive();
+    applyFilters();
+  };
+  xhr.onerror = function(){
+    archiveState = 'idle'; line.classList.remove('loading'); btn.disabled = false;
+    txt.textContent = '网络错误，点击重试';
+  };
+  xhr.send();
+}
+/* ============================================================
+   14. 外置数据加载（网页版：外壳 + 进度条）
    ============================================================ */
 function showLoader(){
   var el = document.getElementById('dataLoader');
