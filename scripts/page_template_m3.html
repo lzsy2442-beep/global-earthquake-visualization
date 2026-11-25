@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230e2a47'/%3E%3Cpath d='M2 12h3l2.5-6 4 12 2.5-7 2 3H22' fill='none' stroke='%2335b6c4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>全球地震活动汇编（1995–2026 · M3.0+）</title>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap">
+<style>
+/* ============================================================
+   设计变量与基础样式
+   ============================================================ */
+:root{
+  --navy:#0e2a47; --navy2:#143a5e; --navy3:#1d4e7a;
+  --teal:#1798a8; --teal-light:#35b6c4;
+  --amber:#e8833a;
+  --bg:#edf1f6; --card:#ffffff; --line:#d9e2ec;
+  --text:#1b2b3a; --muted:#5d7186; --faint:#8aa0b4;
+  --shadow:0 6px 22px rgba(14,42,71,.10);
+  --shadow-lg:0 14px 40px rgba(14,42,71,.18);
+  --radius:14px; --radius-sm:10px;
+  --nav-h:60px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;}
+body{
+  font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--text);font-size:14px;line-height:1.6;
+  overscroll-behavior-y:none;
+}
+button{font-family:inherit;}
+h1,h2,h3,h4{margin:0;}
+b,strong{font-weight:700;}
+::selection{background:rgba(23,152,168,.25);}
+
+/* 滚动条 */
+::-webkit-scrollbar{width:8px;height:8px;}
+::-webkit-scrollbar-thumb{background:#b9c8d6;border-radius:8px;}
+::-webkit-scrollbar-track{background:transparent;}
+
+/* ============================================================
+   顶部标题栏
+   ============================================================ */
+.app-header{
+  position:sticky;top:0;z-index:60;
+  background:linear-gradient(120deg,var(--navy) 0%,var(--navy2) 55%,var(--navy3) 100%);
+  color:#fff;box-shadow:0 4px 18px rgba(10,30,52,.35);
+  padding:10px 20px;display:flex;align-items:center;gap:14px;
+}
+.brand{display:flex;align-items:center;gap:12px;flex:1;min-width:0;}
+.brand-mark{
+  width:40px;height:40px;flex:0 0 40px;border-radius:10px;
+  background:linear-gradient(145deg,var(--teal-light),var(--teal));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(23,152,168,.45);
+}
+.brand-mark svg{width:24px;height:24px;}
+.brand-text{min-width:0;}
+.brand-text h1{font-size:17px;font-weight:900;letter-spacing:.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.brand-text p{margin:2px 0 0;font-size:11.5px;color:#b9d2e6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.header-badge{
+  flex:0 0 auto;font-size:11.5px;background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.22);padding:6px 12px;border-radius:999px;color:#d8e8f5;
+}
+.header-filter-btn{
+  flex:0 0 auto;display:none;border:1px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.14);color:#fff;width:40px;height:40px;border-radius:10px;
+  align-items:center;justify-content:center;cursor:pointer;
+}
+.header-filter-btn svg{width:20px;height:20px;}
+
+/* ============================================================
+   主容器与筛选区（桌面端）
+   ============================================================ */
+.app-main{max-width:1440px;margin:0 auto;padding:18px 20px 90px;}
+.filter-card{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:16px 18px;margin-bottom:16px;
+}
+.filter-row{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.3px;}
+.field input[type=date],.field select,.field input[type=text]{
+  height:40px;border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:0 12px;font-size:13.5px;color:var(--text);background:#fbfdff;outline:none;
+  font-family:inherit;min-width:0;
+}
+.field input:focus,.field select:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(23,152,168,.15);background:#fff;}
+.date-range{display:flex;align-items:center;gap:8px;}
+.date-range .sep{color:var(--faint);padding-bottom:1px;}
+.preset-area{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{
+  border:1px solid var(--line);background:#f6f9fc;color:var(--navy2);
+  font-size:12.5px;padding:7px 13px;border-radius:999px;cursor:pointer;
+  transition:all .15s;white-space:nowrap;
+}
+.chip:hover{border-color:var(--teal);color:var(--teal);}
+.chip.active{background:var(--navy2);border-color:var(--navy2);color:#fff;}
+.filter-divider{width:1px;height:38px;background:var(--line);flex:0 0 1px;}
+.reset-btn{
+  height:40px;padding:0 16px;border:1px solid var(--line);border-radius:var(--radius-sm);
+  background:#fff;color:var(--muted);cursor:pointer;font-size:13px;
+}
+.reset-btn:hover{color:var(--amber);border-color:var(--amber);}
+.tz-toggle{display:flex;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;}
+.tz-toggle button{
+  height:38px;border:0;background:#f6f9fc;color:var(--muted);padding:0 14px;cursor:pointer;font-size:13px;
+}
+.tz-toggle button.active{background:var(--navy2);color:#fff;}
+
+/* ============================================================
+   KPI 指标卡
+   ============================================================ */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px;}
+.kpi{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:16px 18px;position:relative;overflow:hidden;
+}
+.kpi::after{content:"";position:absolute;right:-18px;top:-18px;width:70px;height:70px;border-radius:50%;
+  background:linear-gradient(145deg,rgba(23,152,168,.12),rgba(23,152,168,.02));}
+.kpi.k2::after{background:linear-gradient(145deg,rgba(232,131,58,.16),rgba(232,131,58,.02));}
+.kpi.k3::after{background:linear-gradient(145deg,rgba(139,0,0,.12),rgba(139,0,0,.02));}
+.kpi.k4::after{background:linear-gradient(145deg,rgba(29,78,122,.14),rgba(29,78,122,.02));}
+.kpi .k-label{font-size:12px;color:var(--muted);font-weight:500;}
+.kpi .k-value{font-size:28px;font-weight:900;color:var(--navy);margin-top:4px;line-height:1.15;}
+.kpi .k-value small{font-size:14px;font-weight:500;color:var(--muted);margin-left:2px;}
+.kpi .k-sub{font-size:11.5px;color:var(--faint);margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/* ============================================================
+   视图导航（桌面端横向）
+   ============================================================ */
+.view-tabs{display:flex;gap:6px;margin-bottom:16px;}
+.view-tab{
+  border:0;background:transparent;color:var(--muted);font-size:14px;font-weight:500;
+  padding:9px 20px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:7px;
+}
+.view-tab svg{width:17px;height:17px;}
+.view-tab.active{background:var(--navy2);color:#fff;box-shadow:0 4px 12px rgba(20,58,94,.3);}
+.view-pane{display:none;}
+.view-pane.active{display:block;}
+
+/* ============================================================
+   地图视图
+   ============================================================ */
+.map-wrap{
+  position:relative;background:var(--card);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;height:calc(100vh - 440px);min-height:430px;
+}
+#map{position:absolute;inset:0;}
+.maplibregl-popup-content{
+  font-family:inherit;border-radius:12px;padding:0;overflow:hidden;
+  box-shadow:0 12px 34px rgba(10,30,52,.3);
+}
+.pop-card{width:280px;}
+.pop-head{
+  background:linear-gradient(120deg,var(--navy),var(--navy3));color:#fff;padding:11px 15px;
+  display:flex;align-items:center;gap:9px;
+}
+.pop-head .mag-badge{
+  background:var(--amber);color:#fff;font-weight:900;font-size:15px;border-radius:8px;
+  min-width:46px;text-align:center;padding:4px 0;
+}
+.pop-head .mt{font-size:11px;color:#b9d2e6;}
+.pop-body{padding:12px 15px 14px;}
+.pop-row{display:flex;font-size:12.5px;padding:3px 0;}
+.pop-row .pk{color:var(--muted);min-width:78px;flex:0 0 78px;}
+.pop-row .pv{color:var(--text);word-break:break-all;}
+.map-legend{
+  position:absolute;left:14px;bottom:20px;z-index:10;background:#fff;
+  border-radius:12px;box-shadow:var(--shadow);padding:9px 12px;
+}
+.map-legend .lg-title{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;display:flex;justify-content:space-between;gap:10px;}
+.map-legend .lg-title button{border:0;background:none;color:var(--faint);cursor:pointer;padding:0;font-size:12px;}
+.lg-row{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--muted);padding:2px 0;}
+.lg-dot{width:11px;height:11px;border-radius:50%;flex:0 0 11px;border:1px solid rgba(255,255,255,.9);}
+.lg-row .cnt{margin-left:auto;color:var(--navy);font-weight:700;}
+.basemap-switch{
+  position:absolute;right:14px;top:14px;z-index:5;display:flex;background:rgba(255,255,255,.95);
+  border-radius:10px;box-shadow:var(--shadow);padding:4px;gap:3px;
+}
+.basemap-switch button{
+  border:0;background:transparent;font-size:12px;color:var(--muted);padding:6px 11px;border-radius:8px;cursor:pointer;
+}
+.basemap-switch button.active{background:var(--navy2);color:#fff;}
+.map-note{
+  position:absolute;left:14px;top:14px;z-index:5;background:rgba(14,42,71,.88);color:#cfe2f2;
+  font-size:11.5px;padding:7px 12px;border-radius:9px;max-width:260px;
+}
+
+/* ============================================================
+   统计视图
+   ============================================================ */
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.chart-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px;}
+.chart-card.full{grid-column:1/-1;}
+.chart-card h3{font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+.chart-card h3::before{content:"";width:4px;height:15px;border-radius:3px;background:var(--teal);}
+.chart-card .c-sub{font-size:11.5px;color:var(--faint);margin-bottom:10px;}
+.chart-box{width:100%;height:270px;}
+.chart-box.tall{height:320px;}
+.top-list{display:flex;flex-direction:column;gap:9px;}
+.top-item{
+  display:flex;gap:11px;align-items:flex-start;padding:10px 12px;border-radius:11px;background:#f6f9fc;
+}
+.top-item .rank{
+  flex:0 0 26px;height:26px;border-radius:8px;background:var(--navy2);color:#fff;font-weight:700;
+  display:flex;align-items:center;justify-content:center;font-size:13px;
+}
+.top-item:nth-child(1) .rank{background:#8b0000;}
+.top-item:nth-child(2) .rank{background:#c2381c;}
+.top-item:nth-child(3) .rank{background:#e65a2b;}
+.top-item .t-info{min-width:0;flex:1;}
+.top-item .t-mag{font-weight:900;color:var(--amber);font-size:15px;}
+.top-item .t-mag small{color:var(--muted);font-weight:400;font-size:11px;margin-left:4px;}
+.top-item .t-place{font-size:12.5px;color:var(--text);margin-top:2px;}
+.top-item .t-time{font-size:11px;color:var(--faint);margin-top:2px;}
+
+/* ============================================================
+   目录视图（表格）
+   ============================================================ */
+.table-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+.table-toolbar{
+  display:flex;align-items:center;gap:12px;padding:13px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap;
+}
+.table-toolbar .tt-title{font-weight:700;color:var(--navy);font-size:14.5px;flex:1;}
+.table-toolbar .tt-title small{font-weight:400;color:var(--faint);font-size:12px;margin-left:8px;}
+.sort-btn{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 12px;font-size:12.5px;color:var(--muted);cursor:pointer;}
+.sort-btn:hover{color:var(--teal);border-color:var(--teal);}
+.table-scroll{overflow-x:auto;}
+table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
+.eq-table th{
+  background:#f4f8fb;color:var(--navy);font-size:12px;font-weight:700;text-align:left;
+  padding:11px 14px;white-space:nowrap;position:sticky;top:0;
+}
+.eq-table td{padding:10px 14px;font-size:12.5px;border-bottom:1px solid #eef3f8;vertical-align:top;}
+.eq-table tr{cursor:pointer;}
+.eq-table tbody tr:hover{background:#f5fafc;}
+.eq-table .c-time{white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums;}
+.eq-table .c-mag{font-weight:900;font-variant-numeric:tabular-nums;}
+.eq-table .c-depth{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap;}
+.eq-table .c-ll{color:var(--faint);font-size:11.5px;white-space:nowrap;font-variant-numeric:tabular-nums;}
+.pagination{display:flex;align-items:center;gap:6px;padding:13px 18px;flex-wrap:wrap;}
+.pg-info{font-size:12px;color:var(--muted);flex:1;}
+.pg-btn{
+  min-width:34px;height:34px;border:1px solid var(--line);background:#fff;border-radius:8px;color:var(--navy2);
+  cursor:pointer;font-size:12.5px;padding:0 8px;
+}
+.pg-btn:hover:not(:disabled){border-color:var(--teal);color:var(--teal);}
+.pg-btn.active{background:var(--navy2);color:#fff;border-color:var(--navy2);}
+.pg-btn:disabled{opacity:.4;cursor:default;}
+.empty-row{text-align:center;color:var(--faint);padding:50px 0 !important;cursor:default;}
+
+/* ============================================================
+   页脚
+   ============================================================ */
+.app-footer{
+  max-width:1440px;margin:8px auto 0;padding:18px 20px 30px;color:var(--faint);font-size:11.5px;
+}
+.app-footer p{margin:3px 0;}
+
+/* ============================================================
+   移动端底部导航
+   ============================================================ */
+.bottom-nav{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;
+  background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);
+  padding:6px 8px calc(6px + env(safe-area-inset-bottom));
+  grid-template-columns:repeat(3,1fr);
+}
+.bn-item{
+  border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:3px;
+  color:var(--faint);font-size:11px;cursor:pointer;padding:5px 0;
+}
+.bn-item svg{width:21px;height:21px;}
+.bn-item.active{color:var(--teal);font-weight:700;}
+
+/* ============================================================
+   移动端筛选抽屉
+   ============================================================ */
+.sheet-backdrop{
+  position:fixed;inset:0;background:rgba(10,25,42,.45);z-index:80;
+  opacity:0;pointer-events:none;transition:opacity .25s;
+}
+.sheet-backdrop.open{opacity:1;pointer-events:auto;}
+.filter-sheet{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;background:#fff;
+  border-radius:18px 18px 0 0;max-height:86vh;display:flex;flex-direction:column;
+  transform:translateY(105%);transition:transform .28s cubic-bezier(.32,.72,.28,1);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.filter-sheet.open{transform:translateY(0);}
+.sheet-handle{width:38px;height:4px;border-radius:4px;background:#cfd9e3;margin:9px auto 4px;flex:0 0 auto;}
+.sheet-head{
+  display:flex;align-items:center;justify-content:space-between;padding:8px 20px 12px;flex:0 0 auto;
+}
+.sheet-head h3{font-size:16px;color:var(--navy);}
+.sheet-head button{border:0;background:none;font-size:22px;color:var(--faint);cursor:pointer;line-height:1;}
+.sheet-body{padding:0 20px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:15px;}
+.sheet-body .field input,.sheet-body .field select{width:100%;}
+.sheet-body .date-range{width:100%;}
+.sheet-body .date-range input{flex:1;}
+.sheet-section-title{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.5px;}
+.sheet-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.sheet-apply{
+  flex:0 0 auto;margin:0 20px 16px;height:46px;border:0;border-radius:12px;
+  background:linear-gradient(120deg,var(--navy2),var(--navy3));color:#fff;font-size:15px;font-weight:700;cursor:pointer;
+}
+
+/* ============================================================
+   响应式适配
+   ============================================================ */
+@media (max-width:1100px){
+  .kpi-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:820px){
+  .app-header{padding:9px 14px;}
+  .header-badge{display:none;}
+  .header-filter-btn{display:flex;}
+  .brand-text h1{font-size:15px;}
+  .app-main{padding:14px 13px 84px;}
+  .filter-card{display:none;}
+  .view-tabs{display:none;}
+  .bottom-nav{display:grid;}
+  .kpi-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .kpi{padding:13px 14px;}
+  .kpi .k-value{font-size:23px;}
+  .chart-grid{grid-template-columns:1fr;gap:12px;}
+  .map-wrap{height:calc(100svh - 360px);min-height:340px;}
+  .map-note{max-width:calc(100% - 28px);font-size:11px;}
+  .basemap-switch{top:auto;bottom:14px;right:12px;}
+  .map-legend{left:12px;bottom:70px;padding:8px 11px;}
+  .pop-card{width:252px;}
+  .app-footer{padding:14px 14px 26px;}
+}
+@media (max-width:380px){
+  .kpi-grid{grid-template-columns:1fr 1fr;gap:8px;}
+  .kpi .k-value{font-size:20px;}
+  .brand-text p{font-size:10.5px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     顶部标题栏
+     ============================================================ -->
+<header class="app-header">
+  <div class="brand">
+    <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+        <path d="M2 12h3l2.5-6 4 12 2.5-7 2 3H22"/>
+      </svg>
+    </div>
+    <div class="brand-text">
+      <h1>全球地震活动汇编</h1>
+      <p>1995–2026 年 · 震级 M3.0 及以上 · 数据来源 USGS</p>
+    </div>
+  </div>
+  <span class="header-badge" id="headerRange"></span>
+  <button class="header-filter-btn" id="openSheet" aria-label="筛选">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M3 5h18M6 12h12M10 19h4"/>
+    </svg>
+  </button>
+</header>
+
+<main class="app-main">
+
+  <!-- ==========================================================
+       桌面端筛选区
+       ========================================================== -->
+  <section class="filter-card" id="desktopFilter">
+    <div class="filter-row">
+      <div class="field">
+        <label>发震日期（按所选时区）</label>
+        <div class="date-range">
+          <input type="date" id="dateStart">
+          <span class="sep">至</span>
+          <input type="date" id="dateEnd">
+        </div>
+      </div>
+      <div class="field">
+        <label>最低震级</label>
+        <select id="minMag">
+          <option value="3">M ≥ 3.0</option>
+          <option value="4">M ≥ 4.0</option>
+          <option value="5">M ≥ 5.0</option>
+          <option value="5.5">M ≥ 5.5</option>
+          <option value="6">M ≥ 6.0</option>
+          <option value="6.5">M ≥ 6.5</option>
+          <option value="7">M ≥ 7.0</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>最大深度</label>
+        <select id="maxDepth">
+          <option value="">不限</option>
+          <option value="70">≤ 70 km</option>
+          <option value="150">≤ 150 km</option>
+          <option value="300">≤ 300 km</option>
+          <option value="600">≤ 600 km</option>
+        </select>
+      </div>
+      <div class="field" style="flex:1;min-width:180px;">
+        <label>位置（本版以经纬度显示，无地名检索）</label>
+        <input type="text" id="search" disabled placeholder="无地名数据，可在弹窗查看经纬度" style="opacity:.6;cursor:not-allowed;">
+      </div>
+      <div class="field">
+        <label>时间制式</label>
+        <div class="tz-toggle">
+          <button data-tz="bj" class="active">北京时间</button>
+          <button data-tz="utc">UTC</button>
+        </div>
+      </div>
+      <button class="reset-btn" id="resetBtn">重置</button>
+    </div>
+    <div style="height:12px"></div>
+    <div class="preset-area" id="presetArea"></div>
+  </section>
+
+  <!-- ==========================================================
+       KPI 指标卡
+       ========================================================== -->
+  <section class="kpi-grid">
+    <div class="kpi k1">
+      <div class="k-label">事件总数</div>
+      <div class="k-value" id="kpiCount">–</div>
+      <div class="k-sub" id="kpiCountSub"></div>
+    </div>
+    <div class="kpi k2">
+      <div class="k-label">最大震级</div>
+      <div class="k-value" id="kpiMax">–</div>
+      <div class="k-sub" id="kpiMaxSub"></div>
+    </div>
+    <div class="kpi k3">
+      <div class="k-label">M7.0 及以上</div>
+      <div class="k-value" id="kpiMajor">–<small>次</small></div>
+      <div class="k-sub" id="kpiMajorSub"></div>
+    </div>
+    <div class="kpi k4">
+      <div class="k-label">平均震源深度</div>
+      <div class="k-value" id="kpiDepth">–<small>km</small></div>
+      <div class="k-sub" id="kpiDepthSub"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       视图导航（桌面端）
+       ========================================================== -->
+  <nav class="view-tabs">
+    <button class="view-tab active" data-view="map">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>
+      震中分布
+    </button>
+    <button class="view-tab" data-view="stats">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>
+      统计分析
+    </button>
+    <button class="view-tab" data-view="table">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 4v16"/></svg>
+      地震目录
+    </button>
+  </nav>
+
+  <!-- ==========================================================
+       视图一：地图
+       ========================================================== -->
+  <section class="view-pane active" id="pane-map">
+    <div class="map-wrap">
+      <div id="map"></div>
+      <canvas id="eqCanvas" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:5;"></canvas>
+      <div id="mapDiag" style="display:none;cursor:pointer;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:20;max-width:84%;background:rgba(139,0,0,.94);color:#fff;font-size:12px;padding:10px 14px;border-radius:10px;line-height:1.5;"></div>
+      <div class="map-note">圆点颜色与大小按震级分级；点击聚合圈逐级展开，点击震中查看完整参数。</div>
+      <div class="basemap-switch" id="basemapSwitch">
+        <button data-bm="tdt" class="active">矢量</button>
+        <button data-bm="ter">地形</button>
+        <button data-bm="gaode">高德</button>
+      </div>
+      <div class="map-legend" id="mapLegend">
+        <div class="lg-title"><span>震级分级（M）</span><button id="legendToggle">收起</button></div>
+        <div id="legendBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       视图二：统计
+       ========================================================== -->
+  <section class="view-pane" id="pane-stats">
+    <div class="chart-grid">
+      <div class="chart-card full">
+        <h3>月度活动时序</h3>
+        <div class="c-sub">按月统计当前筛选范围内的地震次数</div>
+        <div class="chart-box tall" id="chartMonthly"></div>
+      </div>
+      <div class="chart-card">
+        <h3>年度事件对比</h3>
+        <div class="c-sub">各自然年地震次数（2026 年为截至 11 月 22 日）</div>
+        <div class="chart-box" id="chartYearly"></div>
+      </div>
+      <div class="chart-card">
+        <h3>震级分布</h3>
+        <div class="c-sub">按震级区间统计次数</div>
+        <div class="chart-box" id="chartMag"></div>
+      </div>
+      <div class="chart-card">
+        <h3>震源深度分布</h3>
+        <div class="c-sub">按深度区间统计次数</div>
+        <div class="chart-box" id="chartDepth"></div>
+      </div>
+      <div class="chart-card">
+        <h3>强震纪录 Top 10</h3>
+        <div class="c-sub">当前范围内震级最大的十次地震</div>
+        <div class="top-list" id="topList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       视图三：目录表格
+       ========================================================== -->
+  <section class="view-pane" id="pane-table">
+    <div class="table-card">
+      <div class="table-toolbar">
+        <div class="tt-title">地震事件明细<small id="tableCountSub"></small></div>
+        <button class="sort-btn" id="sortBtn">时间：新 → 旧</button>
+      </div>
+      <div class="table-scroll">
+        <table class="eq-table">
+          <thead>
+            <tr>
+              <th id="thTime">发震时间（北京）</th>
+              <th>震中位置</th>
+              <th>震级</th>
+              <th>深度</th>
+              <th>纬度</th>
+              <th>经度</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="app-footer">
+  <p>数据来源：美国地质调查局 USGS Earthquake Hazards Program，Earthquake Catalog（FDSN-WS 接口），全球统一权威单源以保证口径一致。</p>
+  <p>口径：mag ≥ 5.0 全量收录；magType 标注震级类型（mww/mb/ml 等）；坐标 WGS-84，南纬西经为负；深度单位 km；北京时间 = UTC + 8。</p>
+  <p>说明：USGS 目录会随分析进展修订震级与定位参数，本页数据以获取时刻为准；2026 年数据截至 2026-11-22。</p>
+</footer>
+
+<!-- ============================================================
+     移动端底部导航
+     ============================================================ -->
+<nav class="bottom-nav" id="bottomNav">
+  <button class="bn-item active" data-view="map">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>
+    震中
+  </button>
+  <button class="bn-item" data-view="stats">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>
+    统计
+  </button>
+  <button class="bn-item" data-view="table">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 4v16"/></svg>
+    目录
+  </button>
+</nav>
+
+<!-- ============================================================
+     移动端筛选抽屉
+     ============================================================ -->
+<div class="sheet-backdrop" id="sheetBackdrop"></div>
+<aside class="filter-sheet" id="filterSheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-head">
+    <h3>筛选条件</h3>
+    <button id="sheetClose">&times;</button>
+  </div>
+  <div class="sheet-body">
+    <div class="sheet-section-title">日期范围</div>
+    <div class="field">
+      <div class="date-range">
+        <input type="date" id="mDateStart">
+        <span class="sep">至</span>
+        <input type="date" id="mDateEnd">
+      </div>
+    </div>
+    <div class="sheet-chips" id="mPresetArea"></div>
+    <div class="sheet-section-title">震级与深度</div>
+    <div class="field">
+      <select id="mMinMag">
+        <option value="3">M ≥ 3.0</option><option value="4">M ≥ 4.0</option>
+        <option value="5">M ≥ 5.0</option><option value="5.5">M ≥ 5.5</option>
+        <option value="6">M ≥ 6.0</option><option value="6.5">M ≥ 6.5</option>
+        <option value="7">M ≥ 7.0</option>
+      </select>
+    </div>
+    <div class="field">
+      <select id="mMaxDepth">
+        <option value="">深度不限</option><option value="70">≤ 70 km</option>
+        <option value="150">≤ 150 km</option><option value="300">≤ 300 km</option>
+        <option value="600">≤ 600 km</option>
+      </select>
+    </div>
+    <div class="sheet-section-title">位置（无地名数据，以经纬度显示）</div>
+    <div class="field"><input type="text" id="mSearch" disabled placeholder="无地名检索，可在弹窗查看经纬度" style="opacity:.6;cursor:not-allowed;"></div>
+    <div class="sheet-section-title">时间制式</div>
+    <div class="tz-toggle" style="align-self:flex-start;">
+      <button data-tz="bj" class="active">北京时间</button>
+      <button data-tz="utc">UTC</button>
+    </div>
+  </div>
+  <button class="sheet-apply" id="sheetApply">应用筛选</button>
+</aside>
+
+<script src="https://fastly.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script>
+/* ============================================================
+   0. 本地字形协议（glyphs://）：浏览器内用 TinySDF 生成 SDF 字形，
+      无需外部字形服务；字形 PBF 缓存于 IndexedDB。
+   ============================================================ */
+var INF = 1e20;
+var pageErrors = [];
+window.addEventListener('error', function(e){
+  var msg = e.message || String(e);
+  pageErrors.push(msg);
+});
+window.addEventListener('unhandledrejection', function(e){
+  var reason = e.reason;
+  pageErrors.push(reason && reason.message ? reason.message : String(reason));
+});
+
+function TinySDF(opts){
+  opts = opts || {};
+  this.buffer = opts.buffer != null ? opts.buffer : 3;
+  this.cutoff = opts.cutoff != null ? opts.cutoff : 0.25;
+  this.radius = opts.radius != null ? opts.radius : 8;
+  var fontSize = opts.fontSize != null ? opts.fontSize : 24;
+  var fontFamily = opts.fontFamily || 'sans-serif';
+  var fontWeight = opts.fontWeight || 'normal';
+  var fontStyle = opts.fontStyle || 'normal';
+  var size = this.size = fontSize + this.buffer * 4;
+  var canvas = document.createElement('canvas');
+  canvas.width = canvas.height = size;
+  var ctx = this.ctx = canvas.getContext('2d', {willReadFrequently:true});
+  ctx.font = fontStyle + ' ' + fontWeight + ' ' + fontSize + 'px ' + fontFamily;
+  ctx.textBaseline = 'alphabetic';
+  ctx.textAlign = 'left';
+  ctx.fillStyle = 'black';
+  this.gridOuter = new Float64Array(size * size);
+  this.gridInner = new Float64Array(size * size);
+  this.f = new Float64Array(size);
+  this.z = new Float64Array(size + 1);
+  this.v = new Uint16Array(size);
+}
+TinySDF.prototype.draw = function(char){
+  var m = this.ctx.measureText(char);
+  var glyphTop = Math.ceil(m.actualBoundingBoxAscent);
+  var glyphLeft = 0;
+  var glyphWidth = Math.max(0, Math.min(this.size - this.buffer,
+    Math.ceil(m.actualBoundingBoxRight - m.actualBoundingBoxLeft)));
+  var glyphHeight = Math.min(this.size - this.buffer,
+    glyphTop + Math.ceil(m.actualBoundingBoxDescent));
+  var width = glyphWidth + 2 * this.buffer;
+  var height = glyphHeight + 2 * this.buffer;
+  var len = Math.max(width * height, 0);
+  var data = new Uint8ClampedArray(len);
+  var glyph = {data:data, width:width, height:height, glyphWidth:glyphWidth,
+    glyphHeight:glyphHeight, glyphTop:glyphTop, glyphLeft:glyphLeft,
+    glyphAdvance:m.width, id:0};
+  if (glyphWidth === 0 || glyphHeight === 0) return glyph;
+  var ctx = this.ctx, buffer = this.buffer;
+  ctx.clearRect(buffer, buffer, glyphWidth, glyphHeight);
+  ctx.fillText(char, buffer, buffer + glyphTop);
+  var img = ctx.getImageData(buffer, buffer, glyphWidth, glyphHeight);
+  this.gridOuter.fill(INF, 0, len);
+  this.gridInner.fill(0, 0, len);
+  for (var y=0;y<glyphHeight;y++){
+    for (var x=0;x<glyphWidth;x++){
+      var a = img.data[4*(y*glyphWidth+x)+3] / 255;
+      if (a === 0) continue;
+      var j = (y+buffer)*width + x + buffer;
+      if (a === 1){ this.gridOuter[j] = 0; this.gridInner[j] = INF; }
+      else {
+        var d = 0.5 - a;
+        this.gridOuter[j] = d > 0 ? d*d : 0;
+        this.gridInner[j] = d < 0 ? d*d : 0;
+      }
+    }
+  }
+  edt(this.gridOuter, 0, 0, width, height, width, this.f, this.v, this.z);
+  edt(this.gridInner, buffer, buffer, glyphWidth, glyphHeight, width, this.f, this.v, this.z);
+  for (var i=0;i<len;i++){
+    var dd = Math.sqrt(this.gridOuter[i]) - Math.sqrt(this.gridInner[i]);
+    data[i] = Math.round(255 - 255*(dd/this.radius + this.cutoff));
+  }
+  return glyph;
+};
+function edt1d(grid, offset, stride, length, f, v, z){
+  v[0] = 0; z[0] = -INF; z[1] = INF; f[0] = grid[offset];
+  for (var q=1,k=0,s=0;q<length;q++){
+    f[q] = grid[offset + q*stride];
+    var q2 = q*q;
+    do {
+      var r = v[k];
+      s = (f[q]-f[r]+q2-r*r)/(q-r)/2;
+    } while (s <= z[k] && --k > -1);
+    k++; v[k]=q; z[k]=s; z[k+1]=INF;
+  }
+  for (var qq=0,kk=0;qq<length;qq++){
+    while (z[kk+1] < qq) kk++;
+    var rr = v[kk], qr = qq-rr;
+    grid[offset+qq*stride] = f[rr] + qr*qr;
+  }
+}
+function edt(data, x0, y0, width, height, gridSize, f, v, z){
+  for (var x=x0;x<x0+width;x++) edt1d(data, y0*gridSize+x, gridSize, height, f, v, z);
+  for (var y=y0;y<y0+height;y++) edt1d(data, y*gridSize+x0, 1, width, f, v, z);
+}
+
+/* 基线校正：TinySDF 的 top 是基线到字形顶的距离；MapLibre 服务端字形的 top
+   以 em 框上方为原点，需减去此常数（与 mapbox LocalGlyphRasterizer 同口径）。*/
+var BASELINE_ADJUST = 27;
+function writeGlyph(glyph, pbf){
+  pbf.writeVarintField(1, glyph.id);
+  pbf.writeBytesField(2, glyph.data);
+  var border = 3;
+  pbf.writeVarintField(3, glyph.width - 2*border);
+  pbf.writeVarintField(4, glyph.height - 2*border);
+  pbf.writeSVarintField(5, glyph.glyphLeft);
+  pbf.writeSVarintField(6, glyph.glyphTop - BASELINE_ADJUST);
+  pbf.writeVarintField(7, glyph.glyphAdvance);
+}
+function generateGlyphPbf(font, range){
+  var bounds = range.split('-');
+  var weight = font.indexOf('Medium') > -1 ? '500' : 'bold';
+  var sdf = new TinySDF({fontSize:24, fontFamily:'Arial, sans-serif',
+    fontWeight:weight, buffer:3, radius:8, cutoff:0.25});
+  var pbf = new Pbf();
+  var glyphs = [];
+  for (var i=Number(bounds[0]);i<=Number(bounds[1]);i++){
+    var g = sdf.draw(String.fromCharCode(i));
+    g.id = i;
+    glyphs.push(g);
+  }
+  pbf.writeMessage(1, function(arr, p){
+    for (var k=0;k<glyphs.length;k++){
+      p.writeMessage(3, writeGlyph, glyphs[k]);
+    }
+  });
+  return pbf.finish();
+}
+function glyphProtocol(params){
+  var match = params.url.match(/glyphs:\/\/(.*)\/(.*)/i);
+  var font = match[1], range = match[2];
+  return new Promise(function(resolve){
+    var settled = false;
+    function deliver(buf){
+      if (settled) return;
+      settled = true;
+      resolve({data:buf.buffer});
+    }
+    /* 超时兜底：某些内核对 IndexedDB 既不响应成功也不响应失败，
+       2.5 秒后直接在内存生成，保证字形请求永不挂起 */
+    var timer = setTimeout(function(){
+      try { deliver(generateGlyphPbf(font, range)); } catch(e){}
+    }, 2500);
+    try {
+      var req = window.indexedDB.open('eq-local-glyphs', 2);
+      req.onupgradeneeded = function(e){
+        e.target.result.createObjectStore('fonts', {keyPath:'fontRange'});
+      };
+      req.onsuccess = function(){
+        var db = req.result;
+        var store = db.transaction('fonts','readwrite').objectStore('fonts');
+        var key = 'v2-' + font + '-' + range;
+        var getReq = store.get(key);
+        getReq.onsuccess = function(){
+          if (getReq.result !== undefined){
+            clearTimeout(timer);
+            if (!settled){ settled = true; db.close(); resolve({data:getReq.result.data}); }
+          } else {
+            var buf = generateGlyphPbf(font, range);
+            try { store.add({fontRange:key, data:buf.buffer}); } catch(e){}
+            clearTimeout(timer);
+            db.close();
+            deliver(buf);
+          }
+        };
+        getReq.onerror = function(){
+          clearTimeout(timer);
+          db.close();
+          deliver(generateGlyphPbf(font, range));
+        };
+      };
+      req.onerror = function(){
+        clearTimeout(timer);
+        deliver(generateGlyphPbf(font, range));
+      };
+    } catch(e){
+      clearTimeout(timer);
+      deliver(generateGlyphPbf(font, range));
+    }
+  });
+}
+
+/* ============================================================
+   1. 数据与常量
+   ============================================================ */
+/* 内联二进制包 {b:base64, mt:震级类型表, n:条数, stride:步长}，解码为统一记录数组。
+   为控制体积，本版不含中英文地名，位置以经纬度呈现。 */
+var EQ_PACK = __EQ_DATA__;
+function decodeEq(p){
+  var s = atob(p.b), u8 = new Uint8Array(s.length);
+  for (var k=0;k<s.length;k++) u8[k] = s.charCodeAt(k);
+  var dv = new DataView(u8.buffer), n = p.n, st = p.stride, out = new Array(n);
+  for (var j=0;j<n;j++){
+    var o = j*st;
+    var t = dv.getUint32(o,true) + dv.getUint16(o+4,true)*4294967296;
+    var la = dv.getInt32(o+6,true)/10000;
+    var ln = dv.getInt32(o+10,true)/10000;
+    var dpr = dv.getInt16(o+14,true);
+    var dp = dpr === -32768 ? null : dpr/10;
+    var mg = (dv.getUint8(o+16)+30)/10;
+    out[j] = [t, la, ln, dp, mg, p.mt[dv.getUint8(o+17)], '', ''];
+  }
+  return out;
+}
+var EQ_DATA = decodeEq(EQ_PACK);
+/* 全点状模式：true=所有地震直接以单点标注（不聚类）；false=屏幕空间聚类 */
+var ALL_POINTS_MODE = __ALL_POINTS_MODE__;
+/* 记录: [t_ms, lat, lon, depth_km, mag, magType, en, zh] */
+
+var DATA_MIN = EQ_DATA[0][0], DATA_MAX = EQ_DATA[EQ_DATA.length - 1][0];
+var MAG_BINS = [
+  {lo:3.0, hi:4.0, color:'#2a9d8f', label:'3.0 – 3.9'},
+  {lo:4.0, hi:5.0, color:'#ffd98a', label:'4.0 – 4.9'},
+  {lo:5.0, hi:5.5, color:'#ffe14d', label:'5.0 – 5.4'},
+  {lo:5.5, hi:6.0, color:'#ffa533', label:'5.5 – 5.9'},
+  {lo:6.0, hi:6.5, color:'#ff6b35', label:'6.0 – 6.4'},
+  {lo:6.5, hi:7.0, color:'#e62e2e', label:'6.5 – 6.9'},
+  {lo:7.0, hi:99,  color:'#8b0000', label:'≥ 7.0'}
+];
+var MAG_TEXT = ['#1d6f66','#c29b1f','#c29b1f','#dd831c','#e25526','#d12727','#8b0000'];
+var DEPTH_BINS = [
+  {lo:0, hi:70, label:'0–70'}, {lo:70, hi:150, label:'70–150'},
+  {lo:150, hi:300, label:'150–300'}, {lo:300, hi:600, label:'300–600'},
+  {lo:600, hi:9999, label:'600+'}
+];
+var TZ_OFFSET = {bj:8*3600*1000, utc:0};
+
+/* ============================================================
+   2. 工具函数
+   ============================================================ */
+function pad(n){ return n < 10 ? '0' + n : '' + n; }
+function dayKey(ms, tz){
+  var d = new Date(ms + TZ_OFFSET[tz]);
+  return d.getUTCFullYear() + '-' + pad(d.getUTCMonth()+1) + '-' + pad(d.getUTCDate());
+}
+function dayInputToMs(dayStr, tz, isEnd){
+  // dayStr: YYYY-MM-DD；返回该时区下当日 00:00（isEnd 时为次日 00:00）对应的 UTC 毫秒
+  var parts = dayStr.split('-').map(Number);
+  var ms = Date.UTC(parts[0], parts[1]-1, parts[2] + (isEnd ? 1 : 0)) - TZ_OFFSET[tz];
+  return ms;
+}
+function fmtTime(ms, tz){
+  var d = new Date(ms + TZ_OFFSET[tz]);
+  return d.getUTCFullYear() + '-' + pad(d.getUTCMonth()+1) + '-' + pad(d.getUTCDate()) +
+         ' ' + pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds());
+}
+function fmtNum(v, digits){
+  return v == null ? '–' : Number(v).toFixed(digits);
+}
+function magBinOf(m){
+  for (var i=0;i<MAG_BINS.length;i++){ if(m >= MAG_BINS[i].lo && m < MAG_BINS[i].hi) return i; }
+  return MAG_BINS.length - 1;
+}
+function depthBinOf(d){
+  for (var i=0;i<DEPTH_BINS.length;i++){ if(d >= DEPTH_BINS[i].lo && d < DEPTH_BINS[i].hi) return i; }
+  return DEPTH_BINS.length - 1;
+}
+function debounce(fn, wait){
+  var timer = null;
+  return function(){
+    var args = arguments, self = this;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ fn.apply(self, args); }, wait);
+  };
+}
+var isMobile = function(){ return window.matchMedia('(max-width:820px)').matches; };
+
+/* ============================================================
+   3. 状态
+   ============================================================ */
+var state = {
+  startMs: DATA_MIN, endMs: DATA_MAX + 1,
+  minMag: 3.0, maxDepth: null, search: '',
+  tz: 'bj', view: 'map', sortDesc: true, page: 1
+};
+var filtered = [];
+var charts = {};
+var chartsInited = false;
+var chartsDirty = true;
+
+/* ============================================================
+   4. 筛选
+   ============================================================ */
+function applyFilters(){
+  var kw = state.search.trim().toLowerCase();
+  var out = [];
+  for (var i=0;i<EQ_DATA.length;i++){
+    var r = EQ_DATA[i];
+    if (r[0] < state.startMs || r[0] >= state.endMs) continue;
+    if (r[4] < state.minMag) continue;
+    if (state.maxDepth != null && r[3] > state.maxDepth) continue;
+    if (kw && r[6].toLowerCase().indexOf(kw) < 0 && r[7].toLowerCase().indexOf(kw) < 0) continue;
+    out.push(r);
+  }
+  filtered = out;
+  state.page = 1;
+  renderAll();
+}
+
+/* ============================================================
+   5. KPI 渲染
+   ============================================================ */
+function renderKpi(){
+  var n = filtered.length;
+  document.getElementById('kpiCount').textContent = n.toLocaleString();
+  var sDay = dayKey(state.startMs, state.tz), eDay = dayKey(state.endMs - 1, state.tz);
+  document.getElementById('kpiCountSub').textContent = sDay + ' 至 ' + eDay;
+  document.getElementById('headerRange').textContent = sDay + ' ~ ' + eDay;
+  if (n){
+    var maxR = filtered[0], sumD = 0, major = 0, minD = Infinity, maxD = -Infinity, dCnt = 0;
+    for (var i=0;i<n;i++){
+      var r = filtered[i];
+      if (r[4] > maxR[4]) maxR = r;
+      if (r[3] !== null){
+        sumD += r[3]; dCnt++;
+        if (r[3] < minD) minD = r[3];
+        if (r[3] > maxD) maxD = r[3];
+      }
+      if (r[4] >= 7) major++;
+    }
+    document.getElementById('kpiMax').innerHTML = fmtNum(maxR[4],1);
+    document.getElementById('kpiMaxSub').textContent = coordLabel(maxR[1],maxR[2]);
+    document.getElementById('kpiMajor').innerHTML = major + '<small>次</small>';
+    document.getElementById('kpiMajorSub').textContent = major ? '占比 ' + (major/n*100).toFixed(2) + '%' : '本区间无 7 级以上地震';
+    document.getElementById('kpiDepth').innerHTML = (sumD/dCnt).toFixed(1) + '<small>km</small>';
+    document.getElementById('kpiDepthSub').textContent =
+      '最浅 ' + minD + ' km / 最深 ' + maxD + ' km';
+  } else {
+    ['kpiMax','kpiMajor','kpiDepth'].forEach(function(id){ document.getElementById(id).innerHTML = '–'; });
+    ['kpiMaxSub','kpiMajorSub','kpiDepthSub'].forEach(function(id){ document.getElementById(id).textContent = ''; });
+  }
+}
+
+/* ============================================================
+   6. 地图
+   ============================================================ */
+var TDT_TK = "38fda728573672739075a63f7f380e03";
+function tdtTiles(layer){
+  return ["t0","t1","t2","t3","t4","t5","t6","t7"].map(function(s){
+    return "https://" + s + ".tianditu.gov.cn/" + layer +
+      "_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=" + layer +
+      "&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=" + TDT_TK;
+  });
+}
+var BASEMAPS = {
+  tdt: {
+    layers: [
+      {tiles:tdtTiles("vec"), tileSize:256, attribution:'天地图'},
+      {tiles:tdtTiles("cva"), tileSize:256, attribution:'天地图'}
+    ]
+  },
+  ter: {
+    layers: [
+      {tiles:tdtTiles("ter"), tileSize:256, attribution:'天地图'},
+      {tiles:tdtTiles("cva"), tileSize:256, attribution:'天地图'}
+    ]
+  },
+  gaode: {
+    layers: [{
+      tiles:["https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+             "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+             "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+             "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}"],
+      tileSize:256, attribution:'高德地图'
+    }]
+  }
+};
+var map, currentBasemap = 'tdt';
+
+function buildStyle(){
+  var sources = {}, layers = [];
+  Object.keys(BASEMAPS).forEach(function(k){
+    BASEMAPS[k].layers.forEach(function(ly, i){
+      var id = 'bm-' + k + '-' + i;
+      sources[id] = {type:'raster', tiles:ly.tiles, tileSize:ly.tileSize, attribution:ly.attribution};
+      layers.push({id:id, type:'raster', source:id,
+        layout:{visibility: k === currentBasemap ? 'visible':'none'}});
+    });
+  });
+  return {version:8, sources:sources, layers:layers};
+}
+
+/* ============================================================
+   地震点 Canvas 叠加层
+   主线程直接渲染（屏幕空间网格聚类），不依赖 GeoJSON worker，
+   规避部分移动内核 content:// 下 worker 数据加载挂起的问题。
+   ============================================================ */
+var eqCanvas = null, eqCtx = null, drawnFeatures = [];
+var CLUSTER_RADIUS = 46;
+
+function clusterStyle(cnt){
+  if (cnt >= 200) return {color:'#0e2a47', r:30};
+  if (cnt >= 50)  return {color:'#143a5e', r:24};
+  if (cnt >= 10)  return {color:'#1d4e7a', r:19};
+  return {color:'#2f6f96', r:15};
+}
+function interpStops(value, stops){
+  if (value <= stops[0][0]) return stops[0][1];
+  if (value >= stops[stops.length-1][0]) return stops[stops.length-1][1];
+  for (var i=0;i<stops.length-1;i++){
+    var a=stops[i], b=stops[i+1];
+    if (value>=a[0] && value<=b[0])
+      return a[1] + (b[1]-a[1])*((value-a[0])/(b[0]-a[0]));
+  }
+  return stops[0][1];
+}
+function pointRadius(mag){
+  return interpStops(mag, [[5,4.5],[5.5,6.5],[6,9],[6.5,12],[7,16],[8,22]]);
+}
+function pointColor(mag){
+  if (mag <= 5) return '#ffe14d';
+  if (mag >= 8) return '#5a0000';
+  var stops = [[5,'#ffe14d'],[5.5,'#ffa533'],[6,'#ff6b35'],[6.5,'#e62e2e'],[7,'#8b0000'],[8,'#5a0000']];
+  for (var i=0;i<stops.length-1;i++){
+    if (mag>=stops[i][0] && mag<stops[i+1][0]) return stops[i][1];
+  }
+  return '#ffa533';
+}
+function abbrevCount(n){
+  if (n < 1000) return String(n);
+  if (n < 1000000)
+    return (n/1000).toFixed(n<10000?1:0).replace(/\.0$/,'') + 'k';
+  return (n/1000000).toFixed(1).replace(/\.0$/,'') + 'm';
+}
+
+function sizeCanvas(){
+  var el = document.getElementById('map');
+  var w = el.clientWidth, h = el.clientHeight;
+  var dpr = window.devicePixelRatio || 1;
+  if (!eqCanvas){ eqCanvas = document.getElementById('eqCanvas'); eqCtx = eqCanvas.getContext('2d'); }
+  var pw = Math.round(w*dpr), ph = Math.round(h*dpr);
+  if (eqCanvas.width !== pw || eqCanvas.height !== ph){
+    eqCanvas.width = pw; eqCanvas.height = ph;
+  }
+  eqCtx.setTransform(dpr,0,0,dpr,0,0);
+  return {w:w,h:h};
+}
+
+/* 聚类对象的实际绘制半径（多点按数量，单点按震级） */
+function effectiveRadius(cl){
+  if (cl.n > 1) return clusterStyle(cl.n).r;
+  return pointRadius(cl.pts[0][4]);
+}
+
+/* 合并距离过近、会发生重叠的聚类，保证视觉不互相压盖 */
+function mergeClusters(list){
+  var changed = true;
+  while (changed){
+    changed = false;
+    var best = null, bestD = Infinity;
+    for (var i=0;i<list.length;i++){
+      for (var j=i+1;j<list.length;j++){
+        var a=list[i], b=list[j];
+        var dx=a.sx-b.sx, dy=a.sy-b.sy, d2=dx*dx+dy*dy;
+        var th = (effectiveRadius(a)+effectiveRadius(b))*0.85;
+        if (d2 < th*th && d2 < bestD){ bestD=d2; best={a:a,b:b}; }
+      }
+    }
+    if (best){
+      var a=best.a, b=best.b, total=a.n+b.n;
+      a.sx=(a.sx*a.n+b.sx*b.n)/total;
+      a.sy=(a.sy*a.n+b.sy*b.n)/total;
+      a.n=total;
+      a.pts=a.pts.concat(b.pts);
+      list.splice(list.indexOf(b),1);
+      changed=true;
+    }
+  }
+  return list;
+}
+
+function magBinIndex(mag){
+  for (var i=0;i<MAG_BINS.length;i++){
+    if (mag < MAG_BINS[i].hi) return i;
+  }
+  return MAG_BINS.length-1;
+}
+
+/* 全点状模式：每个地震直接画一个点，按震级着色/定大小，不做聚类。
+   按震级分桶合并为少量 Path2D 一次性填充，保证数万点的绘制性能。 */
+/* 全点状模式下的点半径：按震级给出温和但可辨的大小梯度，
+   震级越大点略大；再随缩放轻微放大，整体尺寸克制、不压盖底图。 */
+function allPointRadius(mag, z){
+  var base = interpStops(mag,
+    [[3,1.3],[4,1.6],[5,2.0],[5.5,2.6],[6,3.4],[6.5,4.3],[7,5.4],[7.5,6.4],[8,7.4],[9,9.0]]);
+  var zs = interpStops(z,
+    [[1,0.85],[4,1.0],[7,1.22],[10,1.42],[14,1.6]]);
+  return base * zs;
+}
+/* 单个 Path2D 容纳的最大子路径数：超过浏览器（Skia）路径上限后整桶会零绘制，
+   因此每个震级桶按需拆成多个 Path2D 分块填充。 */
+var PATH_CHUNK = 60000;
+function drawAllPoints(ctx, size){
+  var bounds = map.getBounds();
+  var z = map.getZoom();
+  /* 每个震级桶维护若干 Path2D 分块及其当前子路径计数 */
+  var chunks = [];
+  for (var b=0;b<MAG_BINS.length;b++) chunks.push({paths:[new Path2D()], n:0});
+  for (var i=0;i<filtered.length;i++){
+    var rec = filtered[i];
+    var lat=rec[1], lon=rec[2];
+    if (lat < bounds.getSouth()-2 || lat > bounds.getNorth()+2 ||
+        lon < bounds.getWest()-2 || lon > bounds.getEast()+2) continue;
+    var pr = map.project([lon,lat]);
+    var rad = allPointRadius(rec[4], z);
+    var bi = magBinIndex(rec[4]);
+    var grp = chunks[bi];
+    if (grp.n >= PATH_CHUNK){ grp.paths.push(new Path2D()); grp.n = 0; }
+    var p = grp.paths[grp.paths.length-1];
+    p.moveTo(pr.x + rad, pr.y);   /* 断开 arc 之间的隐式连线 */
+    p.arc(pr.x, pr.y, rad, 0, Math.PI*2);
+    grp.n++;
+    drawnFeatures.push({type:'point', x:pr.x, y:pr.y, r:rad, rec:rec});
+  }
+  /* 震级由低到高逐桶、逐分块填充，保证高震级点始终压在低震级点之上 */
+  ctx.globalAlpha = .78;
+  for (var k=0;k<chunks.length;k++){
+    ctx.fillStyle = MAG_BINS[k].color;
+    var cps = chunks[k].paths;
+    for (var c=0;c<cps.length;c++) ctx.fill(cps[c]);
+  }
+  ctx.globalAlpha = 1;
+}
+
+function drawOverlay(){
+  if (!map || state.view !== 'map') return;
+  var size = sizeCanvas();
+  var ctx = eqCtx;
+  ctx.clearRect(0,0,size.w,size.h);
+  drawnFeatures = [];
+  if (filtered.length === 0) return;
+  if (ALL_POINTS_MODE){ drawAllPoints(ctx, size); return; }
+
+  var bounds = map.getBounds();
+  var cell = CLUSTER_RADIUS;
+  var grid = {};
+  function gkey(gx,gy){ return gx + ',' + gy; }
+
+  for (var i=0;i<filtered.length;i++){
+    var r = filtered[i];
+    var lat = r[1], lon = r[2];
+    if (lat < bounds.getSouth()-8 || lat > bounds.getNorth()+8 ||
+        lon < bounds.getWest()-8 || lon > bounds.getEast()+8) continue;
+    var pr = map.project([lon,lat]);
+    var px = pr.x, py = pr.y;
+    var gx = Math.floor(px/cell), gy = Math.floor(py/cell);
+    var assigned = null;
+    for (var ddx=-1;ddx<=1 && !assigned;ddx++){
+      for (var ddy=-1;ddy<=1;ddy++){
+        var bucket = grid[gkey(gx+ddx,gy+ddy)];
+        if (!bucket) continue;
+        for (var b=0;b<bucket.length;b++){
+          var cl = bucket[b];
+          var ex = px-cl.sx, ey = py-cl.sy;
+          if (ex*ex+ey*ey <= cell*cell){ assigned = cl; break; }
+        }
+        if (assigned) break;
+      }
+    }
+    if (assigned){
+      assigned.n++;
+      assigned.sx += (px-assigned.sx)/assigned.n;
+      assigned.sy += (py-assigned.sy)/assigned.n;
+      assigned.pts.push(r);
+    } else {
+      var k = gkey(gx,gy);
+      if (!grid[k]) grid[k] = [];
+      grid[k].push({sx:px, sy:py, n:1, pts:[r]});
+    }
+  }
+
+  /* 收集全部初步聚类，合并重叠后再绘制 */
+  var allClusters = [];
+  for (var gk in grid){
+    grid[gk].forEach(function(cl){ allClusters.push(cl); });
+  }
+  mergeClusters(allClusters);
+
+  for (var ci=0;ci<allClusters.length;ci++){
+    var cl = allClusters[ci];
+    if (cl.n > 1){
+      var st = clusterStyle(cl.n);
+      ctx.globalAlpha = .92;
+      ctx.beginPath();
+      ctx.arc(cl.sx, cl.sy, st.r, 0, Math.PI*2);
+      ctx.fillStyle = st.color;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#ffffff';
+      ctx.stroke();
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '700 12px Arial, "Helvetica Neue", "Microsoft YaHei", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(abbrevCount(cl.n), cl.sx, cl.sy + 0.5);
+      drawnFeatures.push({type:'cluster', x:cl.sx, y:cl.sy, r:st.r, n:cl.n, pts:cl.pts});
+    } else {
+      var rec = cl.pts[0];
+      var mag = rec[4];
+      var rad = pointRadius(mag);
+      ctx.globalAlpha = .85;
+      ctx.beginPath();
+      ctx.arc(cl.sx, cl.sy, rad, 0, Math.PI*2);
+      ctx.fillStyle = pointColor(mag);
+      ctx.fill();
+      ctx.globalAlpha = .9;
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = '#ffffff';
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+      drawnFeatures.push({type:'point', x:cl.sx, y:cl.sy, r:rad, rec:rec});
+    }
+  }
+}
+
+function featureAt(px,py){
+  var best=null, bestScore=Infinity;
+  for (var i=0;i<drawnFeatures.length;i++){
+    var f = drawnFeatures[i];
+    var dx = px-f.x, dy = py-f.y;
+    var hit = f.r + 4;
+    var d2 = dx*dx+dy*dy;
+    if (d2 <= hit*hit){
+      /* 归一化命中紧密度，单点略加权，避免被邻近大圈抢占 */
+      var score = Math.sqrt(d2)/hit * (f.type==='point'?0.9:1);
+      if (score < bestScore){ bestScore=score; best=f; }
+    }
+  }
+  return best;
+}
+
+function recordToProps(rec){
+  return {mag:rec[4], depth:rec[3], mt:rec[5], t:rec[0],
+          zh:rec[7], en:rec[6], lat:rec[1], lon:rec[2]};
+}
+
+function initMap(){
+  map = new maplibregl.Map({
+    container:'map',
+    style:buildStyle(),
+    center:[20, 18],
+    zoom:1.6,
+    minZoom:1,
+    attributionControl:{compact:true}
+  });
+  if (!isMobile()){
+    map.addControl(new maplibregl.NavigationControl({showCompass:false, visualizePitch:false}), 'bottom-right');
+  }
+  map.on('load', drawOverlay);
+  map.on('render', drawOverlay);
+  map.on('resize', drawOverlay);
+
+  map.on('click', function(e){
+    var f = featureAt(e.point.x, e.point.y);
+    if (!f) return;
+    if (f.type === 'cluster'){
+      var target = Math.min(map.getZoom() + 1.8, 12);
+      var c = map.unproject([f.x, f.y]);
+      map.easeTo({center:[c.lng,c.lat], zoom:target, duration:450});
+    } else {
+      showPopup(recordToProps(f.rec), e.lngLat);
+    }
+  });
+
+  if (!isMobile()){
+    map.on('mousemove', function(e){
+      map.getCanvas().style.cursor = featureAt(e.point.x, e.point.y) ? 'pointer' : '';
+    });
+  }
+}
+
+/* 诊断徽章：仅在真正捕获到页面错误时展示，点击重试 */
+function showDiag(){
+  var diag = document.getElementById('mapDiag');
+  var detail = pageErrors.length ? pageErrors[pageErrors.length-1] : '未知错误';
+  diag.innerHTML = '地图脚本异常：' + detail + '<br><b>点此重试</b>';
+  diag.style.display = 'block';
+}
+function hideDiag(){ document.getElementById('mapDiag').style.display = 'none'; }
+document.getElementById('mapDiag').addEventListener('click', function(){
+  hideDiag();
+  try { map.resize(); drawOverlay(); } catch(e){ showDiag(); }
+});
+
+/* 后台切回/页面恢复时重绘，应对 WebView 挂起 */
+document.addEventListener('visibilitychange', function(){
+  if (!document.hidden && map) setTimeout(drawOverlay, 150);
+});
+window.addEventListener('pageshow', function(){
+  if (map) setTimeout(drawOverlay, 150);
+});
+
+function coordLabel(lat,lon){
+  return (lat>=0?'北纬':'南纬') + fmtNum(Math.abs(lat),4) + '° ' +
+         (lon>=0?'东经':'西经') + fmtNum(Math.abs(lon),4) + '°';
+}
+function showPopup(p, lngLat){
+  var t = p.t;
+  var html = '<div class="pop-card"><div class="pop-head">' +
+    '<span class="mag-badge">' + fmtNum(p.mag,1) + '</span>' +
+    '<div><div style="font-weight:700;font-size:13.5px;">地震详情</div><div class="mt">震级类型 ' + p.mt + '</div></div></div>' +
+    '<div class="pop-body">' +
+    '<div class="pop-row"><span class="pk">北京时间</span><span class="pv">' + fmtTime(t,'bj') + '</span></div>' +
+    '<div class="pop-row"><span class="pk">UTC</span><span class="pv">' + fmtTime(t,'utc') + '</span></div>' +
+    '<div class="pop-row"><span class="pk">震中位置</span><span class="pv">' + coordLabel(p.lat,p.lon) + '</span></div>' +
+    '<div class="pop-row"><span class="pk">震源深度</span><span class="pv">' + p.depth + ' km</span></div>' +
+    '</div></div>';
+  var legendEl = document.getElementById('mapLegend');
+  var popup = new maplibregl.Popup({offset:18, closeButton:true, maxWidth:'320px'})
+    .setLngLat(lngLat).setHTML(html);
+  popup.on('open', function(){ legendEl.style.visibility = 'hidden'; });
+  popup.on('close', function(){ legendEl.style.visibility = ''; });
+  popup.addTo(map);
+}
+
+function updateMap(){
+  if (map) drawOverlay();
+}
+
+function switchBasemap(name){
+  if (!map) return;
+  Object.keys(BASEMAPS).forEach(function(k){
+    BASEMAPS[k].layers.forEach(function(ly, i){
+      map.setLayoutProperty('bm-'+k+'-'+i, 'visibility', k === name ? 'visible':'none');
+    });
+  });
+  currentBasemap = name;
+  document.querySelectorAll('#basemapSwitch button').forEach(function(b){
+    b.classList.toggle('active', b.dataset.bm === name);
+  });
+}
+
+/* 图例 */
+function renderLegend(){
+  var counts = new Array(MAG_BINS.length).fill(0);
+  filtered.forEach(function(r){ counts[magBinOf(r[4])]++; });
+  var html = MAG_BINS.map(function(b, i){
+    return '<div class="lg-row"><span class="lg-dot" style="background:' + b.color + '"></span>' +
+           b.label + '<span class="cnt">' + counts[i] + '</span></div>';
+  }).join('');
+  document.getElementById('legendBody').innerHTML = html;
+}
+
+/* ============================================================
+   7. 图表（ECharts，懒加载）
+   ============================================================ */
+var AXIS_COLOR = '#5d7186', GRID_COLOR = '#e6edf4';
+function baseTooltip(){
+  return {trigger:'axis', backgroundColor:'rgba(14,42,71,.94)', borderWidth:0,
+    textStyle:{color:'#e8f1f8', fontSize:12, fontFamily:'inherit'},
+    axisPointer:{type:'shadow', shadowStyle:{color:'rgba(23,152,168,.10)'}}};
+}
+function axisCommon(){
+  return {axisLine:{lineStyle:{color:'#cfd9e3'}}, axisTick:{show:false},
+    axisLabel:{color:AXIS_COLOR, fontSize:11},
+    splitLine:{lineStyle:{color:GRID_COLOR}}};
+}
+function initCharts(){
+  ['chartMonthly','chartYearly','chartMag','chartDepth'].forEach(function(id){
+    charts[id] = echarts.init(document.getElementById(id));
+  });
+  window.addEventListener('resize', function(){
+    Object.keys(charts).forEach(function(k){ charts[k].resize(); });
+  });
+  chartsInited = true;
+}
+function updateCharts(){
+  if (!chartsInited) initCharts();
+  var n = filtered.length;
+
+  /* 月度时序 */
+  var monthMap = {};
+  if (n){
+    var cursor = new Date(state.startMs + TZ_OFFSET[state.tz]);
+    cursor.setUTCDate(1);
+    var endBound = state.endMs;
+    while (cursor.getTime() - TZ_OFFSET[state.tz] < endBound){
+      var key = cursor.getUTCFullYear() + '-' + pad(cursor.getUTCMonth()+1);
+      monthMap[key] = 0;
+      cursor.setUTCMonth(cursor.getUTCMonth()+1);
+    }
+    filtered.forEach(function(r){
+      var d = new Date(r[0] + TZ_OFFSET[state.tz]);
+      var key = d.getUTCFullYear() + '-' + pad(d.getUTCMonth()+1);
+      if (key in monthMap) monthMap[key]++;
+    });
+  }
+  var mKeys = Object.keys(monthMap);
+  charts.chartMonthly.setOption({
+    tooltip:baseTooltip(),
+    grid:{left:48,right:18,top:24,bottom:54},
+    xAxis:Object.assign({type:'category', data:mKeys, axisLabel:{color:AXIS_COLOR,fontSize:10,rotate:mKeys.length>24?45:0}}, axisCommon()),
+    yAxis:Object.assign({type:'value', minInterval:1}, axisCommon()),
+    dataZoom:[{type:'inside'},{type:'slider',height:18,bottom:14,borderColor:'transparent',
+      fillerColor:'rgba(23,152,168,.18)',handleStyle:{color:'#1798a8'},textStyle:{color:AXIS_COLOR,fontSize:10}}],
+    series:[{type:'bar', data:mKeys.map(function(k){return monthMap[k];}), barMaxWidth:22,
+      itemStyle:{borderRadius:[4,4,0,0],
+        color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'#35b6c4'},{offset:1,color:'#1798a8'}])}}]
+  }, true);
+
+  /* 年度对比（覆盖数据完整年份范围，受当前其他条件约束） */
+  var START_YEAR = new Date(DATA_MIN).getUTCFullYear();
+  var endYear = new Date(DATA_MAX).getUTCFullYear();
+  var yearCounts = {};
+  for (var yi=START_YEAR; yi<=endYear; yi++) yearCounts[yi] = 0;
+  filtered.forEach(function(r){
+    var y = new Date(r[0]).getUTCFullYear();
+    if (y in yearCounts) yearCounts[y]++;
+  });
+  var yearKeys = Object.keys(yearCounts);
+  charts.chartYearly.setOption({
+    tooltip:baseTooltip(),
+    grid:{left:44,right:16,top:22,bottom:52},
+    xAxis:Object.assign({type:'category',data:yearKeys,
+      axisLabel:{color:AXIS_COLOR,fontSize:10,interval:0,rotate:45}},axisCommon()),
+    yAxis:Object.assign({type:'value',minInterval:1},axisCommon()),
+    series:[{type:'bar',barMaxWidth:26,data:yearKeys.map(function(k){return yearCounts[k];}),
+      itemStyle:{borderRadius:[5,5,0,0],
+        color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'#4a7fb0'},{offset:1,color:'#1d4e7a'}])}}]
+  }, true);
+
+  /* 震级分布 */
+  var magCounts = [0,0,0,0,0];
+  filtered.forEach(function(r){ magCounts[magBinOf(r[4])]++; });
+  charts.chartMag.setOption({
+    tooltip:baseTooltip(),
+    grid:{left:44,right:16,top:22,bottom:30},
+    xAxis:Object.assign({type:'category',data:MAG_BINS.map(function(b){return b.label;}),axisLabel:{color:AXIS_COLOR,fontSize:10}},axisCommon()),
+    yAxis:Object.assign({type:'value',minInterval:1},axisCommon()),
+    series:[{type:'bar',barMaxWidth:34,data:magCounts.map(function(v,i){return {value:v,itemStyle:{color:MAG_BINS[i].color,borderRadius:[5,5,0,0]}};})}]
+  }, true);
+
+  /* 深度分布 */
+  var depCounts = [0,0,0,0,0];
+  filtered.forEach(function(r){ depCounts[depthBinOf(r[3])]++; });
+  charts.chartDepth.setOption({
+    tooltip:baseTooltip(),
+    grid:{left:44,right:16,top:22,bottom:30},
+    xAxis:Object.assign({type:'category',data:DEPTH_BINS.map(function(b){return b.label;}),axisLabel:{color:AXIS_COLOR,fontSize:10}},axisCommon()),
+    yAxis:Object.assign({type:'value',minInterval:1},axisCommon()),
+    series:[{type:'bar',barMaxWidth:34,data:depCounts,
+      itemStyle:{borderRadius:[5,5,0,0],
+        color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'#e89a5e'},{offset:1,color:'#d4702a'}])}}]
+  }, true);
+
+  /* Top 10 */
+  var top = filtered.slice().sort(function(a,b){
+    return b[4] - a[4] || a[0] - b[0];
+  }).slice(0,10);
+  document.getElementById('topList').innerHTML = n ? top.map(function(r, i){
+    return '<div class="top-item"><span class="rank">' + (i+1) + '</span><div class="t-info">' +
+      '<div class="t-mag">M ' + fmtNum(r[4],1) + '<small>' + r[5] + ' · ' + r[3] + ' km</small></div>' +
+      '<div class="t-place">' + coordLabel(r[1],r[2]) + '</div>' +
+      '<div class="t-time">' + fmtTime(r[0], state.tz) + '</div></div></div>';
+  }).join('') : '<div class="top-item"><div class="t-info"><div class="t-time">当前筛选条件下无事件</div></div></div>';
+
+  chartsDirty = false;
+}
+
+/* ============================================================
+   8. 表格
+   ============================================================ */
+function pageSize(){ return isMobile() ? 12 : 20; }
+function orderedRows(){
+  var rows = filtered.slice();
+  if (state.sortDesc) rows.reverse();
+  return rows;
+}
+function renderTable(){
+  document.getElementById('thTime').textContent = '发震时间（' + (state.tz === 'bj' ? '北京' : 'UTC') + '）';
+  var rows = orderedRows();
+  var ps = pageSize(), totalPages = Math.max(1, Math.ceil(rows.length / ps));
+  if (state.page > totalPages) state.page = totalPages;
+  var start = (state.page - 1) * ps;
+  var slice = rows.slice(start, start + ps);
+  document.getElementById('tableCountSub').textContent = '共 ' + filtered.length.toLocaleString() + ' 个事件';
+  document.getElementById('tableBody').innerHTML = slice.length ? slice.map(function(r){
+    var mc = MAG_TEXT[magBinOf(r[4])];
+    return '<tr data-t="' + r[0] + '"><td class="c-time">' + fmtTime(r[0], state.tz) + '</td>' +
+      '<td>' + coordLabel(r[1],r[2]) + '</td>' +
+      '<td class="c-mag" style="color:' + mc + '">' + fmtNum(r[4],1) + '</td>' +
+      '<td class="c-depth">' + r[3] + '</td>' +
+      '<td class="c-ll">' + fmtNum(r[1],4) + '°</td>' +
+      '<td class="c-ll">' + fmtNum(r[2],4) + '°</td></tr>';
+  }).join('') : '<tr><td colspan="6" class="empty-row">当前筛选条件下没有符合条件的地震事件</td></tr>';
+  renderPagination(totalPages);
+}
+function renderPagination(totalPages){
+  var ps = pageSize();
+  var rows = filtered.length;
+  var html = '<span class="pg-info">第 ' + (rows ? ((state.page-1)*ps+1) + '–' + Math.min(state.page*ps, rows) : '0') +
+    ' 条 / 共 ' + rows.toLocaleString() + ' 条</span>';
+  html += '<button class="pg-btn" ' + (state.page===1?'disabled':'') + ' data-pg="prev">上一页</button>';
+  var win = [];
+  for (var p=1;p<=totalPages;p++){
+    if (p===1||p===totalPages||Math.abs(p-state.page)<=1) win.push(p);
+  }
+  var last = 0;
+  win.forEach(function(p){
+    if (p - last > 1) html += '<span style="color:var(--faint);padding:0 3px;">…</span>';
+    html += '<button class="pg-btn ' + (p===state.page?'active':'') + '" data-pg="' + p + '">' + p + '</button>';
+    last = p;
+  });
+  html += '<button class="pg-btn" ' + (state.page===totalPages?'disabled':'') + ' data-pg="next">下一页</button>';
+  document.getElementById('pagination').innerHTML = html;
+}
+
+/* ============================================================
+   9. 视图路由
+   ============================================================ */
+function switchView(view){
+  state.view = view;
+  document.querySelectorAll('.view-tab').forEach(function(b){ b.classList.toggle('active', b.dataset.view===view); });
+  document.querySelectorAll('.bn-item').forEach(function(b){ b.classList.toggle('active', b.dataset.view===view); });
+  document.querySelectorAll('.view-pane').forEach(function(p){
+    p.classList.toggle('active', p.id === 'pane-' + view);
+  });
+  if (view === 'map'){
+    if (map){ map.resize(); }
+  } else if (view === 'stats'){
+    if (chartsDirty) updateCharts();
+    setTimeout(function(){
+      Object.keys(charts).forEach(function(k){ charts[k].resize(); });
+    }, 60);
+  } else if (view === 'table'){
+    renderTable();
+  }
+  if (location.hash !== '#' + view) history.replaceState(null, '', '#' + view);
+}
+
+/* ============================================================
+   10. 控件联动
+   ============================================================ */
+/* 预设：全部 / 近30天 / 近90天 / 近1年 / 各年份 */
+function buildPresets(){
+  var maxDay = new Date(DATA_MAX + TZ_OFFSET.bj);
+  var maxY = maxDay.getUTCFullYear();
+  var minY = new Date(DATA_MIN + TZ_OFFSET.bj).getUTCFullYear();
+  var presets = [{key:'all', label:'全部'}];
+  [30,90,365].forEach(function(d){
+    presets.push({key:'last'+d, label:'近'+d+'天'});
+  });
+  for (var y=minY;y<=maxY;y++) presets.push({key:'y'+y, label:String(y)});
+  var html = presets.map(function(p){ return '<button class="chip" data-preset="' + p.key + '">' + p.label + '</button>'; }).join('');
+  document.getElementById('presetArea').innerHTML = html;
+  document.getElementById('mPresetArea').innerHTML = html;
+}
+function applyPreset(key){
+  var tz = state.tz;
+  if (key === 'all'){
+    state.startMs = DATA_MIN; state.endMs = DATA_MAX + 1;
+  } else if (key.indexOf('last') === 0){
+    var d = Number(key.replace('last',''));
+    state.endMs = DATA_MAX + 1;
+    state.startMs = state.endMs - d * 86400000;
+    if (state.startMs < DATA_MIN) state.startMs = DATA_MIN;
+  } else if (key.charAt(0) === 'y'){
+    var y = Number(key.slice(1));
+    state.startMs = dayInputToMs(y + '-01-01', tz, false);
+    state.endMs = dayInputToMs(y + '-12-31', tz, true);
+    if (state.endMs > DATA_MAX + 1) state.endMs = DATA_MAX + 1;
+  }
+  syncDateInputs();
+  markPresetActive();
+  applyFilters();
+}
+function markPresetActive(){
+  var activeKey = null;
+  var tz = state.tz;
+  var sDay = dayKey(state.startMs, tz), eDay = dayKey(state.endMs - 1, tz);
+  if (state.startMs === DATA_MIN && state.endMs === DATA_MAX + 1) activeKey = 'all';
+  else {
+    [30,90,365].forEach(function(d){
+      if (state.endMs === DATA_MAX + 1 && state.startMs === Math.max(DATA_MIN, DATA_MAX+1-d*86400000)) activeKey = 'last'+d;
+    });
+    var y = Number(sDay.slice(0,4));
+    if (sDay === y+'-01-01' && (eDay === y+'-12-31' || state.endMs === DATA_MAX+1)) activeKey = 'y'+y;
+  }
+  document.querySelectorAll('[data-preset]').forEach(function(b){
+    b.classList.toggle('active', b.dataset.preset === activeKey);
+  });
+}
+function syncDateInputs(){
+  var minDay = dayKey(DATA_MIN, state.tz), maxDay = dayKey(DATA_MAX, state.tz);
+  var sDay = dayKey(state.startMs, state.tz), eDay = dayKey(state.endMs - 1, state.tz);
+  ['dateStart','mDateStart'].forEach(function(id){
+    var el = document.getElementById(id);
+    el.min = minDay; el.max = maxDay; el.value = sDay;
+  });
+  ['dateEnd','mDateEnd'].forEach(function(id){
+    var el = document.getElementById(id);
+    el.min = minDay; el.max = maxDay; el.value = eDay;
+  });
+}
+function onDateChange(){
+  var s = document.getElementById(isMobile()?'mDateStart':'dateStart').value;
+  var e = document.getElementById(isMobile()?'mDateEnd':'dateEnd').value;
+  if (!s || !e) return;
+  state.startMs = dayInputToMs(s, state.tz, false);
+  state.endMs = dayInputToMs(e, state.tz, true);
+  if (state.endMs <= state.startMs){ syncDateInputs(); return; }
+  state.startMs = Math.max(DATA_MIN, state.startMs);
+  state.endMs = Math.min(DATA_MAX + 1, state.endMs);
+  syncDateInputs();
+  markPresetActive();
+  applyFilters();
+}
+function setTz(tz){
+  state.tz = tz;
+  document.querySelectorAll('[data-tz]').forEach(function(b){ b.classList.toggle('active', b.dataset.tz===tz); });
+  syncDateInputs();
+  markPresetActive();
+  applyFilters();
+}
+function resetAll(){
+  state.minMag = 3; state.maxDepth = null; state.search = '';
+  state.startMs = DATA_MIN; state.endMs = DATA_MAX + 1;
+  document.getElementById('minMag').value = '3';
+  document.getElementById('mMinMag').value = '3';
+  document.getElementById('maxDepth').value = '';
+  document.getElementById('mMaxDepth').value = '';
+  document.getElementById('search').value = '';
+  document.getElementById('mSearch').value = '';
+  setTz('bj');
+}
+
+/* 移动端抽屉 */
+function openSheet(){
+  document.getElementById('filterSheet').classList.add('open');
+  document.getElementById('sheetBackdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSheet(){
+  document.getElementById('filterSheet').classList.remove('open');
+  document.getElementById('sheetBackdrop').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ============================================================
+   11. 统一渲染入口
+   ============================================================ */
+function renderAll(){
+  renderKpi();
+  updateMap();
+  renderLegend();
+  chartsDirty = true;
+  if (state.view === 'stats') updateCharts();
+  if (state.view === 'table') renderTable();
+}
+
+/* 行点击：地图定位 */
+function locateEvent(t){
+  var rec = null;
+  for (var i=0;i<filtered.length;i++){ if(filtered[i][0]===t){ rec = filtered[i]; break; } }
+  if (!rec) return;
+  switchView('map');
+  var popup = {mag:rec[4],depth:rec[3],mt:rec[5],t:rec[0],zh:rec[7],en:rec[6],lat:rec[1],lon:rec[2]};
+  var go = function(){
+    map.flyTo({center:[rec[2],rec[1]], zoom:6.2, speed:1.1});
+    setTimeout(function(){ showPopup(popup, {lng:rec[2],lat:rec[1]}); }, 750);
+  };
+  if (map.loaded()) go();
+  else map.once('idle', go);
+}
+
+/* ============================================================
+   12. 启动
+   ============================================================ */
+function boot(){
+  buildPresets();
+  syncDateInputs();
+  markPresetActive();
+  initMap();
+  applyFilters();
+
+  /* 事件绑定 */
+  document.querySelectorAll('[data-view]').forEach(function(b){
+    b.addEventListener('click', function(){ switchView(b.dataset.view); });
+  });
+  document.querySelectorAll('[data-preset]').forEach(function(b){
+    b.addEventListener('click', function(){ applyPreset(b.dataset.preset); });
+  });
+  document.querySelectorAll('#basemapSwitch button').forEach(function(b){
+    b.addEventListener('click', function(){ switchBasemap(b.dataset.bm); });
+  });
+  document.querySelectorAll('[data-tz]').forEach(function(b){
+    b.addEventListener('click', function(){ setTz(b.dataset.tz); });
+  });
+  document.getElementById('dateStart').addEventListener('change', onDateChange);
+  document.getElementById('dateEnd').addEventListener('change', onDateChange);
+  document.getElementById('mDateStart').addEventListener('change', onDateChange);
+  document.getElementById('mDateEnd').addEventListener('change', onDateChange);
+  document.getElementById('minMag').addEventListener('change', function(e){
+    state.minMag = Number(e.target.value); document.getElementById('mMinMag').value = e.target.value; applyFilters();
+  });
+  document.getElementById('mMinMag').addEventListener('change', function(e){
+    state.minMag = Number(e.target.value); document.getElementById('minMag').value = e.target.value; applyFilters();
+  });
+  document.getElementById('maxDepth').addEventListener('change', function(e){
+    state.maxDepth = e.target.value === '' ? null : Number(e.target.value);
+    document.getElementById('mMaxDepth').value = e.target.value; applyFilters();
+  });
+  document.getElementById('mMaxDepth').addEventListener('change', function(e){
+    state.maxDepth = e.target.value === '' ? null : Number(e.target.value);
+    document.getElementById('maxDepth').value = e.target.value; applyFilters();
+  });
+  var onSearch = debounce(function(e){
+    state.search = e.target.value;
+    var other = document.getElementById(e.target.id === 'search' ? 'mSearch' : 'search');
+    other.value = e.target.value;
+    applyFilters();
+  }, 280);
+  document.getElementById('search').addEventListener('input', onSearch);
+  document.getElementById('mSearch').addEventListener('input', onSearch);
+  document.getElementById('resetBtn').addEventListener('click', resetAll);
+  document.getElementById('sortBtn').addEventListener('click', function(){
+    state.sortDesc = !state.sortDesc;
+    this.textContent = state.sortDesc ? '时间：新 → 旧' : '时间：旧 → 新';
+    renderTable();
+  });
+  document.getElementById('pagination').addEventListener('click', function(e){
+    var b = e.target.closest('[data-pg]');
+    if (!b || b.disabled) return;
+    var p = b.dataset.pg;
+    var ps = pageSize(), totalPages = Math.ceil(filtered.length / ps);
+    if (p === 'prev') state.page = Math.max(1, state.page-1);
+    else if (p === 'next') state.page = Math.min(totalPages, state.page+1);
+    else state.page = Number(p);
+    renderTable();
+  });
+  document.getElementById('tableBody').addEventListener('click', function(e){
+    var tr = e.target.closest('tr[data-t]');
+    if (tr) locateEvent(Number(tr.dataset.t));
+  });
+  document.getElementById('openSheet').addEventListener('click', openSheet);
+  document.getElementById('sheetClose').addEventListener('click', closeSheet);
+  document.getElementById('sheetBackdrop').addEventListener('click', closeSheet);
+  document.getElementById('sheetApply').addEventListener('click', function(){ closeSheet(); });
+  document.getElementById('legendToggle').addEventListener('click', function(){
+    var body = document.getElementById('legendBody');
+    var hidden = body.style.display === 'none';
+    body.style.display = hidden ? 'block' : 'none';
+    this.textContent = hidden ? '收起' : '展开';
+  });
+  window.addEventListener('hashchange', function(){
+    var v = location.hash.replace('#','');
+    if (['map','stats','table'].indexOf(v) >= 0) switchView(v);
+  });
+  if (location.hash && ['map','stats','table'].indexOf(location.hash.slice(1))>=0){
+    switchView(location.hash.slice(1));
+  }
+}
+boot();
+</script>
+</body>
+</html>

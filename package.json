@@ -1,0 +1,13 @@
+{
+  "name": "global-earthquake-visualization",
+  "version": "1.0.0",
+  "private": true,
+  "description": "1995-2026 全球地震交互地图（纯静态，Cloudflare Workers 静态资源托管）",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

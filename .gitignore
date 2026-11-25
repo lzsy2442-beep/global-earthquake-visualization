@@ -1,0 +1,28 @@
+# 原始数据：约 450 MB，可用 scripts/download_usgs_m3.py 重新抓取
+data/m3/
+data/usgs_m5_*.geojson
+
+# 分发包
+*.zip
+
+# 构建产物：根目录下的成品 HTML 与 site/ 中的同名页面重复，不重复提交
+/*.html
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node / Wrangler
+node_modules/
+.wrangler/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本地预览临时文件
+.edgeprofile*/
+*.log

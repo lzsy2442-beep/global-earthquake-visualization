@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+# 数据与二进制
+*.geojson -text
+*.bin -text
+*.png binary
+*.jpg binary
+*.xlsx binary
+
+# 生成物标记（便于 GitHub 语言统计忽略）
+site/*.html linguist-generated=false

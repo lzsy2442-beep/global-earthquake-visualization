@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "earthquake-visualization",
+  "compatibility_date": "2025-06-01",
+
+  // 纯静态站：没有 Worker 脚本，所有请求都由静态资源直接返回，不计入
+  // 免费版 10 万次/天的 Worker 请求额度。
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}

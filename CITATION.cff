@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "如果本项目对你的研究或教学有帮助，请按以下格式引用。"
+title: "全球地震可视化：1995–2026 全球地震活动交互地图"
+abstract: "基于 USGS 公开地震目录构建的交互式地图可视化，覆盖 1995–2026 年全球 M3.0 以上地震事件 605,435 条，支持时间、震级、深度多维筛选与统计分析。"
+type: software
+version: "1.0.0"
+date-released: "2026-11-25"
+url: "https://earthquakevisualization.top"
+repository-code: "https://github.com/<你的用户名>/global-earthquake-visualization"
+license: MIT
+keywords:
+  - earthquake
+  - seismicity
+  - data visualization
+  - USGS
+  - MapLibre
+  - 地震
+  - 可视化
+authors:
+  - family-names: "<你的姓>"
+    given-names: "<你的名>"
+    # 如需英文名，可改为 "Zhang" / "San"
