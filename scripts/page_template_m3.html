@@ -184,6 +184,26 @@ b,strong{font-weight:700;}
   border:0;background:transparent;font-size:12px;color:var(--muted);padding:6px 11px;border-radius:8px;cursor:pointer;
 }
 .basemap-switch button.active{background:var(--navy2);color:#fff;}
+/* 全屏按钮与全屏态 */
+.map-full-btn{
+  position:absolute;right:14px;top:56px;z-index:6;
+  width:38px;height:38px;padding:0;border:0;border-radius:10px;cursor:pointer;
+  background:rgba(255,255,255,.95);color:var(--navy2);
+  box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;
+  transition:color .15s,background .15s;
+}
+.map-full-btn:hover{color:var(--teal);background:#fff;}
+.map-full-btn svg{width:18px;height:18px;}
+.map-wrap.fs{
+  position:fixed;inset:0;width:100vw;height:100vh!important;min-height:0;
+  border-radius:0;z-index:9999;box-shadow:none;
+}
+.map-wrap.fs .map-full-btn{top:18px;right:18px;}
+/* 数据新鲜度提示 */
+.fresh-line{display:none;align-items:center;gap:7px;margin-top:10px;font-size:12px;color:var(--muted);}
+.fresh-line.on{display:flex;}
+.fresh-dot{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:#19b36b;box-shadow:0 0 0 3px rgba(25,179,107,.18);}
+.fresh-line b{color:var(--navy2);}
 .map-note{
   position:absolute;left:14px;top:14px;z-index:5;background:rgba(14,42,71,.88);color:#cfe2f2;
   font-size:11.5px;padding:7px 12px;border-radius:9px;max-width:260px;
@@ -331,6 +351,7 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
   .map-wrap{height:calc(100svh - 360px);min-height:340px;}
   .map-note{max-width:calc(100% - 28px);font-size:11px;}
   .basemap-switch{top:auto;bottom:14px;right:12px;}
+  .map-full-btn{top:auto;bottom:58px;right:12px;}
   .map-legend{left:12px;bottom:70px;padding:8px 11px;}
   .pop-card{width:252px;}
   .app-footer{padding:14px 14px 26px;}
@@ -479,11 +500,15 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
         <button data-bm="ter">地形</button>
         <button data-bm="gaode">高德</button>
       </div>
+      <button class="map-full-btn" id="mapFullBtn" title="全屏查看地图" aria-label="全屏查看地图">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
       <div class="map-legend" id="mapLegend">
         <div class="lg-title"><span>震级分级（M）</span><button id="legendToggle">收起</button></div>
         <div id="legendBody"></div>
       </div>
     </div>
+    <div class="fresh-line" id="freshLine"><span class="fresh-dot"></span><span id="freshText"></span></div>
   </section>
 
   <!-- ==========================================================
@@ -1541,6 +1566,7 @@ function renderPagination(totalPages){
    9. 视图路由
    ============================================================ */
 function switchView(view){
+  if (view !== 'map' && mapFs) toggleMapFull(false);
   state.view = view;
   document.querySelectorAll('.view-tab').forEach(function(b){ b.classList.toggle('active', b.dataset.view===view); });
   document.querySelectorAll('.bn-item').forEach(function(b){ b.classList.toggle('active', b.dataset.view===view); });
@@ -1696,6 +1722,73 @@ function locateEvent(t){
 }
 
 /* ============================================================
+   11.5 全屏地图 & 最新数据同步
+   ============================================================ */
+var mapFs = false;
+var FS_ENTER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
+var FS_EXIT  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>';
+
+function toggleMapFull(force){
+  var wrap = document.querySelector('.map-wrap');
+  if (!wrap) return;
+  mapFs = (typeof force === 'boolean') ? force : !mapFs;
+  wrap.classList.toggle('fs', mapFs);
+  document.body.style.overflow = mapFs ? 'hidden' : '';
+  var btn = document.getElementById('mapFullBtn');
+  if (btn){
+    btn.innerHTML = mapFs ? FS_EXIT : FS_ENTER;
+    btn.title = mapFs ? '退出全屏（Esc）' : '全屏查看地图';
+  }
+  var refit = function(){ try { map.resize(); drawOverlay(); } catch(e){} };
+  setTimeout(refit, 60);
+  setTimeout(refit, 320);
+}
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape' && mapFs) toggleMapFull(false);
+});
+window.addEventListener('orientationchange', function(){
+  if (mapFs) setTimeout(function(){ try{ map.resize(); drawOverlay(); }catch(e){} }, 260);
+});
+
+/* 最新数据：页面加载后拉取站点自带的 recent 文件，只并入比内联数据更新的记录 */
+var RECENT_URL = '/data/recent-m3.json';
+function fmtFreshTime(ms){
+  var d = new Date(ms + TZ_OFFSET.bj);
+  return d.getUTCFullYear() + '-' + pad(d.getUTCMonth()+1) + '-' + pad(d.getUTCDate()) +
+         ' ' + pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes());
+}
+function showFresh(updatedMs, added){
+  var line = document.getElementById('freshLine'), txt = document.getElementById('freshText');
+  if (!line || !txt) return;
+  txt.innerHTML = added > 0
+    ? '已并入 <b>' + added + '</b> 条最新地震 · 数据更新于 ' + fmtFreshTime(updatedMs) + '（北京时间）'
+    : '数据已是最新 · 最近同步 ' + fmtFreshTime(updatedMs) + '（北京时间）';
+  line.classList.add('on');
+}
+function loadRecent(){
+  if (!window.fetch) return;
+  fetch(RECENT_URL, {cache:'no-store'}).then(function(r){
+    return r.ok ? r.json() : null;
+  }).then(function(pack){
+    if (!pack || !pack.events || !pack.events.length) return;
+    var oldMax = DATA_MAX, added = 0;
+    for (var i=0;i<pack.events.length;i++){
+      var row = pack.events[i];
+      if (!row || !isFinite(row[0]) || row[0] <= oldMax) continue;
+      EQ_DATA.push(row);
+      added++;
+    }
+    if (added > 0){
+      DATA_MAX = EQ_DATA[EQ_DATA.length-1][0];
+      if (state.endMs >= oldMax + 1) state.endMs = DATA_MAX + 1;
+      applyFilters();
+      try { syncDateInputs(); markPresetActive(); } catch(e){}
+    }
+    showFresh(pack.updated || DATA_MAX, added);
+  }).catch(function(){ /* 文件缺失或离线时静默降级，不影响原有功能 */ });
+}
+
+/* ============================================================
    12. 启动
    ============================================================ */
 function boot(){
@@ -1715,6 +1808,7 @@ function boot(){
   document.querySelectorAll('#basemapSwitch button').forEach(function(b){
     b.addEventListener('click', function(){ switchBasemap(b.dataset.bm); });
   });
+  document.getElementById('mapFullBtn').addEventListener('click', function(){ toggleMapFull(); });
   document.querySelectorAll('[data-tz]').forEach(function(b){
     b.addEventListener('click', function(){ setTz(b.dataset.tz); });
   });
@@ -1781,6 +1875,7 @@ function boot(){
   if (location.hash && ['map','stats','table'].indexOf(location.hash.slice(1))>=0){
     switchView(location.hash.slice(1));
   }
+  loadRecent();
 }
 boot();
 </script>

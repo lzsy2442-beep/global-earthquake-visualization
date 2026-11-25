@@ -25,4 +25,8 @@ Thumbs.db
 
 # 本地预览临时文件
 .edgeprofile*/
+.edgep*/
+.e[0-9]*/
+preview-fs.png
+preview-full1.png
 *.log
