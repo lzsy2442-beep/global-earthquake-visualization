@@ -23,6 +23,7 @@
   Access-Control-Allow-Origin: *
 
 /data/*.bin
+  Content-Type: application/json
   Cache-Control: public, max-age=604800
   Access-Control-Allow-Origin: *
 
