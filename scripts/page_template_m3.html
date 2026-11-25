@@ -204,10 +204,35 @@ b,strong{font-weight:700;}
 .fresh-line.on{display:flex;}
 .fresh-dot{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:#19b36b;box-shadow:0 0 0 3px rgba(25,179,107,.18);}
 .fresh-line b{color:var(--navy2);}
+/* 移动端浏览器工具栏适配：dvh 支持时优先用动态视口高度 */
+@supports (height: 100dvh){
+  .map-wrap.fs{height:100dvh!important;}
+}
+/* 数据加载遮罩 */
+.data-loader{
+  display:none;position:fixed;inset:0;z-index:99999;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,#0b2440,#143a5e 60%,#1d4e7a);color:#fff;transition:opacity .3s;
+}
+.data-loader.on{display:flex;}
+.data-loader.done{opacity:0;pointer-events:none;}
+.dl-card{width:min(340px,86vw);text-align:center;}
+.dl-spin{
+  width:36px;height:36px;margin:0 auto 16px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.18);border-top-color:var(--teal-light);
+  animation:dlspin .9s linear infinite;
+}
+@keyframes dlspin{to{transform:rotate(360deg);}}
+.dl-title{font-size:14px;color:#cfe2f2;letter-spacing:.5px;}
+.dl-track{height:6px;border-radius:6px;background:rgba(255,255,255,.15);margin:14px 0 10px;overflow:hidden;}
+.dl-fill{display:block;height:100%;width:2%;border-radius:6px;background:linear-gradient(90deg,var(--teal),var(--teal-light));transition:width .2s;}
+.dl-note{font-size:12px;color:#8fb3cf;min-height:18px;}
+.dl-note a{color:var(--teal-light);}
 .map-note{
   position:absolute;left:14px;top:14px;z-index:5;background:rgba(14,42,71,.88);color:#cfe2f2;
   font-size:11.5px;padding:7px 12px;border-radius:9px;max-width:260px;
+  transition:opacity .45s;
 }
+.map-note.fade{opacity:0;pointer-events:none;}
 
 /* ============================================================
    统计视图
@@ -348,8 +373,9 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
   .kpi{padding:13px 14px;}
   .kpi .k-value{font-size:23px;}
   .chart-grid{grid-template-columns:1fr;gap:12px;}
-  .map-wrap{height:calc(100svh - 360px);min-height:340px;}
-  .map-note{max-width:calc(100% - 28px);font-size:11px;}
+  .map-wrap{height:calc(100svh - 306px);min-height:320px;}
+  .fresh-line{font-size:11.5px;margin-top:8px;}
+  .map-note{max-width:calc(100% - 28px);font-size:11px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
   .basemap-switch{top:auto;bottom:14px;right:12px;}
   .map-full-btn{top:auto;bottom:58px;right:12px;}
   .map-legend{left:12px;bottom:70px;padding:8px 11px;}
@@ -364,6 +390,16 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
 </style>
 </head>
 <body>
+
+<!-- 数据加载遮罩（仅网页版外置数据时显示） -->
+<div class="data-loader" id="dataLoader">
+  <div class="dl-card">
+    <div class="dl-spin"></div>
+    <div class="dl-title">正在加载地震数据…</div>
+    <div class="dl-track"><i class="dl-fill" id="dlFill"></i></div>
+    <div class="dl-note" id="dlNote"></div>
+  </div>
+</div>
 
 <!-- ============================================================
      顶部标题栏
@@ -842,6 +878,10 @@ function glyphProtocol(params){
 /* 内联二进制包 {b:base64, mt:震级类型表, n:条数, stride:步长}，解码为统一记录数组。
    为控制体积，本版不含中英文地名，位置以经纬度呈现。 */
 var EQ_PACK = __EQ_DATA__;
+/* 网页版二进制元信息（条数、步长、震级类型表）；单文件离线版为 null，走内联 Base64 */
+var M3_META = __M3_META__;
+/* 网页版外置数据地址；离线版为空字符串 */
+var DATA_URL = "__DATA_URL__";
 function decodeEq(p){
   var s = atob(p.b), u8 = new Uint8Array(s.length);
   for (var k=0;k<s.length;k++) u8[k] = s.charCodeAt(k);
@@ -858,12 +898,28 @@ function decodeEq(p){
   }
   return out;
 }
-var EQ_DATA = decodeEq(EQ_PACK);
+/* 直接解析 ArrayBuffer，跳过 Base64 与逐字符转换（省内存、省时间） */
+function decodeBuffer(ab){
+  var dv = new DataView(ab), n = M3_META.n, st = M3_META.stride, mt = M3_META.mt, out = new Array(n);
+  for (var j=0;j<n;j++){
+    var o = j*st;
+    var t = dv.getUint32(o,true) + dv.getUint16(o+4,true)*4294967296;
+    var la = dv.getInt32(o+6,true)/10000;
+    var ln = dv.getInt32(o+10,true)/10000;
+    var dpr = dv.getInt16(o+14,true);
+    var dp = dpr === -32768 ? null : dpr/10;
+    var mg = (dv.getUint8(o+16)+30)/10;
+    out[j] = [t, la, ln, dp, mg, mt[dv.getUint8(o+17)], '', ''];
+  }
+  return out;
+}
+var EQ_DATA = EQ_PACK ? decodeEq(EQ_PACK) : null;
 /* 全点状模式：true=所有地震直接以单点标注（不聚类）；false=屏幕空间聚类 */
 var ALL_POINTS_MODE = __ALL_POINTS_MODE__;
 /* 记录: [t_ms, lat, lon, depth_km, mag, magType, en, zh] */
 
-var DATA_MIN = EQ_DATA[0][0], DATA_MAX = EQ_DATA[EQ_DATA.length - 1][0];
+var DATA_MIN = EQ_DATA ? EQ_DATA[0][0] : Date.UTC(1995,0,1);
+var DATA_MAX = EQ_DATA ? EQ_DATA[EQ_DATA.length - 1][0] : Date.now();
 var MAG_BINS = [
   {lo:3.0, hi:4.0, color:'#2a9d8f', label:'3.0 – 3.9'},
   {lo:4.0, hi:5.0, color:'#ffd98a', label:'4.0 – 4.9'},
@@ -1809,6 +1865,11 @@ function boot(){
     b.addEventListener('click', function(){ switchBasemap(b.dataset.bm); });
   });
   document.getElementById('mapFullBtn').addEventListener('click', function(){ toggleMapFull(); });
+  /* 移动端：操作提示 8 秒后淡出，避免长期遮挡地图 */
+  if (isMobile()){
+    var mapNote = document.querySelector('.map-note');
+    if (mapNote) setTimeout(function(){ mapNote.classList.add('fade'); }, 8000);
+  }
   document.querySelectorAll('[data-tz]').forEach(function(b){
     b.addEventListener('click', function(){ setTz(b.dataset.tz); });
   });
@@ -1877,7 +1938,60 @@ function boot(){
   }
   loadRecent();
 }
-boot();
+
+/* ============================================================
+   13. 外置数据加载（网页版）
+   ============================================================ */
+function showLoader(){
+  var el = document.getElementById('dataLoader');
+  if (el){ el.classList.add('on'); el.classList.remove('done'); }
+}
+function hideLoader(){
+  var el = document.getElementById('dataLoader');
+  if (!el) return;
+  el.classList.add('done');
+  setTimeout(function(){ el.classList.remove('on'); }, 320);
+}
+function fmtBytes(n){
+  return n > 1048576 ? (n/1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n/1024)) + ' KB';
+}
+function setLoader(pct, note){
+  var f = document.getElementById('dlFill'), n = document.getElementById('dlNote');
+  if (f) f.style.width = Math.max(2, Math.min(100, pct)) + '%';
+  if (n) n.textContent = (pct > 0 ? pct + '%  ' : '') + (note || '');
+}
+function loaderFail(msg){
+  var t = document.querySelector('.dl-title'), n = document.getElementById('dlNote');
+  if (t) t.textContent = '数据加载失败';
+  if (n) n.innerHTML = msg + ' · <a href="javascript:location.reload()">点此重试</a>';
+}
+function loadRemoteData(){
+  showLoader();
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', DATA_URL, true);
+  xhr.responseType = /\.bin(\?|$)/.test(DATA_URL) ? 'arraybuffer' : 'json';
+  xhr.onprogress = function(e){
+    if (e.lengthComputable) setLoader(Math.round(e.loaded/e.total*100), fmtBytes(e.loaded) + ' / ' + fmtBytes(e.total));
+    else setLoader(0, fmtBytes(e.loaded));
+  };
+  xhr.onload = function(){
+    if (xhr.status < 200 || xhr.status >= 300){ loaderFail('HTTP ' + xhr.status); return; }
+    var payload = xhr.response;
+    if (!payload){ loaderFail('响应为空'); return; }
+    EQ_DATA = (payload.byteLength !== undefined) ? decodeBuffer(payload) : payload;
+    if (!EQ_DATA || !EQ_DATA.length){ loaderFail('数据格式异常'); return; }
+    DATA_MIN = EQ_DATA[0][0];
+    DATA_MAX = EQ_DATA[EQ_DATA.length - 1][0];
+    state.startMs = DATA_MIN;
+    state.endMs = DATA_MAX + 1;
+    hideLoader();
+    boot();
+  };
+  xhr.onerror = function(){ loaderFail('网络错误'); };
+  xhr.send();
+}
+
+if (DATA_URL){ loadRemoteData(); } else { boot(); }
 </script>
 </body>
 </html>

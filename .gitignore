@@ -1,4 +1,4 @@
-# 原始数据：约 450 MB，可用 scripts/download_usgs_m3.py 重新抓取
+﻿# 原始数据：约 450 MB，可用 scripts/download_usgs_m3.py 重新抓取
 data/m3/
 data/usgs_m5_*.geojson
 
@@ -30,3 +30,9 @@ Thumbs.db
 preview-fs.png
 preview-full1.png
 *.log
+
+# 本地测试产物
+.cdpprof*/
+dom-*.txt
+site/_sync-*.html
+shot-*.png

@@ -13,7 +13,9 @@ with open(DATA, encoding="utf-8") as f:
     data = f.read()
 
 assert "__EQ_DATA__" in tpl and "__ALL_POINTS_MODE__" in tpl
-html = tpl.replace("__EQ_DATA__", data).replace("__ALL_POINTS_MODE__", "true")
+html = (tpl.replace("__EQ_DATA__", data)
+           .replace("__ALL_POINTS_MODE__", "true")
+           .replace('"__DATA_URL__"', '""'))
 with open(OUT, "w", encoding="utf-8") as f:
     f.write(html)
 

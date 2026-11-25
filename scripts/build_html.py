@@ -14,7 +14,9 @@ with open(DATA, encoding="utf-8") as f:
 
 token = "__EQ_DATA__"
 assert token in tpl, "placeholder missing"
-html = tpl.replace(token, data).replace("__ALL_POINTS_MODE__", "false")
+html = (tpl.replace(token, data)
+           .replace("__ALL_POINTS_MODE__", "false")
+           .replace('"__DATA_URL__"', '""'))
 with open(OUT, "w", encoding="utf-8") as f:
     f.write(html)
 
