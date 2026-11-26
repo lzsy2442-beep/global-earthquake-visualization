@@ -36,3 +36,6 @@ preview-full1.png
 dom-*.txt
 site/_sync-*.html
 shot-*.png
+
+# 本地宣传物料，不入库
+/地震可视化网站上线海报.png
