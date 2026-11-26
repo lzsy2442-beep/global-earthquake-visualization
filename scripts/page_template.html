@@ -1765,12 +1765,14 @@ function showFresh(updatedMs, added){
     : '数据已是最新 · 最近同步 ' + fmtFreshTime(updatedMs) + '（北京时间）';
   line.classList.add('on');
 }
-function loadRecent(){
+function loadRecent(attempt){
   if (!window.fetch) return;
+  attempt = attempt || 0;
   fetch(RECENT_URL, {cache:'no-store'}).then(function(r){
-    return r.ok ? r.json() : null;
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
   }).then(function(pack){
-    if (!pack || !pack.events || !pack.events.length) return;
+    if (!pack || !pack.events || !pack.events.length) throw new Error('empty');
     var oldMax = DATA_MAX, added = 0;
     for (var i=0;i<pack.events.length;i++){
       var row = pack.events[i];
@@ -1785,7 +1787,21 @@ function loadRecent(){
       try { syncDateInputs(); markPresetActive(); } catch(e){}
     }
     showFresh(pack.updated || DATA_MAX, added);
-  }).catch(function(){ /* 文件缺失或离线时静默降级，不影响原有功能 */ });
+  }).catch(function(){
+    // 失败时先重试两次，仍失败则显式提示，避免用户以为看到的是最新数据
+    if (attempt < 2) setTimeout(function(){ loadRecent(attempt + 1); }, 1200);
+    else showFreshFail();
+  });
+}
+function showFreshFail(){
+  var line = document.getElementById('freshLine'), txt = document.getElementById('freshText');
+  if (!line || !txt) return;
+  var d = new Date(DATA_MAX + TZ_OFFSET.bj);
+  var day = d.getUTCFullYear() + '-' + pad(d.getUTCMonth()+1) + '-' + pad(d.getUTCDate());
+  txt.textContent = '最新数据同步失败，当前显示至 ' + day + '，刷新页面可重试';
+  var dot = line.querySelector('.fresh-dot');
+  if (dot){ dot.style.background = '#e8833a'; dot.style.boxShadow = '0 0 0 3px rgba(232,131,58,.2)'; }
+  line.classList.add('on');
 }
 
 /* ============================================================
