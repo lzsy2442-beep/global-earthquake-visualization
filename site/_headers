@@ -12,16 +12,22 @@
 /
   Cache-Control: public, max-age=300, must-revalidate
 
-# 每日同步文件：半小时
-/data/recent-*.json
-  Cache-Control: public, max-age=1800
-  Access-Control-Allow-Origin: *
-
 # 主数据集：一周（文件名固定，不能 immutable，否则重建后用户拿不到新版）
 /data/*.json
   Cache-Control: public, max-age=604800
   Access-Control-Allow-Origin: *
 
+# 每日同步文件：半小时（覆盖上面的通用规则）
+/data/recent-*.json
+  ! Cache-Control
+  Cache-Control: public, max-age=1800
+
+# 站点公告：5 分钟，方便发完立刻生效
+/data/notice.json
+  ! Cache-Control
+  Cache-Control: public, max-age=300
+
+# 二进制数据：标成可压缩类型，否则 Cloudflare 会裸传（octet-stream 不压缩）
 /data/*.bin
   Content-Type: application/json
   Cache-Control: public, max-age=604800

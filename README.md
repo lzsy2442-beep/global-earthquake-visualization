@@ -30,6 +30,7 @@
 - **底图切换**：天地图矢量 / 天地图地形 / 高德
 - **全屏地图**：一键铺满整个屏幕，`Esc` 或再点一次退出，进出都会重算画布尺寸
 - **每日自动同步**：GitHub Actions 每天 09:17（北京时间）抓取 USGS 最新地震，提交后由 Cloudflare 自动重新部署；页面加载时并入比内联数据更新的记录，地图下方显示同步条数
+- **站点公告**：首页右上角「公告」入口，有未读公告时显示红点；内容来自 `site/data/notice.json`，用 `scripts/add_notice.py` 追加即可发布
 - **移动端适配**：响应式布局与触控事件
 
 ## 技术要点
@@ -54,12 +55,15 @@
 │   ├── m3-points.html         3 级以上 · 全量点状版
 │   ├── 404.html               自定义错误页
 │   ├── download/              离线单文件版
+│   ├── data/                  外置数据（M5 JSON / M3 分段二进制 / 每日增量 / 公告）
 │   ├── robots.txt · sitemap.xml · _headers
 ├── scripts/                   数据抓取、打包、构建与地名处理
 │   ├── download_usgs.py       M5 下载（按月分块，超限自动二分）
 │   ├── download_usgs_m3.py    M3 下载（可重入）
 │   ├── build_dataset.py       M5 紧凑 JSON
 │   ├── build_m3_pack.py       M3 二进制 Base64 包
+│   ├── build_web.py           网页版：外壳 + 外置数据（M3 分段）
+│   ├── add_notice.py          发布站点公告
 │   ├── build_html.py / build_html_allpoints.py / build_html_m3.py
 │   ├── page_template.html / page_template_m3.html
 │   └── place_translate.py     中文地名词典
@@ -117,6 +121,20 @@ python scripts/build_html_m3.py
 ```
 
 > 脚本里的路径是绝对路径（`D:\LZSY\地震汇编`），换机器运行时需改成实际路径。
+
+## 发布公告
+
+首页右上角「公告」的内容来自 `site/data/notice.json`，用脚本追加：
+
+```bash
+python scripts/add_notice.py --type feature --title "标题" --body "正文"
+python scripts/add_notice.py --list          # 查看现有公告
+python scripts/add_notice.py --remove <id>   # 删除某条
+```
+
+`--type` 可选 `feature`（新功能）/ `data`（数据）/ `maintenance`（维护）/ `other`（其他），决定标签颜色。
+
+改完提交推送即可，Cloudflare 会自动部署；公告接口缓存 5 分钟，所以最多 5 分钟后全站可见。有未读公告时首页按钮会显示红点，用户点开一次后红点消失（记在浏览器本地）。
 
 ## 部署
 
