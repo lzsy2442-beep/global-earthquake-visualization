@@ -153,6 +153,8 @@ b,strong{font-weight:700;}
   font-family:inherit;border-radius:12px;padding:0;overflow:hidden;
   box-shadow:0 12px 34px rgba(10,30,52,.3);
 }
+/* 详情弹窗必须压在震点画布（#eqCanvas z-index:5）之上 */
+.maplibregl-popup{z-index:30;}
 .pop-card{width:280px;}
 .pop-head{
   background:linear-gradient(120deg,var(--navy),var(--navy3));color:#fff;padding:11px 15px;
