@@ -954,6 +954,23 @@ var chartsDirty = true;
 /* ============================================================
    4. 筛选
    ============================================================ */
+/* 关键词的归属扩展：搜「中国」时把台湾等地的记录一并纳入
+   （地名本身写的是「台湾 恒春东南 83 公里」，不含「中国」二字） */
+var KW_EXTRA = {
+  '中国': ['台湾', 'taiwan'],
+  'china': ['taiwan', '台湾']
+};
+function kwMatch(rec, kw){
+  var hay = ((rec[6] || '') + ' ' + (rec[7] || '')).toLowerCase();
+  if (hay.indexOf(kw) >= 0) return true;
+  var extra = KW_EXTRA[kw];
+  if (extra){
+    for (var i=0;i<extra.length;i++){
+      if (hay.indexOf(extra[i]) >= 0) return true;
+    }
+  }
+  return false;
+}
 function applyFilters(){
   var kw = state.search.trim().toLowerCase();
   var out = [];
@@ -962,7 +979,7 @@ function applyFilters(){
     if (r[0] < state.startMs || r[0] >= state.endMs) continue;
     if (r[4] < state.minMag) continue;
     if (state.maxDepth != null && r[3] > state.maxDepth) continue;
-    if (kw && r[6].toLowerCase().indexOf(kw) < 0 && r[7].toLowerCase().indexOf(kw) < 0) continue;
+    if (kw && !kwMatch(r, kw)) continue;
     out.push(r);
   }
   filtered = out;
