@@ -103,7 +103,7 @@ def main():
     year_min = datetime.datetime.fromtimestamp(min_t / 1000, datetime.UTC).year
     label = "加载 %d–%d 完整历史（约 %.1f MB）" % (year_min, year_recent - 1, len(older) / 1048576.0)
 
-    meta = {"n": n_all, "stride": stride, "mt": pack["mt"]}
+    meta = {"n": n_all, "stride": stride, "mt": pack["mt"], "rt": pack["rt"]}
     jobs = [
         ("m5-cluster.html", tpl_m5, "/data/eq-m5.json", False, None, "", ""),
         ("m5-points.html", tpl_m5, "/data/eq-m5.json", True, None, "", ""),

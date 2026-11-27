@@ -475,8 +475,8 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
         </select>
       </div>
       <div class="field" style="flex:1;min-width:180px;">
-        <label>位置（本版以经纬度显示，无地名检索）</label>
-        <input type="text" id="search" disabled placeholder="无地名数据，可在弹窗查看经纬度" style="opacity:.6;cursor:not-allowed;">
+        <label>位置检索（国家 / 地区）</label>
+        <input type="text" id="search" placeholder="如：日本、台湾、Indonesia…">
       </div>
       <div class="field">
         <label>时间制式</label>
@@ -688,8 +688,8 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
         <option value="600">≤ 600 km</option>
       </select>
     </div>
-    <div class="sheet-section-title">位置（无地名数据，以经纬度显示）</div>
-    <div class="field"><input type="text" id="mSearch" disabled placeholder="无地名检索，可在弹窗查看经纬度" style="opacity:.6;cursor:not-allowed;"></div>
+    <div class="sheet-section-title">位置检索（国家 / 地区）</div>
+    <div class="field"><input type="text" id="mSearch" placeholder="如：日本、台湾、Indonesia…"></div>
     <div class="sheet-section-title">时间制式</div>
     <div class="tz-toggle" style="align-self:flex-start;">
       <button data-tz="bj" class="active">北京时间</button>
@@ -907,23 +907,16 @@ var ARCHIVE_LABEL = "__ARCHIVE_LABEL__";
 function decodeEq(p){
   var s = atob(p.b), u8 = new Uint8Array(s.length);
   for (var k=0;k<s.length;k++) u8[k] = s.charCodeAt(k);
-  var dv = new DataView(u8.buffer), n = p.n, st = p.stride, out = new Array(n);
-  for (var j=0;j<n;j++){
-    var o = j*st;
-    var t = dv.getUint32(o,true) + dv.getUint16(o+4,true)*4294967296;
-    var la = dv.getInt32(o+6,true)/10000;
-    var ln = dv.getInt32(o+10,true)/10000;
-    var dpr = dv.getInt16(o+14,true);
-    var dp = dpr === -32768 ? null : dpr/10;
-    var mg = (dv.getUint8(o+16)+30)/10;
-    out[j] = [t, la, ln, dp, mg, p.mt[dv.getUint8(o+17)], '', ''];
-  }
-  return out;
+  return decodeBuffer(u8.buffer, p.stride, p.mt, p.rt);
 }
 /* 直接解析 ArrayBuffer，跳过 Base64 与逐字符转换（省内存、省时间）。
-   记录条数由字节长度推导，因此同一解码函数可用于「近期」与「历史」两个分段。 */
-function decodeBuffer(ab, stride, mt){
-  var st = stride || M3_META.stride, table = mt || M3_META.mt;
+   记录条数由字节长度推导，因此同一解码函数可用于「近期」与「历史」两个分段。
+   stride ≥ 20 时最后 2 字节是地区编号，指向 rt 对照表（国家/地区级地名）。 */
+function decodeBuffer(ab, stride, mt, rt){
+  var st = stride || (M3_META && M3_META.stride) || 20;
+  var table = mt || (M3_META && M3_META.mt) || [];
+  var regions = rt || (M3_META && M3_META.rt) || [];
+  var hasRegion = st >= 20;
   var n = Math.floor(ab.byteLength / st), dv = new DataView(ab), out = new Array(n);
   for (var j=0;j<n;j++){
     var o = j*st;
@@ -933,7 +926,8 @@ function decodeBuffer(ab, stride, mt){
     var dpr = dv.getInt16(o+14,true);
     var dp = dpr === -32768 ? null : dpr/10;
     var mg = (dv.getUint8(o+16)+30)/10;
-    out[j] = [t, la, ln, dp, mg, table[dv.getUint8(o+17)], '', ''];
+    var rg = hasRegion ? regions[dv.getUint16(o+18,true)] : null;
+    out[j] = [t, la, ln, dp, mg, table[dv.getUint8(o+17)], rg ? rg[0] : '', rg ? rg[1] : ''];
   }
   return out;
 }
@@ -1440,6 +1434,7 @@ function showPopup(p, lngLat){
     '<div class="pop-row"><span class="pk">北京时间</span><span class="pv">' + fmtTime(t,'bj') + '</span></div>' +
     '<div class="pop-row"><span class="pk">UTC</span><span class="pv">' + fmtTime(t,'utc') + '</span></div>' +
     '<div class="pop-row"><span class="pk">震中位置</span><span class="pv">' + coordLabel(p.lat,p.lon) + '</span></div>' +
+    '<div class="pop-row"><span class="pk">地区</span><span class="pv">' + (p.zh || p.en || '—') + '</span></div>' +
     '<div class="pop-row"><span class="pk">震源深度</span><span class="pv">' + p.depth + ' km</span></div>' +
     '</div></div>';
   var legendEl = document.getElementById('mapLegend');
