@@ -21,7 +21,7 @@ import time
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NOTICE = os.path.join(BASE, "site", "data", "notice.json")
-TYPES = ("feature", "data", "maintenance", "fix", "other")
+TYPES = ("feature", "data", "maintenance", "fix", "info", "other")
 MAX_ITEMS = 30
 
 
