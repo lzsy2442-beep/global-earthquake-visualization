@@ -1851,7 +1851,7 @@ function loadRecent(attempt){
     var oldMax = DATA_MAX, added = 0;
     for (var i=0;i<pack.events.length;i++){
       var row = pack.events[i];
-      if (!row || !isFinite(row[0]) || row[0] <= oldMax) continue;
+      if (!row || !isFinite(row[0]) || row[0] <= oldMax || row[0] > Date.now() + 366*86400000) continue;
       EQ_DATA.push(row);
       added++;
     }
@@ -2055,6 +2055,12 @@ function hideLoader(){
 function fmtBytes(n){
   return n > 1048576 ? (n/1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n/1024)) + ' KB';
 }
+/* 时间戳合理性检查：格式/缓存不匹配时解码结果会跑到几百上千年后，直接拦下 */
+function dataSane(arr){
+  var lo = Date.UTC(1900,0,1), hi = Date.now() + 366*86400000;
+  var a = arr[0][0], b = arr[arr.length-1][0];
+  return typeof a === 'number' && typeof b === 'number' && a >= lo && b <= hi;
+}
 function setLoader(pct, note){
   var f = document.getElementById('dlFill'), n = document.getElementById('dlNote');
   if (f) f.style.width = Math.max(2, Math.min(100, pct)) + '%';
@@ -2080,6 +2086,7 @@ function loadRemoteData(){
     if (!payload){ loaderFail('响应为空'); return; }
     EQ_DATA = (payload.byteLength !== undefined) ? decodeBuffer(payload) : payload;
     if (!EQ_DATA || !EQ_DATA.length){ loaderFail('数据格式异常'); return; }
+    if (!dataSane(EQ_DATA)){ loaderFail('数据与页面版本不匹配，请按 Ctrl + F5 强制刷新'); return; }
     DATA_MIN = EQ_DATA[0][0];
     DATA_MAX = EQ_DATA[EQ_DATA.length - 1][0];
     state.startMs = DATA_MIN;

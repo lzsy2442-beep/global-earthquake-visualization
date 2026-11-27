@@ -22,6 +22,7 @@ import os
 import json
 import base64
 import datetime
+import hashlib
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(BASE, "site")
@@ -64,6 +65,12 @@ def render(tpl, data_url, all_points, m3_meta=None, archive_url="", archive_labe
     return html
 
 
+def file_ver(path):
+    """给数据文件打版本号：内容变则 URL 变，绕开浏览器/边缘缓存。"""
+    with open(path, "rb") as f:
+        return hashlib.md5(f.read()).hexdigest()[:8]
+
+
 def main():
     os.makedirs(OUTDATA, exist_ok=True)
 
@@ -104,10 +111,16 @@ def main():
     label = "加载 %d–%d 完整历史（约 %.1f MB）" % (year_min, year_recent - 1, len(older) / 1048576.0)
 
     meta = {"n": n_all, "stride": stride, "mt": pack["mt"], "rt": pack["rt"]}
+
+    # 数据 URL 带内容指纹：格式或内容一变就换 URL，避免旧缓存被新页面按新格式解析
+    m5_url = "/data/eq-m5.json?v=" + file_ver(os.path.join(OUTDATA, "eq-m5.json"))
+    recent_url = "/data/m3-recent.bin?v=" + file_ver(os.path.join(OUTDATA, "m3-recent.bin"))
+    archive_url = "/data/m3-archive.bin?v=" + file_ver(os.path.join(OUTDATA, "m3-archive.bin"))
+
     jobs = [
-        ("m5-cluster.html", tpl_m5, "/data/eq-m5.json", False, None, "", ""),
-        ("m5-points.html", tpl_m5, "/data/eq-m5.json", True, None, "", ""),
-        ("m3-points.html", tpl_m3, "/data/m3-recent.bin", True, meta, "/data/m3-archive.bin", label),
+        ("m5-cluster.html", tpl_m5, m5_url, False, None, "", ""),
+        ("m5-points.html", tpl_m5, m5_url, True, None, "", ""),
+        ("m3-points.html", tpl_m3, recent_url, True, meta, archive_url, label),
     ]
     for name, tpl, url, all_points, m3_meta, arc_url, arc_label in jobs:
         html = render(tpl, url, all_points, m3_meta, arc_url, arc_label)
