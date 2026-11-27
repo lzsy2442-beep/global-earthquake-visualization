@@ -467,7 +467,7 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
         <input type="text" id="search" placeholder="如：日本、Tonga、台湾…">
       </div>
       <div class="field">
-        <label>地名语言</label>
+        <label>语言 / Language</label>
         <div class="tz-toggle">
           <button data-lang="zh" class="active">中文</button>
           <button data-lang="en">EN</button>
@@ -678,7 +678,7 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
     </div>
     <div class="sheet-section-title">位置检索</div>
     <div class="field"><input type="text" id="mSearch" placeholder="中文 / 英文关键词"></div>
-    <div class="sheet-section-title">地名语言</div>
+    <div class="sheet-section-title">语言 / Language</div>
     <div class="tz-toggle" style="align-self:flex-start;">
       <button data-lang="zh" class="active">中文</button>
       <button data-lang="en">EN</button>
@@ -946,6 +946,7 @@ function setLang(lang){
     b.classList.toggle('active', b.dataset.lang === state.lang);
   });
   try { localStorage.setItem('eqviz.lang', state.lang); } catch(e){}
+  applyLabelLang();
   applyFilters();
 }
 function magBinOf(m){
@@ -1043,13 +1044,13 @@ var BASEMAPS = {
   tdt: {
     layers: [
       {tiles:tdtTiles("vec"), tileSize:256, attribution:'天地图'},
-      {tiles:tdtTiles("cva"), tileSize:256, attribution:'天地图'}
+      {annotation:true, tileSize:256, attribution:'天地图'}
     ]
   },
   ter: {
     layers: [
       {tiles:tdtTiles("ter"), tileSize:256, attribution:'天地图'},
-      {tiles:tdtTiles("cva"), tileSize:256, attribution:'天地图'}
+      {annotation:true, tileSize:256, attribution:'天地图'}
     ]
   },
   gaode: {
@@ -1064,12 +1065,32 @@ var BASEMAPS = {
 };
 var map, currentBasemap = 'tdt';
 
+/* 天地图英文注记（eva）需要 key 单独开通；未开通时自动回退中文注记，避免地图变空白 */
+var evaOK = null;
+function probeEva(){
+  var t = tdtTiles('eva')[0].replace('{z}', '3').replace('{y}', '2').replace('{x}', '6');
+  var img = new Image();
+  img.onload = function(){ evaOK = true; if (state.lang === 'en') applyLabelLang(); };
+  img.onerror = function(){ evaOK = false; };
+  img.src = t;
+}
+function labelLayerName(){ return (state.lang === 'en' && evaOK) ? 'eva' : 'cva'; }
+/* 中/英文注记切换：天地图 cva=中文注记，eva=英文注记 */
+function applyLabelLang(){
+  if (!map) return;
+  var tiles = tdtTiles(labelLayerName());
+  ['bm-tdt-1','bm-ter-1'].forEach(function(id){
+    var src = map.getSource(id);
+    if (src && typeof src.setTiles === 'function') src.setTiles(tiles);
+  });
+}
 function buildStyle(){
   var sources = {}, layers = [];
   Object.keys(BASEMAPS).forEach(function(k){
     BASEMAPS[k].layers.forEach(function(ly, i){
       var id = 'bm-' + k + '-' + i;
-      sources[id] = {type:'raster', tiles:ly.tiles, tileSize:ly.tileSize, attribution:ly.attribution};
+      var tiles = ly.annotation ? tdtTiles(labelLayerName()) : ly.tiles;
+      sources[id] = {type:'raster', tiles:tiles, tileSize:ly.tileSize, attribution:ly.attribution};
       layers.push({id:id, type:'raster', source:id,
         layout:{visibility: k === currentBasemap ? 'visible':'none'}});
     });
@@ -1335,6 +1356,7 @@ function initMap(){
     map.addControl(new maplibregl.NavigationControl({showCompass:false, visualizePitch:false}), 'bottom-right');
   }
   map.on('load', drawOverlay);
+  map.on('load', applyLabelLang);
   map.on('render', drawOverlay);
   map.on('resize', drawOverlay);
 
@@ -1846,6 +1868,7 @@ function boot(){
     var savedLang = localStorage.getItem('eqviz.lang');
     if (savedLang === 'en' || savedLang === 'zh') state.lang = savedLang;
   } catch(e){}
+  probeEva();
   buildPresets();
   syncDateInputs();
   markPresetActive();
