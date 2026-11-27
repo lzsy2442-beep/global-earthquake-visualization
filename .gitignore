@@ -43,3 +43,6 @@ shot-*.png
 # 演示稿生成过程中的私人物料，不入库
 *.importable.pptx
 site/download/eqviz-m3-offline.html
+
+# M3 打包中间文件（由 build_m3_pack.py 生成，站点只需 site/data/*.bin）
+data/m3_pack.json

@@ -20,9 +20,15 @@ _PREFIX = re.compile(
 )
 _SUFFIX = re.compile(r"\s+region$", re.I)
 
+# 归并后的别名：台湾省不是地区级条目，统一并入中国
+_ALIAS = {
+    "Taiwan": "China",
+    "Taiwan region": "China",
+}
+
 
 def region_of(place):
-    """'83 km ESE of Hengchun, Taiwan' -> 'Taiwan'；'Japan region' -> 'Japan'。"""
+    """'83 km ESE of Hengchun, Taiwan' -> 'China'；'Japan region' -> 'Japan'。"""
     s = (place or "").strip()
     if not s:
         return ""
@@ -34,7 +40,7 @@ def region_of(place):
         s = s.split(", ")[-1].strip()
         s = _PREFIX.sub("", s).strip()
     s = _SUFFIX.sub("", s).strip()
-    return s
+    return _ALIAS.get(s, s)
 
 
 # 补充译名：COUNTRY_CN 没覆盖到的常见海域、洋中脊、岛屿
