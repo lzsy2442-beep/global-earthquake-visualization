@@ -200,7 +200,8 @@ b,strong{font-weight:700;}
   position:fixed;inset:0;width:100vw;height:100vh!important;min-height:0;
   border-radius:0;z-index:9999;box-shadow:none;
 }
-.map-wrap.fs .map-full-btn{top:18px;right:18px;}
+/* 全屏时按钮仍排在底图切换下方，避免压住「矢量/地形/高德」 */
+.map-wrap.fs .map-full-btn{top:64px;right:18px;}
 /* 数据新鲜度提示 */
 .fresh-line{display:none;align-items:center;gap:7px;margin-top:10px;font-size:12px;color:var(--muted);}
 .fresh-line.on{display:flex;}
@@ -466,6 +467,13 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
         <input type="text" id="search" placeholder="如：日本、Tonga、台湾…">
       </div>
       <div class="field">
+        <label>地名语言</label>
+        <div class="tz-toggle">
+          <button data-lang="zh" class="active">中文</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </div>
+      <div class="field">
         <label>时间制式</label>
         <div class="tz-toggle">
           <button data-tz="bj" class="active">北京时间</button>
@@ -670,6 +678,11 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
     </div>
     <div class="sheet-section-title">位置检索</div>
     <div class="field"><input type="text" id="mSearch" placeholder="中文 / 英文关键词"></div>
+    <div class="sheet-section-title">地名语言</div>
+    <div class="tz-toggle" style="align-self:flex-start;">
+      <button data-lang="zh" class="active">中文</button>
+      <button data-lang="en">EN</button>
+    </div>
     <div class="sheet-section-title">时间制式</div>
     <div class="tz-toggle" style="align-self:flex-start;">
       <button data-tz="bj" class="active">北京时间</button>
@@ -920,6 +933,21 @@ function fmtTime(ms, tz){
 function fmtNum(v, digits){
   return v == null ? '–' : Number(v).toFixed(digits);
 }
+/* 地名按当前语言取值，另一个语言作为副行 */
+function placeOf(rec){
+  return state.lang === 'en' ? (rec[6] || rec[7] || '') : (rec[7] || rec[6] || '');
+}
+function placeAlt(rec){
+  return state.lang === 'en' ? (rec[7] || '') : (rec[6] || '');
+}
+function setLang(lang){
+  state.lang = (lang === 'en') ? 'en' : 'zh';
+  document.querySelectorAll('[data-lang]').forEach(function(b){
+    b.classList.toggle('active', b.dataset.lang === state.lang);
+  });
+  try { localStorage.setItem('eqviz.lang', state.lang); } catch(e){}
+  applyFilters();
+}
 function magBinOf(m){
   for (var i=0;i<MAG_BINS.length;i++){ if(m >= MAG_BINS[i].lo && m < MAG_BINS[i].hi) return i; }
   return MAG_BINS.length - 1;
@@ -944,7 +972,7 @@ var isMobile = function(){ return window.matchMedia('(max-width:820px)').matches
 var state = {
   startMs: DATA_MIN, endMs: DATA_MAX + 1,
   minMag: 5.0, maxDepth: null, search: '',
-  tz: 'bj', view: 'map', sortDesc: true, page: 1
+  tz: 'bj', lang: 'zh', view: 'map', sortDesc: true, page: 1
 };
 var filtered = [];
 var charts = {};
@@ -988,7 +1016,7 @@ function renderKpi(){
       if (r[4] >= 7) major++;
     }
     document.getElementById('kpiMax').innerHTML = fmtNum(maxR[4],1);
-    document.getElementById('kpiMaxSub').textContent = maxR[7];
+    document.getElementById('kpiMaxSub').textContent = placeOf(maxR);
     document.getElementById('kpiMajor').innerHTML = major + '<small>次</small>';
     document.getElementById('kpiMajorSub').textContent = major ? '占比 ' + (major/n*100).toFixed(2) + '%' : '本区间无 7 级以上地震';
     document.getElementById('kpiDepth').innerHTML = (sumD/n).toFixed(1) + '<small>km</small>';
@@ -1352,6 +1380,10 @@ window.addEventListener('pageshow', function(){
 
 function showPopup(p, lngLat){
   var t = p.t;
+  var isEn = state.lang === 'en';
+  var mainPlace = isEn ? (p.en || p.zh || '—') : (p.zh || p.en || '—');
+  var altLabel = isEn ? '中文位置' : 'USGS 原文';
+  var altVal = isEn ? (p.zh || '—') : (p.en || '—');
   var html = '<div class="pop-card"><div class="pop-head">' +
     '<span class="mag-badge">' + fmtNum(p.mag,1) + '</span>' +
     '<div><div style="font-weight:700;font-size:13.5px;">地震详情</div><div class="mt">震级类型 ' + p.mt + '</div></div></div>' +
@@ -1361,8 +1393,8 @@ function showPopup(p, lngLat){
     '<div class="pop-row"><span class="pk">纬度</span><span class="pv">' + fmtNum(p.lat,4) + '°</span></div>' +
     '<div class="pop-row"><span class="pk">经度</span><span class="pv">' + fmtNum(p.lon,4) + '°</span></div>' +
     '<div class="pop-row"><span class="pk">震源深度</span><span class="pv">' + p.depth + ' km</span></div>' +
-    '<div class="pop-row"><span class="pk">中文位置</span><span class="pv">' + p.zh + '</span></div>' +
-    '<div class="pop-row"><span class="pk">USGS 原文</span><span class="pv">' + p.en + '</span></div>' +
+    '<div class="pop-row"><span class="pk">' + (isEn ? '位置' : '中文位置') + '</span><span class="pv">' + mainPlace + '</span></div>' +
+    '<div class="pop-row"><span class="pk">' + altLabel + '</span><span class="pv">' + altVal + '</span></div>' +
     '</div></div>';
   var legendEl = document.getElementById('mapLegend');
   var popup = new maplibregl.Popup({offset:18, closeButton:true, maxWidth:'320px'})
@@ -1509,7 +1541,7 @@ function updateCharts(){
   document.getElementById('topList').innerHTML = n ? top.map(function(r, i){
     return '<div class="top-item"><span class="rank">' + (i+1) + '</span><div class="t-info">' +
       '<div class="t-mag">M ' + fmtNum(r[4],1) + '<small>' + r[5] + ' · ' + r[3] + ' km</small></div>' +
-      '<div class="t-place">' + r[7] + '</div>' +
+      '<div class="t-place">' + placeOf(r) + '</div>' +
       '<div class="t-time">' + fmtTime(r[0], state.tz) + '</div></div></div>';
   }).join('') : '<div class="top-item"><div class="t-info"><div class="t-time">当前筛选条件下无事件</div></div></div>';
 
@@ -1536,7 +1568,7 @@ function renderTable(){
   document.getElementById('tableBody').innerHTML = slice.length ? slice.map(function(r){
     var mc = MAG_TEXT[magBinOf(r[4])];
     return '<tr data-t="' + r[0] + '"><td class="c-time">' + fmtTime(r[0], state.tz) + '</td>' +
-      '<td>' + r[7] + '<div style="color:var(--faint);font-size:11px;margin-top:2px;">' + r[6] + '</div></td>' +
+      '<td>' + placeOf(r) + '<div style="color:var(--faint);font-size:11px;margin-top:2px;">' + placeAlt(r) + '</div></td>' +
       '<td class="c-mag" style="color:' + mc + '">' + fmtNum(r[4],1) + '</td>' +
       '<td class="c-depth">' + r[3] + '</td>' +
       '<td class="c-ll">' + fmtNum(r[1],4) + '°</td>' +
@@ -1810,6 +1842,10 @@ function showFreshFail(){
    12. 启动
    ============================================================ */
 function boot(){
+  try {
+    var savedLang = localStorage.getItem('eqviz.lang');
+    if (savedLang === 'en' || savedLang === 'zh') state.lang = savedLang;
+  } catch(e){}
   buildPresets();
   syncDateInputs();
   markPresetActive();
@@ -1834,6 +1870,10 @@ function boot(){
   }
   document.querySelectorAll('[data-tz]').forEach(function(b){
     b.addEventListener('click', function(){ setTz(b.dataset.tz); });
+  });
+  document.querySelectorAll('[data-lang]').forEach(function(b){
+    b.classList.toggle('active', b.dataset.lang === state.lang);
+    b.addEventListener('click', function(){ setLang(b.dataset.lang); });
   });
   document.getElementById('dateStart').addEventListener('change', onDateChange);
   document.getElementById('dateEnd').addEventListener('change', onDateChange);
