@@ -200,7 +200,6 @@ b,strong{font-weight:700;}
   position:fixed;inset:0;width:100vw;height:100vh!important;min-height:0;
   border-radius:0;z-index:9999;box-shadow:none;
 }
-/* 全屏时按钮仍排在底图切换下方，避免压住「矢量/地形/高德」 */
 .map-wrap.fs .map-full-btn{top:64px;right:18px;}
 /* 数据新鲜度提示 */
 .fresh-line{display:none;align-items:center;gap:7px;margin-top:10px;font-size:12px;color:var(--muted);}
@@ -480,13 +479,6 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
         <input type="text" id="search" disabled placeholder="无地名数据，可在弹窗查看经纬度" style="opacity:.6;cursor:not-allowed;">
       </div>
       <div class="field">
-        <label>语言 / Language</label>
-        <div class="tz-toggle">
-          <button data-lang="zh" class="active">中文</button>
-          <button data-lang="en">EN</button>
-        </div>
-      </div>
-      <div class="field">
         <label>时间制式</label>
         <div class="tz-toggle">
           <button data-tz="bj" class="active">北京时间</button>
@@ -698,11 +690,6 @@ table.eq-table{width:100%;border-collapse:collapse;min-width:760px;}
     </div>
     <div class="sheet-section-title">位置（无地名数据，以经纬度显示）</div>
     <div class="field"><input type="text" id="mSearch" disabled placeholder="无地名检索，可在弹窗查看经纬度" style="opacity:.6;cursor:not-allowed;"></div>
-    <div class="sheet-section-title">语言 / Language</div>
-    <div class="tz-toggle" style="align-self:flex-start;">
-      <button data-lang="zh" class="active">中文</button>
-      <button data-lang="en">EN</button>
-    </div>
     <div class="sheet-section-title">时间制式</div>
     <div class="tz-toggle" style="align-self:flex-start;">
       <button data-tz="bj" class="active">北京时间</button>
@@ -1020,7 +1007,7 @@ var isMobile = function(){ return window.matchMedia('(max-width:820px)').matches
 var state = {
   startMs: DATA_MIN, endMs: DATA_MAX + 1,
   minMag: 3.0, maxDepth: null, search: '',
-  tz: 'bj', lang: 'zh', view: 'map', sortDesc: true, page: 1
+  tz: 'bj', view: 'map', sortDesc: true, page: 1
 };
 var filtered = [];
 var charts = {};
@@ -1095,13 +1082,13 @@ var BASEMAPS = {
   tdt: {
     layers: [
       {tiles:tdtTiles("vec"), tileSize:256, attribution:'天地图'},
-      {annotation:true, tileSize:256, attribution:'天地图'}
+      {tiles:tdtTiles("cva"), tileSize:256, attribution:'天地图'}
     ]
   },
   ter: {
     layers: [
       {tiles:tdtTiles("ter"), tileSize:256, attribution:'天地图'},
-      {annotation:true, tileSize:256, attribution:'天地图'}
+      {tiles:tdtTiles("cva"), tileSize:256, attribution:'天地图'}
     ]
   },
   gaode: {
@@ -1116,40 +1103,12 @@ var BASEMAPS = {
 };
 var map, currentBasemap = 'tdt';
 
-/* 天地图英文注记（eva）需要 key 单独开通；未开通时自动回退中文注记，避免地图变空白 */
-var evaOK = null;
-function probeEva(){
-  var t = tdtTiles('eva')[0].replace('{z}', '3').replace('{y}', '2').replace('{x}', '6');
-  var img = new Image();
-  img.onload = function(){ evaOK = true; if (state.lang === 'en') applyLabelLang(); };
-  img.onerror = function(){ evaOK = false; };
-  img.src = t;
-}
-function labelLayerName(){ return (state.lang === 'en' && evaOK) ? 'eva' : 'cva'; }
-/* 中/英文注记切换：天地图 cva=中文注记，eva=英文注记 */
-function applyLabelLang(){
-  if (!map) return;
-  var tiles = tdtTiles(labelLayerName());
-  ['bm-tdt-1','bm-ter-1'].forEach(function(id){
-    var src = map.getSource(id);
-    if (src && typeof src.setTiles === 'function') src.setTiles(tiles);
-  });
-}
-function setLang(lang){
-  state.lang = (lang === 'en') ? 'en' : 'zh';
-  document.querySelectorAll('[data-lang]').forEach(function(b){
-    b.classList.toggle('active', b.dataset.lang === state.lang);
-  });
-  try { localStorage.setItem('eqviz.lang', state.lang); } catch(e){}
-  applyLabelLang();
-}
 function buildStyle(){
   var sources = {}, layers = [];
   Object.keys(BASEMAPS).forEach(function(k){
     BASEMAPS[k].layers.forEach(function(ly, i){
       var id = 'bm-' + k + '-' + i;
-      var tiles = ly.annotation ? tdtTiles(labelLayerName()) : ly.tiles;
-      sources[id] = {type:'raster', tiles:tiles, tileSize:ly.tileSize, attribution:ly.attribution};
+      sources[id] = {type:'raster', tiles:ly.tiles, tileSize:ly.tileSize, attribution:ly.attribution};
       layers.push({id:id, type:'raster', source:id,
         layout:{visibility: k === currentBasemap ? 'visible':'none'}});
     });
@@ -1425,7 +1384,6 @@ function initMap(){
     map.addControl(new maplibregl.NavigationControl({showCompass:false, visualizePitch:false}), 'bottom-right');
   }
   map.on('load', drawOverlay);
-  map.on('load', applyLabelLang);
   map.on('render', drawOverlay);
   map.on('resize', drawOverlay);
 
@@ -1930,11 +1888,6 @@ function showFreshFail(){
    12. 启动
    ============================================================ */
 function boot(){
-  try {
-    var savedLang = localStorage.getItem('eqviz.lang');
-    if (savedLang === 'en' || savedLang === 'zh') state.lang = savedLang;
-  } catch(e){}
-  probeEva();
   buildPresets();
   syncDateInputs();
   markPresetActive();
@@ -1969,10 +1922,6 @@ function boot(){
   }
   document.querySelectorAll('[data-tz]').forEach(function(b){
     b.addEventListener('click', function(){ setTz(b.dataset.tz); });
-  });
-  document.querySelectorAll('[data-lang]').forEach(function(b){
-    b.classList.toggle('active', b.dataset.lang === state.lang);
-    b.addEventListener('click', function(){ setLang(b.dataset.lang); });
   });
   document.getElementById('dateStart').addEventListener('change', onDateChange);
   document.getElementById('dateEnd').addEventListener('change', onDateChange);
