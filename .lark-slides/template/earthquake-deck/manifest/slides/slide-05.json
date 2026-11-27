@@ -1,0 +1,169 @@
+{
+  "slide_num": 5,
+  "role": "content",
+  "slide_id": "pqN",
+  "local_xml_path": "source-slides\\slide-05.xml",
+  "shell_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.3889,
+      "width": 2.3611,
+      "height": 0.4722,
+      "text": ""
+    },
+    {
+      "id": 4,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.0556,
+      "width": 0.6944,
+      "height": 0.0556,
+      "text": ""
+    },
+    {
+      "id": 5,
+      "type": "AUTO_SHAPE",
+      "left": 0.9722,
+      "top": 2.5694,
+      "width": 0.6667,
+      "height": 0.6667,
+      "text": ""
+    },
+    {
+      "id": 9,
+      "type": "LINE",
+      "left": 3.5278,
+      "top": 2.8694,
+      "width": 0.7722,
+      "height": 0.0056,
+      "text": ""
+    },
+    {
+      "id": 10,
+      "type": "AUTO_SHAPE",
+      "left": 5.0,
+      "top": 2.5694,
+      "width": 0.6667,
+      "height": 0.6667,
+      "text": ""
+    },
+    {
+      "id": 15,
+      "type": "AUTO_SHAPE",
+      "left": 9.0278,
+      "top": 2.5694,
+      "width": 0.6667,
+      "height": 0.6667,
+      "text": ""
+    },
+    {
+      "id": 19,
+      "type": "LINE",
+      "left": 7.3778,
+      "top": 2.875,
+      "width": 0.7722,
+      "height": 0.0056,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.25,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": "聊天三步法：怎么开口、怎么听、怎么回应"
+    },
+    {
+      "id": 6,
+      "type": "TEXT_BOX",
+      "left": 0.9854,
+      "top": 2.6549,
+      "width": 0.6667,
+      "height": 0.4444,
+      "text": "1"
+    },
+    {
+      "id": 7,
+      "type": "TEXT_BOX",
+      "left": 1.8056,
+      "top": 2.6389,
+      "width": 2.5,
+      "height": 0.5278,
+      "text": "怎么开口"
+    },
+    {
+      "id": 8,
+      "type": "TEXT_BOX",
+      "left": 0.9944,
+      "top": 3.4722,
+      "width": 3.4458,
+      "height": 2.8903,
+      "text": "尽量寻找自然的机会\n比如吃饭、回宿舍路上\n从具体小事切入：\n“ 最近XX课挺难的吧？”\n“ 看你这几天好像没睡好？”"
+    },
+    {
+      "id": 11,
+      "type": "TEXT_BOX",
+      "left": 5.0,
+      "top": 2.6549,
+      "width": 0.6667,
+      "height": 0.4444,
+      "text": "2"
+    },
+    {
+      "id": 12,
+      "type": "TEXT_BOX",
+      "left": 5.8333,
+      "top": 2.6389,
+      "width": 2.5,
+      "height": 0.5278,
+      "text": "怎么听"
+    },
+    {
+      "id": 13,
+      "type": "TEXT_BOX",
+      "left": 5.0222,
+      "top": 3.4722,
+      "width": 3.4458,
+      "height": 2.8903,
+      "text": "放下手机，看着他的眼睛\n不打断、不评判、不说教\n用“ 嗯 ” “ 然后呢 ” 引导TA继续说\n偶尔可以复述一下：\n“ 你是说……是吗？”"
+    },
+    {
+      "id": 16,
+      "type": "TEXT_BOX",
+      "left": 9.0278,
+      "top": 2.6549,
+      "width": 0.6667,
+      "height": 0.4444,
+      "text": "3"
+    },
+    {
+      "id": 17,
+      "type": "TEXT_BOX",
+      "left": 9.8611,
+      "top": 2.6389,
+      "width": 2.5,
+      "height": 0.5278,
+      "text": "怎么回应"
+    },
+    {
+      "id": 18,
+      "type": "TEXT_BOX",
+      "left": 9.05,
+      "top": 3.4722,
+      "width": 3.7326,
+      "height": 2.8903,
+      "text": "先接情绪，再聊事情\n别说“ 这有什么大不了的”\n要说“ 这事换我我也难受”\n“ 你愿意说出来就已经很棒了”"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image2.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

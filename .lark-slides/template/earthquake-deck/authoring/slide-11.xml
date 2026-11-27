@@ -1,0 +1,97 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgba(248, 250, 253, 1)"/>
+    </fill>
+  </style>
+  <data>
+    <img src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28"/>
+    <!-- citation: [20][21] -->
+    <shape width="860" height="42" topLeftX="60" topLeftY="86" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="28" fontFamily="Microsoft YaHei">AI 大模型与 Vibe Coding：网站是怎么“聊”出来的</span></strong></p>
+      </content>
+    </shape>
+    <shape width="50" height="4" topLeftX="60" topLeftY="140" type="round-rect">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+
+    <shape width="880" height="86" topLeftX="40" topLeftY="160" type="round-rect">
+      <fill><fillColor color="rgba(236, 243, 252, 1)"/></fill>
+    </shape>
+    <shape width="840" height="26" topLeftX="60" topLeftY="170" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="17" fontFamily="Microsoft YaHei">什么是 Vibe Coding（氛围编程）</span></strong></p>
+      </content>
+    </shape>
+    <shape width="840" height="46" topLeftX="60" topLeftY="198" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="multiple:1.4" marginRight="0"><span color="rgba(70, 70, 70, 1)" fontSize="15" fontFamily="Microsoft YaHei">用自然语言向大模型描述需求、由模型生成代码，人负责引导、测试与反馈；2025 年 2 月由 Karpathy 提出，韦氏、柯林斯相继收录（柯林斯 2025 年度词汇）</span></p>
+      </content>
+    </shape>
+
+    <!-- 左：AI承担 -->
+    <shape width="430" height="158" topLeftX="40" topLeftY="262" type="rect">
+      <fill><fillColor color="rgba(255, 255, 255, 1)"/></fill>
+      <border color="rgba(220, 228, 240, 1)" width="1"/>
+    </shape>
+    <shape width="430" height="40" topLeftX="40" topLeftY="262" type="rect">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+    <shape width="390" height="28" topLeftX="60" topLeftY="268" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="18" fontFamily="Microsoft YaHei">AI 大模型承担</span></strong></p>
+      </content>
+    </shape>
+    <!-- citation: [23] -->
+    <shape width="390" height="104" topLeftX="60" topLeftY="312" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">代码生成与补全</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">报错调试与性能优化</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">数据处理脚本、文档解释</span></p>
+      </content>
+    </shape>
+
+    <!-- 右：人把关 -->
+    <shape width="430" height="158" topLeftX="490" topLeftY="262" type="rect">
+      <fill><fillColor color="rgba(255, 255, 255, 1)"/></fill>
+      <border color="rgba(220, 228, 240, 1)" width="1"/>
+    </shape>
+    <shape width="430" height="40" topLeftX="490" topLeftY="262" type="rect">
+      <fill><fillColor color="rgba(30, 58, 110, 1)"/></fill>
+    </shape>
+    <shape width="390" height="28" topLeftX="510" topLeftY="268" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="18" fontFamily="Microsoft YaHei">人来把关</span></strong></p>
+      </content>
+    </shape>
+    <!-- citation: [22][23] -->
+    <shape width="390" height="104" topLeftX="510" topLeftY="312" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">需求设计与技术选型</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">地理与地震专业判断</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">逐行理解、测试与核验</span></p>
+      </content>
+    </shape>
+
+    <!-- citation: [22] -->
+    <shape width="880" height="62" topLeftX="40" topLeftY="434" type="round-rect">
+      <fill><fillColor color="rgba(228, 238, 251, 1)"/></fill>
+      <border color="rgba(190, 210, 235, 1)" width="1"/>
+    </shape>
+    <shape width="840" height="46" topLeftX="60" topLeftY="442" type="text">
+      <content textAlign="center">
+        <p textAlign="center" lineSpacing="multiple:1.4" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="15" fontFamily="Microsoft YaHei">AI 生成的代码可能含错误或安全隐患；理解、审查与验证不可省，</span></strong></p>
+        <p textAlign="center" lineSpacing="multiple:1.4" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="15" fontFamily="Microsoft YaHei">专业判断不能外包给模型</span></strong></p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">可能有同学会问，这个网站代码量不小，是怎么写出来的？这里就要提到一个2025年的热词，Vibe Coding，氛围编程。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">它是计算机科学家Karpathy在2025年2月提出的，简单说就是用自然语言向大模型描述需求，让模型生成代码，人负责引导、测试和反馈，这个词还被柯林斯评为了2025年度词汇。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">在这个项目里，大模型承担了代码生成、报错调试、数据处理脚本这些工作；但需求设计、技术选型，尤其是地理和地震的专业判断，还有逐行理解和核验，都是我自己来做的。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">我想特别强调，AI生成的代码可能有错误甚至安全隐患，所以理解、审查和验证一步都不能省，专业判断是不能外包给模型的。把AI当成得力助手，而不是甩手不管，这才是负责任的用法。</span></p>
+    </content>
+  </note>
+</slide>

@@ -1,0 +1,151 @@
+{
+  "slide_num": 10,
+  "role": "content",
+  "slide_id": "pqp",
+  "local_xml_path": "source-slides\\slide-10.xml",
+  "shell_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.3889,
+      "width": 2.3611,
+      "height": 0.4722,
+      "text": ""
+    },
+    {
+      "id": 4,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.0556,
+      "width": 0.6944,
+      "height": 0.0556,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.25,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": "注意自我关怀，别把自己累垮"
+    },
+    {
+      "id": 6,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 3.0556,
+      "width": 3.6111,
+      "height": 3.1944,
+      "text": ""
+    },
+    {
+      "id": 7,
+      "type": "TEXT_BOX",
+      "left": 1.1806,
+      "top": 3.4028,
+      "width": 2.9167,
+      "height": 0.5556,
+      "text": "心委不是救世主"
+    },
+    {
+      "id": 8,
+      "type": "TEXT_BOX",
+      "left": 1.0618,
+      "top": 4.3306,
+      "width": 2.9167,
+      "height": 1.9444,
+      "text": "我们只能力所能及地为同学们排忧疏闷\n保持敏感、真诚倾听、及时求助"
+    },
+    {
+      "id": 9,
+      "type": "AUTO_SHAPE",
+      "left": 4.8611,
+      "top": 3.0556,
+      "width": 3.6111,
+      "height": 3.1944,
+      "text": ""
+    },
+    {
+      "id": 10,
+      "type": "TEXT_BOX",
+      "left": 5.2083,
+      "top": 3.4028,
+      "width": 2.9167,
+      "height": 0.5556,
+      "text": "解决问题有老师"
+    },
+    {
+      "id": 11,
+      "type": "TEXT_BOX",
+      "left": 5.0896,
+      "top": 3.9417,
+      "width": 2.9167,
+      "height": 1.9444,
+      "text": "专业的事交给专业的人\n心委任务是发现和陪伴，不是治疗"
+    },
+    {
+      "id": 12,
+      "type": "AUTO_SHAPE",
+      "left": 8.8889,
+      "top": 3.0556,
+      "width": 3.6111,
+      "height": 3.1944,
+      "text": ""
+    },
+    {
+      "id": 13,
+      "type": "TEXT_BOX",
+      "left": 9.2361,
+      "top": 3.4028,
+      "width": 2.9167,
+      "height": 0.5556,
+      "text": "心委也可以求助"
+    },
+    {
+      "id": 14,
+      "type": "TEXT_BOX",
+      "left": 9.1174,
+      "top": 4.1083,
+      "width": 3.0521,
+      "height": 1.9444,
+      "text": "觉得被影响了，可以寻求辅导员、心理中心老师的帮助\n注意对自我的情绪关怀，不做情绪的垃圾桶"
+    },
+    {
+      "id": 15,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 6.5278,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": ""
+    },
+    {
+      "id": 16,
+      "type": "TEXT_BOX",
+      "left": 1.1111,
+      "top": 6.6167,
+      "width": 11.1111,
+      "height": 0.5278,
+      "text": "先照顾好你自己，才能更好地陪伴同学"
+    },
+    {
+      "id": 17,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 2.3611,
+      "width": 11.6667,
+      "height": 0.4167,
+      "text": "不做情绪的垃圾桶"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image2.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

@@ -1,0 +1,101 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgba(248, 250, 253, 1)"/>
+    </fill>
+  </style>
+  <data>
+    <img src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28"/>
+    <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="30" fontFamily="Microsoft YaHei">三种视图：按数据量选择阅读方式</span></strong></p>
+      </content>
+    </shape>
+    <shape width="50" height="4" topLeftX="60" topLeftY="148" type="round-rect">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+
+    <shape width="260" height="290" topLeftX="60" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(255, 255, 255, 1)"/></fill>
+      <border color="rgba(220, 228, 240, 1)" width="1"/>
+    </shape>
+    <shape width="260" height="7" topLeftX="60" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(30, 58, 110, 1)"/></fill>
+    </shape>
+    <shape width="220" height="40" topLeftX="82" topLeftY="202" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">M5.0+ 聚类视图</span></strong></p>
+      </content>
+    </shape>
+    <shape width="220" height="30" topLeftX="82" topLeftY="246" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="17" fontFamily="Microsoft YaHei">屏幕空间聚类</span></strong></p>
+      </content>
+    </shape>
+    <shape width="240" height="160" topLeftX="70" topLeftY="285" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="fixed:34" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">放大后自动拆分为单点</span></p>
+        <p textAlign="left" lineSpacing="fixed:34" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">适合总览全球强震带格局</span></p>
+        <p textAlign="left" lineSpacing="fixed:34" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">54,724 条 · 6.93 MB</span></p>
+      </content>
+    </shape>
+
+    <shape width="260" height="290" topLeftX="350" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(255, 255, 255, 1)"/></fill>
+      <border color="rgba(220, 228, 240, 1)" width="1"/>
+    </shape>
+    <shape width="260" height="7" topLeftX="350" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+    <shape width="220" height="40" topLeftX="372" topLeftY="202" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">M5.0+ 全点状</span></strong></p>
+      </content>
+    </shape>
+    <shape width="220" height="30" topLeftX="372" topLeftY="246" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="17" fontFamily="Microsoft YaHei">不聚合的点状图</span></strong></p>
+      </content>
+    </shape>
+    <shape width="240" height="160" topLeftX="360" topLeftY="285" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="fixed:34" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">每个弧圈代表一次地震</span></p>
+        <p textAlign="left" lineSpacing="fixed:34" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">高震级始终在最上层</span></p>
+        <p textAlign="left" lineSpacing="fixed:34" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">54,724 条 · 6.93 MB</span></p>
+      </content>
+    </shape>
+
+    <shape width="260" height="290" topLeftX="640" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(255, 255, 255, 1)"/></fill>
+      <border color="rgba(220, 228, 240, 1)" width="1"/>
+    </shape>
+    <shape width="260" height="7" topLeftX="640" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(100, 150, 210, 1)"/></fill>
+    </shape>
+    <shape width="220" height="40" topLeftX="662" topLeftY="202" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">M3.0+ 全量</span></strong></p>
+      </content>
+    </shape>
+    <shape width="220" height="30" topLeftX="662" topLeftY="246" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="17" fontFamily="Microsoft YaHei">60 万条全量数据</span></strong></p>
+      </content>
+    </shape>
+    <shape width="240" height="160" topLeftX="650" topLeftY="285" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="fixed:34" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">二进制压缩解码</span></p>
+        <p textAlign="left" lineSpacing="fixed:34" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">中小地震填补板块边界细节</span></p>
+        <p textAlign="left" lineSpacing="fixed:34" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">605,435 条 · 13.93 MB</span></p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">网站提供三种视图，按数据量和阅读场景选择。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">第一种是5级以上聚类视图，用屏幕空间聚类，放大到一定层级会自动拆成单点，适合总览全球强震带的整体格局。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">第二种是5级以上全点状，不做聚合，每个弧圈就是一次地震，并保证高震级始终画在最上层，不会被遮挡。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">第三种是3级以上全量，覆盖60万条记录，通过二进制压缩解码，大量中小地震能把板块边界的细节填补出来。</span></p>
+    </content>
+  </note>
+</slide>

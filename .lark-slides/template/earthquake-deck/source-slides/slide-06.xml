@@ -1,0 +1,186 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0" id="pqC">
+    <style>
+      <fill id="fqC">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bkm" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bkw">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">如何识别同学的心理危机</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bkD">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <group id="bkp">
+        <shape width="261.62503937007875" height="258.25" topLeftX="57.37503937007875" topLeftY="187.89999999999998" presetHandlers="0" type="round-rect" id="bkX">
+          <fill>
+            <fillColor color="rgba(255, 255, 255, 1)"/>
+          </fill>
+          <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="47.51803149606299" topLeftX="82.53125984251969" topLeftY="208.56" type="ellipse" id="bky">
+          <fill>
+            <fillColor color="rgba(30, 58, 110, 1)"/>
+          </fill>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="36.15496062992126" topLeftX="82.53125984251969" topLeftY="216.82401574803148" type="text" id="bkr">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+            <p textAlign="center" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="11" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="161" height="39.2540157480315" topLeftX="142.9062992125984" topLeftY="210.6259842519685" type="text" id="bka">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">情绪变化</span></strong></p>
+          </content>
+        </shape>
+        <shape width="230.9344094488189" height="151.69606299212597" topLeftX="72.87125984251968" topLeftY="276.11818897637795" type="text" id="bkI">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <ul listStyle="pptx-bullet">
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">以前很开朗，突然变沉默了</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">动不动就烦躁、爱哭</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">突然变得什么都无所谓</span></p>
+              </li>
+            </ul>
+            <p textAlign="left" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="16" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="261.62503937007875" height="258.25" topLeftX="349.18755905511813" topLeftY="187.89999999999998" presetHandlers="0" type="round-rect" id="bkc">
+          <fill>
+            <fillColor color="rgba(255, 255, 255, 1)"/>
+          </fill>
+          <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="47.51803149606299" topLeftX="374.34377952755904" topLeftY="208.56" type="ellipse" id="bkq">
+          <fill>
+            <fillColor color="rgba(43, 91, 168, 1)"/>
+          </fill>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="36.15496062992126" topLeftX="374.34377952755904" topLeftY="216.82401574803148" type="text" id="bkn">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+            <p textAlign="center" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="11" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="161" height="39.2540157480315" topLeftX="434.7188188976378" topLeftY="210.6259842519685" type="text" id="bkV">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">行为变化</span></strong></p>
+          </content>
+        </shape>
+        <shape width="253.42409448818898" height="149.5267716535433" topLeftX="358.14314960629923" topLeftY="277.5127559055118" type="text" id="bkJ">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <ul listStyle="pptx-bullet">
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">以前天天上课，突然不去了</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">以前爱参加活动，突然谁也不理</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">朋友圈开始发消极内容</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">易激惹、躯体化症状</span></p>
+              </li>
+            </ul>
+          </content>
+        </shape>
+        <shape width="261.62503937007875" height="258.25" topLeftX="641" topLeftY="187.89999999999998" presetHandlers="0" type="round-rect" id="bkK">
+          <fill>
+            <fillColor color="rgba(255, 255, 255, 1)"/>
+          </fill>
+          <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="47.51803149606299" topLeftX="666.1562992125985" topLeftY="208.56" type="ellipse" id="bkx">
+          <fill>
+            <fillColor color="rgba(100, 150, 210, 1)"/>
+          </fill>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="36.15496062992126" topLeftX="666.1562992125985" topLeftY="216.82401574803148" type="text" id="bku">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+            <p textAlign="center" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="11" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="161" height="39.2540157480315" topLeftX="726.5312598425197" topLeftY="210.6259842519685" type="text" id="bkf">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">生理变化</span></strong></p>
+          </content>
+        </shape>
+        <shape width="211.31251968503938" height="154.95" topLeftX="666.1562992125985" topLeftY="257.3692125984252" type="text" id="bkW">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <ul listStyle="pptx-bullet">
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">失眠、不吃饭/暴饮暴食</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">总说自己很累、没力气</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">身体状态是心理的镜子</span></p>
+              </li>
+            </ul>
+          </content>
+        </shape>
+      </group>
+      <shape width="840" height="30" topLeftX="60" topLeftY="473.3" type="text" id="bkS">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">看到变化不要慌，不要急于下结论，多观察几天</span></p>
+        </content>
+      </shape>
+      <shape width="34.7" height="33.85" topLeftX="88.35" topLeftY="214.5" type="text" id="bkk">
+        <content verticalAlign="top" paddingTop="3.6" paddingBottom="3.6" paddingLeft="7.2" paddingRight="7.2" fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center" autoFit="shape-auto-fit">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">情</span></strong></p>
+        </content>
+      </shape>
+      <shape width="41.5" height="33.85" topLeftX="376.75" topLeftY="214.5" type="text" id="bkZ">
+        <content verticalAlign="top" paddingTop="3.6" paddingBottom="3.6" paddingLeft="7.2" paddingRight="7.2" fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center" autoFit="shape-auto-fit">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">行</span></strong></p>
+        </content>
+      </shape>
+      <shape width="41.5" height="33.85" topLeftX="669.15" topLeftY="214.5" type="text" id="bkF">
+        <content verticalAlign="top" paddingTop="3.6" paddingBottom="3.6" paddingLeft="7.2" paddingRight="7.2" fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center" autoFit="shape-auto-fit">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">生</span></strong></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bkP">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="宋体" bold="false" italic="false" strikethrough="false" underline="false">例子：这里讲一个我工作中遇到的例子，有一个同学，</span><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">TA</span><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="宋体" bold="false" italic="false" strikethrough="false" underline="false">跟自己最要好的朋友闹掰了，之后一段时间情绪都非常的低落，对于团体活动变得非常消极，然后在朋友圈经常发一些比较忧郁的文案或者是一些回忆高中生活的照片、文字，我发现之后没有贸然行动，我先去跟之前和他玩的好的几个同学了解了一下情况，大概了解原委之后，从我和他的共同爱好切入，约他一起出去打羽毛球，运动之后他就很自然的开始和我倾诉，最后我建议他可以尝试去和辅导员说明一下情况、也可以去西安精卫去约个心理医生聊一聊，之后呢我第一时间跟辅导员通报了他的情况（因为他那段时间经常表述自己有自伤甚至结束生命的倾向），后来他在精卫也是确诊有焦虑症的情况。</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  

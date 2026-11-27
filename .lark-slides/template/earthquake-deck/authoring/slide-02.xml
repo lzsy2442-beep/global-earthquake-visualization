@@ -1,0 +1,93 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgba(248, 250, 253, 1)"/>
+    </fill>
+  </style>
+  <data>
+    <img src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28"/>
+    <shape width="800" height="55" topLeftX="60" topLeftY="90" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei">分享目录</span></strong></p>
+      </content>
+    </shape>
+    <shape width="50" height="4" topLeftX="60" topLeftY="150" type="round-rect">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+    <shape width="800" height="35" topLeftX="60" topLeftY="170" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="18" fontFamily="Microsoft YaHei">四个板块，了解一个地震数据可视化项目</span></p>
+      </content>
+    </shape>
+    <shape width="90" height="55" topLeftX="60" topLeftY="230" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="40" fontFamily="Microsoft YaHei">01</span></strong></p>
+      </content>
+    </shape>
+    <shape width="320" height="35" topLeftX="155" topLeftY="238" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">项目背景与定位</span></strong></p>
+      </content>
+    </shape>
+    <shape width="320" height="30" topLeftX="155" topLeftY="275" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei">为什么做这个项目</span></p>
+      </content>
+    </shape>
+    <shape width="90" height="55" topLeftX="500" topLeftY="230" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="40" fontFamily="Microsoft YaHei">02</span></strong></p>
+      </content>
+    </shape>
+    <shape width="360" height="35" topLeftX="595" topLeftY="238" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">数据底座与处理</span></strong></p>
+      </content>
+    </shape>
+    <shape width="360" height="30" topLeftX="595" topLeftY="275" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei">60 万条数据从哪来</span></p>
+      </content>
+    </shape>
+    <line startX="60" startY="330" endX="900" endY="330">
+      <border color="rgba(220, 228, 240, 1)" width="1"/>
+    </line>
+    <shape width="90" height="55" topLeftX="60" topLeftY="350" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="40" fontFamily="Microsoft YaHei">03</span></strong></p>
+      </content>
+    </shape>
+    <shape width="320" height="35" topLeftX="155" topLeftY="358" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">网站功能与界面</span></strong></p>
+      </content>
+    </shape>
+    <shape width="320" height="30" topLeftX="155" topLeftY="395" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei">三种视图与交互</span></p>
+      </content>
+    </shape>
+    <shape width="90" height="55" topLeftX="500" topLeftY="350" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="40" fontFamily="Microsoft YaHei">04</span></strong></p>
+      </content>
+    </shape>
+    <shape width="360" height="35" topLeftX="595" topLeftY="358" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">技术实现与价值</span></strong></p>
+      </content>
+    </shape>
+    <shape width="360" height="30" topLeftX="595" topLeftY="395" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei">技术选型与 AI 协作</span></p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">这是今天的分享框架，一共四个板块。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">先讲项目的背景和定位，再讲这套数据底座是怎么获取和处理的；然后是网站的核心功能和实际界面，最后谈谈技术实现、AI 大模型如何参与开发，以及它的价值边界。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">大家可以先有个整体印象，跟着这个顺序往下听。</span></p>
+    </content>
+  </note>
+</slide>

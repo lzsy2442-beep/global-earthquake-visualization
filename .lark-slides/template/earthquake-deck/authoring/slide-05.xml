@@ -1,0 +1,97 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgba(248, 250, 253, 1)"/>
+    </fill>
+  </style>
+  <data>
+    <img src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28"/>
+    <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="30" fontFamily="Microsoft YaHei">数据获取与处理：从 USGS 到本地数据集</span></strong></p>
+      </content>
+    </shape>
+    <shape width="50" height="4" topLeftX="60" topLeftY="148" type="round-rect">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+
+    <shape width="48" height="48" topLeftX="70" topLeftY="185" type="ellipse">
+      <fill><fillColor color="rgba(30, 58, 110, 1)"/></fill>
+    </shape>
+    <shape width="48" height="32" topLeftX="70" topLeftY="191" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Arial">1</span></strong></p>
+      </content>
+    </shape>
+    <shape width="180" height="38" topLeftX="130" topLeftY="190" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">分块抓取</span></strong></p>
+      </content>
+    </shape>
+    <shape width="248" height="210" topLeftX="71" topLeftY="250" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei">调用 USGS FDSN 事件接口</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei">按月分块发起请求</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei">单次返回超限时自动二分，缩小时间范围</span></p>
+      </content>
+    </shape>
+    <line startX="254" startY="207" endX="309" endY="207">
+      <border color="rgba(180, 200, 230, 1)" width="1"/>
+      <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+    </line>
+
+    <shape width="48" height="48" topLeftX="360" topLeftY="185" type="ellipse">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+    <shape width="48" height="32" topLeftX="360" topLeftY="191" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Arial">2</span></strong></p>
+      </content>
+    </shape>
+    <shape width="180" height="38" topLeftX="420" topLeftY="190" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">去重清洗</span></strong></p>
+      </content>
+    </shape>
+    <shape width="248" height="210" topLeftX="361" topLeftY="250" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei">按事件唯一编号去重</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei">分别构建 M5.0+ 与 M3.0+</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei">两套独立数据集</span></p>
+      </content>
+    </shape>
+    <line startX="531" startY="207" endX="586" endY="207">
+      <border color="rgba(180, 200, 230, 1)" width="1"/>
+      <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+    </line>
+
+    <shape width="48" height="48" topLeftX="650" topLeftY="185" type="ellipse">
+      <fill><fillColor color="rgba(70, 120, 180, 1)"/></fill>
+    </shape>
+    <shape width="48" height="32" topLeftX="650" topLeftY="191" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Arial">3</span></strong></p>
+      </content>
+    </shape>
+    <shape width="220" height="38" topLeftX="710" topLeftY="190" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">每日同步</span></strong></p>
+      </content>
+    </shape>
+    <shape width="268" height="210" topLeftX="651" topLeftY="250" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei">每天北京时间 09:17</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei">自动抓取最新地震</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei">并入地图与统计，保持数据时效</span></p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">这60万条数据是怎么拿到的？分三步。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">第一步分块抓取，程序调用USGS的FDSN接口，按月分块请求；如果单次返回数据超限，就自动二分、缩小时间范围，保证请求稳定。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">第二步去重清洗，按事件的唯一编号去重，并分别构建5级以上和3级以上两套数据集。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">第三步每日同步，每天北京时间9点17分自动抓取最新地震，并入地图和统计，让数据始终保持更新。</span></p>
+    </content>
+  </note>
+</slide>

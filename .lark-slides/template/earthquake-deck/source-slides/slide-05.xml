@@ -1,0 +1,124 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0" id="pqN">
+    <style>
+      <fill id="fqN">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="baW" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="baI">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">聊天三步法：怎么开口、怎么听、怎么回应</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bac">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="48" height="48" topLeftX="70" topLeftY="185" type="ellipse" id="baD">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="48" height="32" topLeftX="70.95" topLeftY="191.15" type="text" id="baq">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">1</span></strong></p>
+        </content>
+      </shape>
+      <shape width="180" height="38" topLeftX="130" topLeftY="190" type="text" id="ban">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">怎么开口</span></strong></p>
+        </content>
+      </shape>
+      <shape width="248.1" height="208.1" topLeftX="71.59999999999998" topLeftY="250" type="text" id="baV">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">尽量寻找自然的机会</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">比如吃饭、回宿舍路上</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">从具体小事切入：</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">“ 最近XX课挺难的吧？”</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">“ 看你这几天好像没睡好？”</span></p>
+        </content>
+      </shape>
+      <line id="baZ" startX="254" startY="207" endX="309.6" endY="206.6">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+      <shape width="48" height="48" topLeftX="360" topLeftY="185" type="ellipse" id="baF">
+        <fill>
+          <fillColor color="rgba(43, 91, 168, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="48" height="32" topLeftX="360" topLeftY="191.15" type="text" id="bau">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">2</span></strong></p>
+        </content>
+      </shape>
+      <shape width="180" height="38" topLeftX="420" topLeftY="190" type="text" id="bar">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">怎么听</span></strong></p>
+        </content>
+      </shape>
+      <shape width="248.1" height="208.1" topLeftX="361.6" topLeftY="250" type="text" id="bam">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">放下手机，看着他的眼睛</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">不打断、不评判、不说教</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">用“ 嗯 ” “ 然后呢 ” 引导TA继续说</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">偶尔可以复述一下：</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">“ 你是说……是吗？”</span></p>
+        </content>
+      </shape>
+      <shape width="48" height="48" topLeftX="650" topLeftY="185" type="ellipse" id="baw">
+        <fill>
+          <fillColor color="rgba(70, 120, 180, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="48" height="32" topLeftX="650" topLeftY="191.15" type="text" id="bay">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">3</span></strong></p>
+        </content>
+      </shape>
+      <shape width="180" height="38" topLeftX="710" topLeftY="190" type="text" id="bax">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">怎么回应</span></strong></p>
+        </content>
+      </shape>
+      <shape width="268.75" height="208.1" topLeftX="651.6" topLeftY="250" type="text" id="baX">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">先接情绪，再聊事情</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">别说“ 这有什么大不了的”</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">要说“ 这事换我我也难受”</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">“ 你愿意说出来就已经很棒了”</span></p>
+        </content>
+      </shape>
+      <line id="bap" startX="531.2" startY="207.4" endX="586.8000000000001" endY="207">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+    </data>
+    <note id="baf">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  

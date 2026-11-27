@@ -1,0 +1,155 @@
+<presentation id="NwUQsgS6klmSPPdfRTAcnwotnTd" xmlns="https://www.larkoffice.com/sml/2.0" width="960" height="540">
+  <title>全球地震可视化项目成果分享</title>
+  <theme>
+    <background>
+      <fillColor color="rgba(255, 255, 255, 1)"/>
+    </background>
+    <textStyles>
+      <headline fontColor="rgba(31, 35, 41, 1)"/>
+      <sub-headline fontColor="rgba(31, 35, 41, 1)"/>
+      <body fontColor="rgba(31, 35, 41, 1)"/>
+      <caption fontColor="rgba(155, 158, 162, 1)" fontSize="14"/>
+    </textStyles>
+  </theme>
+  <slide id="pqX">
+    <style>
+      <fill id="fqX">
+        <fillColor color="linear-gradient(135deg,rgba(20, 40, 80, 1) 0%,rgba(30, 58, 110, 1) 50%,rgba(43, 91, 168, 1) 100%)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bPD" src="DTc9bSJ2MoG06SxY925cZBpsnkD" width="180" height="36" topLeftX="50" topLeftY="40">
+        <crop type="rect" leftOffset="0.5595854922279813" rightOffset="0.559585492227967" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="820" height="72" topLeftX="80" topLeftY="158" type="text" id="bPf">
+        <content fontSize="54" fontFamily="Microsoft YaHei" color="rgba(255, 255, 255, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="54" fontFamily="Microsoft YaHei">全球地震可视化</span></strong></p>
+        </content>
+      </shape>
+      <shape width="820" height="46" topLeftX="80" topLeftY="252" type="text" id="bPn">
+        <content fontSize="28" fontFamily="Microsoft YaHei" color="rgba(180, 210, 240, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(180, 210, 240, 1)" fontSize="28" fontFamily="Microsoft YaHei">基于 USGS 目录的 31 年全球地震交互地图</span></strong></p>
+        </content>
+      </shape>
+      <line id="bPy" startX="80" startY="336" endX="300.00227271553354" endY="336">
+        <border color="rgba(100, 150, 210, 0.5)" width="1"/>
+      </line>
+      <shape width="600" height="30" topLeftX="80" topLeftY="452" type="text" id="bPp">
+        <content fontSize="16" fontFamily="Microsoft YaHei" color="rgba(160, 190, 220, 0.851)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(160, 190, 220, 0.851)" fontSize="16" fontFamily="Microsoft YaHei">分享人：陆赵苏豫 日期：2026 年 11 月</span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bJJ">
+      <content>
+        <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">老师好，各位同学好，我是地理科学专业的陆赵苏豫，很高兴今天有机会和大家分享我做的一个项目。</span></p>
+        <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">这个项目叫全球地震可视化，它把美国地质调查局公开的、从1995年至今的全球地震目录，做成了一个可以在线交互查询的地图网站。</span></p>
+        <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">接下来的八分钟，我会从项目背景、数据处理、网站功能和技术价值四个方面，带大家看看这张“地球体检图”是怎么做出来的。</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqD">
+    <style>
+      <fill id="fqD">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bPj" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5284974093264339" rightOffset="0.5284974093264339" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="800" height="55" topLeftX="60" topLeftY="90" type="text" id="bPT">
+        <content fontSize="32" fontFamily="Microsoft YaHei" color="rgba(30, 58, 110, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei">分享目录</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="150" presetHandlers="16" type="round-rect" id="bPB">
+        <fill>
+          <fillColor color="rgba(43, 91, 168, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)"/>
+      </shape>
+      <shape width="800" height="35" topLeftX="60" topLeftY="170" type="text" id="bPS">
+        <content fontSize="18" fontFamily="Microsoft YaHei" color="rgba(107, 114, 128, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="18" fontFamily="Microsoft YaHei">四个板块，了解一个地震数据可视化项目</span></p>
+        </content>
+      </shape>
+      <shape width="90" height="55" topLeftX="60" topLeftY="230" type="text" id="bPQ">
+        <content fontSize="40" fontFamily="Microsoft YaHei" color="rgba(43, 91, 168, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="40" fontFamily="Microsoft YaHei">01</span></strong></p>
+        </content>
+      </shape>
+      <shape width="320" height="35" topLeftX="155" topLeftY="238" type="text" id="bPO">
+        <content fontSize="22" fontFamily="Microsoft YaHei" color="rgba(30, 58, 110, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">项目背景与定位</span></strong></p>
+        </content>
+      </shape>
+      <shape width="320" height="30" topLeftX="155" topLeftY="275" type="text" id="bPl">
+        <content fontSize="15" fontFamily="Microsoft YaHei" color="rgba(107, 114, 128, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei">为什么做这个项目</span></p>
+        </content>
+      </shape>
+      <shape width="90" height="55" topLeftX="500" topLeftY="230" type="text" id="bPg">
+        <content fontSize="40" fontFamily="Microsoft YaHei" color="rgba(43, 91, 168, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="40" fontFamily="Microsoft YaHei">02</span></strong></p>
+        </content>
+      </shape>
+      <shape width="360" height="35" topLeftX="595" topLeftY="238" type="text" id="bPW">
+        <content fontSize="22" fontFamily="Microsoft YaHei" color="rgba(30, 58, 110, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">数据底座与处理</span></strong></p>
+        </content>
+      </shape>
+      <shape width="360" height="30" topLeftX="595" topLeftY="275" type="text" id="bPH">
+        <content fontSize="15" fontFamily="Microsoft YaHei" color="rgba(107, 114, 128, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei">60 万条数据从哪来</span></p>
+        </content>
+      </shape>
+      <line id="bPA" startX="60" startY="330" endX="900.0005952378843" endY="330">
+        <border color="rgba(220, 228, 240, 1)" width="1"/>
+      </line>
+      <shape width="90" height="55" topLeftX="60" topLeftY="350" type="text" id="bPM">
+        <content fontSize="40" fontFamily="Microsoft YaHei" color="rgba(43, 91, 168, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="40" fontFamily="Microsoft YaHei">03</span></strong></p>
+        </content>
+      </shape>
+      <shape width="320" height="35" topLeftX="155" topLeftY="358" type="text" id="bPb">
+        <content fontSize="22" fontFamily="Microsoft YaHei" color="rgba(30, 58, 110, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">网站功能与界面</span></strong></p>
+        </content>
+      </shape>
+      <shape width="320" height="30" topLeftX="155" topLeftY="395" type="text" id="bPV">
+        <content fontSize="15" fontFamily="Microsoft YaHei" color="rgba(107, 114, 128, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei">三种视图与交互</span></p>
+        </content>
+      </shape>
+      <shape width="90" height="55" topLeftX="500" topLeftY="350" type="text" id="bPL">
+        <content fontSize="40" fontFamily="Microsoft YaHei" color="rgba(43, 91, 168, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(43, 91, 168, 1)" fontSize="40" fontFamily="Microsoft YaHei">04</span></strong></p>
+        </content>
+      </shape>
+      <shape width="360" height="35" topLeftX="595" topLeftY="358" type="text" id="bPN">
+        <content fontSize="22" fontFamily="Microsoft YaHei" color="rgba(30, 58, 110, 1)" bold="true" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">技术实现与价值</span></strong></p>
+        </content>
+      </shape>
+      <shape width="360" height="30" topLeftX="595" topLeftY="395" type="text" id="bPR">
+        <content fontSize="15" fontFamily="Microsoft YaHei" color="rgba(107, 114, 128, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei">怎么做、能做什么</span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bPr">
+      <content>
+        <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">这是今天的分享框架，一共四个板块。</span></p>
+        <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">先讲项目的背景和定位，再讲这套数据底座是怎么获取和处理的；然后是网站的核心功能和实际界面，最后谈谈技术实现和它的价值边界。</span></p>
+        <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">大家可以先有个整体印象，跟着这个顺序往下听。</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+</presentation>

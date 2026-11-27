@@ -1,0 +1,35 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="linear-gradient(135deg,rgba(20, 40, 80, 1) 0%,rgba(30, 58, 110, 1) 50%,rgba(43, 91, 168, 1) 100%)"/>
+    </fill>
+  </style>
+  <data>
+    <img src="DTc9bSJ2MoG06SxY925cZBpsnkD" width="180" height="36" topLeftX="50" topLeftY="40"/>
+    <shape width="820" height="72" topLeftX="80" topLeftY="158" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="54" fontFamily="Microsoft YaHei">全球地震可视化</span></strong></p>
+      </content>
+    </shape>
+    <shape width="820" height="46" topLeftX="80" topLeftY="252" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(180, 210, 240, 1)" fontSize="28" fontFamily="Microsoft YaHei">基于 USGS 目录的 31 年全球地震交互地图</span></strong></p>
+      </content>
+    </shape>
+    <line startX="80" startY="336" endX="300" endY="336">
+      <border color="rgba(100, 150, 210, 0.5)" width="1"/>
+    </line>
+    <shape width="600" height="30" topLeftX="80" topLeftY="452" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><span color="rgba(160, 190, 220, 0.85)" fontSize="16" fontFamily="Microsoft YaHei">分享人：陆赵苏豫     日期：2026 年 11 月</span></p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">老师好，各位同学好，我是地理科学专业的陆赵苏豫，很高兴今天有机会和大家分享我做的一个项目。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">这个项目叫全球地震可视化，它把美国地质调查局公开的、从1995年至今的全球地震目录，做成了一个可以在线交互查询的地图网站。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">接下来的八分钟，我会从项目背景、数据处理、网站功能和技术价值四个方面，带大家看看这张“地球体检图”是怎么做出来的。</span></p>
+    </content>
+  </note>
+</slide>

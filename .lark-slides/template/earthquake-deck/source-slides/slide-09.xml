@@ -1,0 +1,133 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0" id="pqP">
+    <style>
+      <fill id="fqP">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bPJ" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bPI">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">发现问题四步走</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bPc">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="195" height="120" topLeftX="60" topLeftY="185" presetHandlers="10.5492" type="round-rect" id="bPq">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="165" height="32" topLeftX="75" topLeftY="200" type="text" id="bkd">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="17" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">第一步</span></strong></p>
+        </content>
+      </shape>
+      <shape width="165" height="55" topLeftX="75" topLeftY="238" type="text" id="bks">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(255, 255, 255, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">保证安全，别让TA独处</span></p>
+        </content>
+      </shape>
+      <line id="bPP" startX="260.0000039968034" startY="244.99999780728407" endX="285.01999600319664" endY="245.00000219271593">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+      <shape width="195" height="120" topLeftX="290" topLeftY="185" presetHandlers="11.3496" type="round-rect" id="bPK">
+        <fill>
+          <fillColor color="rgba(43, 91, 168, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="165" height="32" topLeftX="305" topLeftY="200" type="text" id="bPx">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="17" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">第二步</span></strong></p>
+        </content>
+      </shape>
+      <shape width="165" height="55" topLeftX="305" topLeftY="238" type="text" id="bPu">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(255, 255, 255, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">马上联系辅导员或班主任</span></p>
+        </content>
+      </shape>
+      <line id="bkU" startX="490.0000039968034" startY="244.99999780728407" endX="515.0199960031966" endY="245.00000219271593">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+      <shape width="195" height="120" topLeftX="520" topLeftY="185" presetHandlers="13.8" type="round-rect" id="bkh">
+        <fill>
+          <fillColor color="rgba(70, 120, 180, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="165" height="32" topLeftX="535" topLeftY="200" type="text" id="bPk">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="17" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">第三步</span></strong></p>
+        </content>
+      </shape>
+      <shape width="165" height="55" topLeftX="535" topLeftY="238" type="text" id="bPm">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(255, 255, 255, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">配合老师，如实提供信息</span></p>
+        </content>
+      </shape>
+      <line id="bPw" startX="720.0000039968033" startY="244.99999780728407" endX="745.0199960031965" endY="245.00000219271593">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+      <shape width="160" height="120" topLeftX="750" topLeftY="185" presetHandlers="11.2992" type="round-rect" id="bPX">
+        <fill>
+          <fillColor color="rgba(90, 140, 200, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="130" height="32" topLeftX="765" topLeftY="200" type="text" id="bkY">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="17" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">第四步</span></strong></p>
+        </content>
+      </shape>
+      <shape width="130" height="55" topLeftX="765" topLeftY="238" type="text" id="bPa">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(255, 255, 255, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">继续陪伴、保密</span></p>
+        </content>
+      </shape>
+      <shape width="840" height="38" topLeftX="60" topLeftY="340.2" type="text" id="bPZ">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">几个关键提醒</span></strong></p>
+        </content>
+      </shape>
+      <shape width="840" height="120" topLeftX="60" topLeftY="382.2" type="text" id="bPF">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">· 上报的时候只说事实，不做“ 诊断”</span></p>
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">· 除老师外严格保密，保护他的隐私</span></p>
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">· 不私自联系家长</span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bke">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  

@@ -1,0 +1,70 @@
+{
+  "slide_num": 8,
+  "role": "chapter",
+  "slide_id": "pqq",
+  "local_xml_path": "source-slides\\slide-08.xml",
+  "shell_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.3889,
+      "width": 2.3611,
+      "height": 0.4722,
+      "text": ""
+    },
+    {
+      "id": 4,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.0556,
+      "width": 0.6944,
+      "height": 0.0556,
+      "text": ""
+    },
+    {
+      "id": 14,
+      "type": "GROUP",
+      "left": 0.8333,
+      "top": 2.5056,
+      "width": 11.6667,
+      "height": 3.6688,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.25,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": "陪伴比讲道理有用"
+    },
+    {
+      "id": 12,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 6.5278,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": ""
+    },
+    {
+      "id": 13,
+      "type": "TEXT_BOX",
+      "left": 1.1111,
+      "top": 6.6167,
+      "width": 11.1111,
+      "height": 0.5278,
+      "text": "学会“ 共情 ”  学会“ 引导 ”"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image2.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

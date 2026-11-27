@@ -1,0 +1,103 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0" id="pqu">
+    <style>
+      <fill id="fqu">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="baO" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bal">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">这些情况是红线，必须马上上报！</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="baS">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="840" height="30" topLeftX="60" topLeftY="170" type="text" id="baT">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(185, 28, 28, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">拿不准的时候就立即上报</span></strong></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="210" type="text" id="baB">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">① 直接或间接提到不想活了</span></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="248" type="text" id="bat">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">② 把心爱东西送人、突然跟人告别</span></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="286" type="text" id="baj">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">③ 有自伤行为，或明确说想伤害自己</span></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="324" type="text" id="baN">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><strong><span color="rgba(232, 114, 12, 1)" fontSize="18" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">④ 情绪很低落很久，突然变"平静"</span></strong></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="362" type="text" id="baR">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">⑤ 严重失眠或不吃饭，持续两周以上</span></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="400" type="text" id="bab">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">⑥ 遭遇重大打击后明显不对劲</span></p>
+        </content>
+      </shape>
+      <shape width="410.25" height="238.8" topLeftX="478.79999999999995" topLeftY="177.99999999999997" presetHandlers="0" type="round-rect" id="baL">
+        <fill>
+          <fillColor color="rgba(254, 242, 242, 1)"/>
+        </fill>
+        <border color="rgba(252, 165, 165, 1)" width="1" miterLimit="10"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="357.65" height="37.95" topLeftX="503.8" topLeftY="198" type="text" id="baA">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(185, 28, 28, 1)" fontSize="18" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">为什么第④条特别要注意？</span></strong></p>
+        </content>
+      </shape>
+      <shape width="357.65" height="151.95" topLeftX="503.8" topLeftY="243.00000000000003" type="text" id="baM">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">一个人低落了很久，突然变得很平静、很释然——</span></p>
+          <p textAlign="left" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">这往往不是好转，</span></p>
+          <p textAlign="left" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">而是他可能已经做了某个决定。</span></p>
+        </content>
+      </shape>
+      <shape width="840" height="55" topLeftX="60" topLeftY="455" presetHandlers="0" type="round-rect" id="bag">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="800" height="40" topLeftX="80" topLeftY="461.8" type="text" id="baH">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="18" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">及时上报紧急情况不是“ 打小报告”</span></strong></p>
+        </content>
+      </shape>
+    </data>
+    <note id="baQ">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  

@@ -1,0 +1,24 @@
+<presentation id="NwUQsgS6klmSPPdfRTAcnwotnTd" xmlns="https://www.larkoffice.com/sml/2.0" width="960" height="540">
+  <title>全球地震可视化项目成果分享</title>
+  <theme>
+    <background>
+      <fillColor color="rgba(255, 255, 255, 1)"/>
+    </background>
+    <textStyles>
+      <headline fontColor="rgba(31, 35, 41, 1)"/>
+      <sub-headline fontColor="rgba(31, 35, 41, 1)"/>
+      <body fontColor="rgba(31, 35, 41, 1)"/>
+      <caption fontColor="rgba(155, 158, 162, 1)" fontSize="14"/>
+    </textStyles>
+  </theme>
+  <slide id="pqX">
+    <style/>
+    <data/>
+    <note id="bJJ">
+      <content/>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+</presentation>

@@ -1,0 +1,444 @@
+{
+  "ok": true,
+  "pptx": "manifest\\presentation-input\\地科院_陆赵苏豫（9）.importable.pptx",
+  "source_input": {
+    "path": "D:\\LZSY\\陕师大\\心委工作\\2026.11.7心委分享\\地科院_陆赵苏豫（9）.pptx",
+    "kind": "pptx",
+    "sha256": "a8792efbe426cae6b4ae5eedf8b76559990fd8507702b30811f9b699c343c02a",
+    "presentation_path": "D:\\LZSY\\地震汇编\\.lark-slides\\template\\earthquake-deck\\manifest\\presentation-input\\地科院_陆赵苏豫（9）.importable.pptx"
+  },
+  "source_import_preparation": {
+    "ok": true,
+    "status": "prepared",
+    "source_pptx": "D:\\LZSY\\陕师大\\心委工作\\2026.11.7心委分享\\地科院_陆赵苏豫（9）.pptx",
+    "source_sha256": "a8792efbe426cae6b4ae5eedf8b76559990fd8507702b30811f9b699c343c02a",
+    "output_pptx": "D:\\LZSY\\地震汇编\\.lark-slides\\template\\earthquake-deck\\manifest\\presentation-input\\地科院_陆赵苏豫（9）.importable.pptx",
+    "output_sha256": "a8792efbe426cae6b4ae5eedf8b76559990fd8507702b30811f9b699c343c02a",
+    "reused_identical_output": false,
+    "picture_fallbacks": false,
+    "bullet_char": null,
+    "picture_changes": [],
+    "ink_changes": [],
+    "unsupported_pictures": [],
+    "bullet_changes": [],
+    "empty_textboxes_removed_count": 0,
+    "changed_xml_parts": [],
+    "media_unchanged": true,
+    "relationships_unchanged": true,
+    "protected_content_unchanged": true,
+    "member_count": 183,
+    "unchanged_member_count": 183,
+    "baseline": "original_pptx_plus_explicit_format_selection_receipt"
+  },
+  "empty_text_cleanup": {
+    "removed_count": 0,
+    "report_path": "manifest/source-import-preparation.json",
+    "source_original_preserved": true
+  },
+  "canvas": {
+    "width_inch": 13.3333,
+    "height_inch": 7.5
+  },
+  "total_slides": 11,
+  "capability_level": "degraded",
+  "capabilities": {
+    "python_pptx": true,
+    "pypdfium2": true,
+    "pil": true,
+    "lxml": true,
+    "soffice": false
+  },
+  "overview": {
+    "ok": true,
+    "reason": "ok_via_screenshot",
+    "origin": "imported_deck_or_unavailable",
+    "source_chart_render_required": false,
+    "path": "thumbs/overview.jpg",
+    "paths": [
+      "thumbs/overview.jpg"
+    ],
+    "sharded": false,
+    "shard_count": 1
+  },
+  "first_page_write": {
+    "status": "ready",
+    "action": "update",
+    "presentation_id": "NwUQsgS6klmSPPdfRTAcnwotnTd",
+    "slide_id": "pqX",
+    "message": "第一页已保留，真实 slide_id=pqX。第一张成稿用 +update-slide 覆盖此页，不要用 +add-slide，否则会把空白首页留在前面。用 template_publish.py 发布第1页时显式传 --slide-id pqX；第2页起再用 +add-slide 追加。",
+    "command": "lark-cli slides +update-slide --no-lint --presentation NwUQsgS6klmSPPdfRTAcnwotnTd --slide-id pqX --content @authoring/slide-01.xml"
+  },
+  "lark": {
+    "template_imported": true,
+    "deck": {
+      "xml_presentation_id": "NwUQsgS6klmSPPdfRTAcnwotnTd",
+      "url": "https://my.feishu.cn/slides/NwUQsgS6klmSPPdfRTAcnwotnTd",
+      "first_page_slide_id": "pqX",
+      "first_page_state": "blank"
+    }
+  },
+  "visual_language": {
+    "primary_colors": [
+      "rgba(31, 35, 41, 1)",
+      "rgba(248, 250, 253, 1)",
+      "rgba(232, 114, 12, 1)",
+      "rgba(255, 255, 255, 1)",
+      "rgba(30, 58, 110, 1)",
+      "rgba(43, 91, 168, 1)"
+    ],
+    "fonts_declared": {
+      "major_latin": "Arial",
+      "minor_latin": "Arial",
+      "major_ea": null,
+      "minor_ea": null
+    },
+    "fonts_used": [
+      {
+        "name": "Microsoft YaHei",
+        "count": 142
+      },
+      {
+        "name": "思源黑体",
+        "count": 139
+      },
+      {
+        "name": "Arial",
+        "count": 58
+      },
+      {
+        "name": "宋体",
+        "count": 2
+      }
+    ]
+  },
+  "native_charts": {
+    "ok": true,
+    "total_slides": 11,
+    "total_charts": 0,
+    "parsed_chart_count": 0,
+    "chart_part_count": 0,
+    "chart_counts_by_slide": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "types": {},
+    "palette": [],
+    "small_multiple_groups": [],
+    "warning_count": 0,
+    "inventory_path": "manifest/native-chart-inventory.json",
+    "data_policy": {
+      "sample_values_included": false,
+      "series_names_role": "source_style_labels",
+      "omitted": [
+        "category_labels",
+        "cached_values",
+        "formulas",
+        "axis_bounds",
+        "sample_titles"
+      ],
+      "reuse_instruction": "Reuse source chart types, colors and geometry; replace all data and labels with current task inputs."
+    }
+  },
+  "assets_local_files": [
+    {
+      "filename": "image1.png",
+      "size_bytes": 126540,
+      "local_path": "assets\\image1.png"
+    },
+    {
+      "filename": "image2.png",
+      "size_bytes": 59493,
+      "local_path": "assets\\image2.png"
+    }
+  ],
+  "assets_with_tokens": [
+    {
+      "file_token": "DTc9bSJ2MoG06SxY925cZBpsnkD",
+      "used_in_slide_num": [
+        1,
+        11
+      ],
+      "source": "template"
+    },
+    {
+      "file_token": "RMOwb64MWoTMY1xnvZfcaOmenAb",
+      "used_in_slide_num": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source": "template"
+    }
+  ],
+  "sample_placeholders": [],
+  "slides": [
+    {
+      "slide_num": 1,
+      "role": "cover",
+      "slide_id": "pqX",
+      "local_xml_path": "source-slides\\slide-01.xml",
+      "preview_text": "从\"萌新\"到\"信号雷达\" / 新生心理委员成长之路 / 分享人：陆赵苏豫     日期：2026年11月14日",
+      "images_used": [
+        "image1.png"
+      ],
+      "shape_count": {
+        "shell": 1,
+        "content": 4
+      },
+      "content_skeleton_path": null,
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 2,
+      "role": "toc",
+      "slide_id": "pqZ",
+      "local_xml_path": "source-slides\\slide-02.xml",
+      "preview_text": "分享目录 / 四个板块，帮你快速上手心委工作 / 01 / 明确心委定位 / 心委的工作性质 / 02 / 日常工作如何开展 / 怎么识别同学的心理危机 / 03 / 遇到紧急情况怎么办 / 哪些情况必须马上上报？ / 04 / 注意自我关怀 / 心委也是普通人",
+      "images_used": [
+        "image2.png"
+      ],
+      "shape_count": {
+        "shell": 5,
+        "content": 14
+      },
+      "content_skeleton_path": null,
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 3,
+      "role": "content",
+      "slide_id": "pqk",
+      "local_xml_path": "source-slides\\slide-03.xml",
+      "preview_text": "心委不是心理医生 / 我当初以为的 / 要会\"治病\"，能诊断心理问题\n要帮同学解决所有烦恼\n要懂好多心理学理论和术语\n出了问题就是我没做好 / 实际上我们是 / 同学身边那个愿意听他说话的人\n最早发现\"他好像不太对劲\"的人\n帮他找到专业帮助的那个人 / 心委不需要会治病，只要“ 在场” 和“ 敏锐” 就够了",
+      "images_used": [
+        "image2.png"
+      ],
+      "shape_count": {
+        "shell": 4,
+        "content": 7
+      },
+      "content_skeleton_path": "manifest\\content-skeletons\\slide-03.content-skeleton.xml",
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 4,
+      "role": "content",
+      "slide_id": "pqr",
+      "local_xml_path": "source-slides\\slide-04.xml",
+      "preview_text": "三个角色：听人说话、留心观察、帮忙搭桥 / 倾听者 / 不急于提建议 / 同学吐槽的时候，别说\"你应该...\"\n先回应情绪：\"这换谁都难受\"\n耐心倾听，让TA把话说完 / 观察者 / 注意\"变化\" / 情绪：异常沉默、异常易怒\n行为：不去上课、不参加活动\n作息：熬夜、不吃饭 / 转介者 / 不硬扛，快上报 / 超出能力范围的，不要硬抗\n及时寻求辅导员、班主任、心理中心老师等专业人员的帮助",
+      "images_used": [
+        "image2.png"
+      ],
+      "shape_count": {
+        "shell": 5,
+        "content": 13
+      },
+      "content_skeleton_path": "manifest\\content-skeletons\\slide-04.content-skeleton.xml",
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 5,
+      "role": "content",
+      "slide_id": "pqN",
+      "local_xml_path": "source-slides\\slide-05.xml",
+      "preview_text": "聊天三步法：怎么开口、怎么听、怎么回应 / 1 / 怎么开口 / 尽量寻找自然的机会\n比如吃饭、回宿舍路上\n从具体小事切入：\n“ 最近XX课挺难的吧？”\n“ 看你这几天好像没睡好？” / 2 / 怎么听 / 放下手机，看着他的眼睛\n不打断、不评判、不说教\n用“ 嗯 ” “ 然后呢 ” 引导TA继续说\n偶尔可以复述一下：\n“ 你是说……是吗？” / 3 / 怎么回应 / 先接情绪，再聊事情\n别说“ ",
+      "images_used": [
+        "image2.png"
+      ],
+      "shape_count": {
+        "shell": 7,
+        "content": 10
+      },
+      "content_skeleton_path": "manifest\\content-skeletons\\slide-05.content-skeleton.xml",
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 6,
+      "role": "content",
+      "slide_id": "pqC",
+      "local_xml_path": "source-slides\\slide-06.xml",
+      "preview_text": "如何识别同学的心理危机 / 看到变化不要慌，不要急于下结论，多观察几天 / 情 / 行 / 生",
+      "images_used": [
+        "image2.png"
+      ],
+      "shape_count": {
+        "shell": 3,
+        "content": 5
+      },
+      "content_skeleton_path": "manifest\\content-skeletons\\slide-06.content-skeleton.xml",
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 7,
+      "role": "content",
+      "slide_id": "pqu",
+      "local_xml_path": "source-slides\\slide-07.xml",
+      "preview_text": "这些情况是红线，必须马上上报！ / 拿不准的时候就立即上报 / ① 直接或间接提到不想活了 / ② 把心爱东西送人、突然跟人告别 / ③ 有自伤行为，或明确说想伤害自己 / ④ 情绪很低落很久，突然变\"平静\" / ⑤ 严重失眠或不吃饭，持续两周以上 / ⑥ 遭遇重大打击后明显不对劲 / 为什么第④条特别要注意？ / 一个人低落了很久，突然变得很平静、很释然——\n这往往不是好转，\n而是他可能已经做了",
+      "images_used": [
+        "image2.png"
+      ],
+      "shape_count": {
+        "shell": 2,
+        "content": 13
+      },
+      "content_skeleton_path": "manifest\\content-skeletons\\slide-07.content-skeleton.xml",
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 8,
+      "role": "chapter",
+      "slide_id": "pqq",
+      "local_xml_path": "source-slides\\slide-08.xml",
+      "preview_text": "陪伴比讲道理有用 / 学会“ 共情 ”  学会“ 引导 ”",
+      "images_used": [
+        "image2.png"
+      ],
+      "shape_count": {
+        "shell": 3,
+        "content": 3
+      },
+      "content_skeleton_path": "manifest\\content-skeletons\\slide-08.content-skeleton.xml",
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 9,
+      "role": "content",
+      "slide_id": "pqP",
+      "local_xml_path": "source-slides\\slide-09.xml",
+      "preview_text": "发现问题四步走 / 第一步 / 保证安全，别让TA独处 / 第二步 / 马上联系辅导员或班主任 / 第三步 / 配合老师，如实提供信息 / 第四步 / 继续陪伴、保密 / 几个关键提醒 / · 上报的时候只说事实，不做“ 诊断”\n· 除老师外严格保密，保护他的隐私\n· 不私自联系家长",
+      "images_used": [
+        "image2.png"
+      ],
+      "shape_count": {
+        "shell": 5,
+        "content": 15
+      },
+      "content_skeleton_path": "manifest\\content-skeletons\\slide-09.content-skeleton.xml",
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 10,
+      "role": "content",
+      "slide_id": "pqp",
+      "local_xml_path": "source-slides\\slide-10.xml",
+      "preview_text": "注意自我关怀，别把自己累垮 / 心委不是救世主 / 我们只能力所能及地为同学们排忧疏闷\n保持敏感、真诚倾听、及时求助 / 解决问题有老师 / 专业的事交给专业的人\n心委任务是发现和陪伴，不是治疗 / 心委也可以求助 / 觉得被影响了，可以寻求辅导员、心理中心老师的帮助\n注意对自我的情绪关怀，不做情绪的垃圾桶 / 先照顾好你自己，才能更好地陪伴同学 / 不做情绪的垃圾桶",
+      "images_used": [
+        "image2.png"
+      ],
+      "shape_count": {
+        "shell": 2,
+        "content": 13
+      },
+      "content_skeleton_path": "manifest\\content-skeletons\\slide-10.content-skeleton.xml",
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    },
+    {
+      "slide_num": 11,
+      "role": "ending",
+      "slide_id": "pqa",
+      "local_xml_path": "source-slides\\slide-11.xml",
+      "preview_text": "三句话送给学弟学妹们 / · 保持敏感，善做“ 雷达”，但不要过度紧张 / · 真诚倾听，用心陪伴，以朋友的身份承接情绪 / · 明晰边界，及时求助，成为同学们靠谱的身边人",
+      "images_used": [
+        "image1.png"
+      ],
+      "shape_count": {
+        "shell": 0,
+        "content": 5
+      },
+      "content_skeleton_path": null,
+      "native_charts": {
+        "count": 0,
+        "chart_ids": [],
+        "types": [],
+        "palette": [],
+        "small_multiple_groups": [],
+        "detail_path": "manifest/native-chart-inventory.json"
+      }
+    }
+  ]
+}

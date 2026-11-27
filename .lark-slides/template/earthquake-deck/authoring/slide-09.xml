@@ -1,0 +1,83 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgba(248, 250, 253, 1)"/>
+    </fill>
+  </style>
+  <data>
+    <img src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28"/>
+    <shape width="860" height="50" topLeftX="60" topLeftY="90" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="30" fontFamily="Microsoft YaHei">技术实现：让 60 万条数据在浏览器流畅运行</span></strong></p>
+      </content>
+    </shape>
+    <shape width="50" height="4" topLeftX="60" topLeftY="148" type="round-rect">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+
+    <shape width="270" height="285" topLeftX="45" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(236, 243, 252, 1)"/></fill>
+    </shape>
+    <shape width="6" height="285" topLeftX="45" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(30, 58, 110, 1)"/></fill>
+    </shape>
+    <shape width="230" height="36" topLeftX="70" topLeftY="204" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">渲染引擎</span></strong></p>
+      </content>
+    </shape>
+    <shape width="232" height="200" topLeftX="70" topLeftY="252" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">MapLibre GL 地图引擎</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">主线程 Canvas 叠加层绘制</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">规避移动端 GeoJSON Worker 挂起</span></p>
+      </content>
+    </shape>
+
+    <shape width="270" height="285" topLeftX="345" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(236, 243, 252, 1)"/></fill>
+    </shape>
+    <shape width="6" height="285" topLeftX="345" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+    <shape width="230" height="36" topLeftX="370" topLeftY="204" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">数据压缩</span></strong></p>
+      </content>
+    </shape>
+    <shape width="232" height="200" topLeftX="370" topLeftY="252" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">每条仅 18 字节二进制编码</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">Base64 解码后渲染</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">60 万条文件仅 13.93 MB</span></p>
+      </content>
+    </shape>
+
+    <shape width="270" height="285" topLeftX="645" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(236, 243, 252, 1)"/></fill>
+    </shape>
+    <shape width="6" height="285" topLeftX="645" topLeftY="178" type="round-rect">
+      <fill><fillColor color="rgba(100, 150, 210, 1)"/></fill>
+    </shape>
+    <shape width="230" height="36" topLeftX="670" topLeftY="204" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei">底图与离线</span></strong></p>
+      </content>
+    </shape>
+    <shape width="232" height="200" topLeftX="670" topLeftY="252" type="text">
+      <content textAlign="left">
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">天地图矢量、地形 + 高德</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">离线单文件版断网可用</span></p>
+        <p textAlign="left" lineSpacing="multiple:1.7" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="15" fontFamily="Microsoft YaHei">适合课堂分发与演示</span></p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">60万条数据要在浏览器里流畅运行，靠的是三个技术处理。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">渲染上，用MapLibre GL作为地图引擎，地震点用主线程Canvas叠加层绘制，规避了移动端GeoJSON Worker容易挂起的问题。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">压缩上，每条地震只用18个字节的二进制编码，再用Base64解码，所以60万条数据文件只有13.93MB。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">底图用天地图和高德，还提供离线单文件版，断网也能打开，特别适合课堂分发。</span></p>
+    </content>
+  </note>
+</slide>

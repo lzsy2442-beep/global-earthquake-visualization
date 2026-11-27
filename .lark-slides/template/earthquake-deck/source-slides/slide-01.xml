@@ -1,0 +1,41 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0" id="pqX">
+    <style>
+      <fill id="fqX">
+        <fillColor color="linear-gradient(135deg,rgba(20, 40, 80, 1) 0%,rgba(30, 58, 110, 1) 50%,rgba(43, 91, 168, 1) 100%)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bJa" src="DTc9bSJ2MoG06SxY925cZBpsnkD" width="180" height="36" topLeftX="50" topLeftY="40">
+        <crop type="rect" leftOffset="0.5578362714320235" rightOffset="0.5578362714319951" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="800" height="70" topLeftX="80" topLeftY="154.8" type="text" id="bJk">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="54" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">从"萌新"到"信号雷达"</span></strong></p>
+        </content>
+      </shape>
+      <shape width="800" height="45" topLeftX="80" topLeftY="253.2" type="text" id="bJP">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(180, 210, 240, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">新生心理委员成长之路</span></strong></p>
+        </content>
+      </shape>
+      <line id="bJK" startX="79.99996600443795" startY="343.999999549826" endX="300.0022387199715" endY="344.000000450174">
+        <border color="rgba(100, 150, 210, 0.5)" width="1" miterLimit="10"/>
+        <startArrow widthScale="med" heightScale="med"/>
+        <endArrow widthScale="med" heightScale="med"/>
+      </line>
+      <shape width="500" height="30" topLeftX="80" topLeftY="449" type="text" id="bJI">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(160, 190, 220, 0.8)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">分享人：陆赵苏豫     日期：2026年11月14日</span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bJJ">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  

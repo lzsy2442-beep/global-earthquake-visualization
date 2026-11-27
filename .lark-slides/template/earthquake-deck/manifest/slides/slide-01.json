@@ -1,0 +1,68 @@
+{
+  "slide_num": 1,
+  "role": "cover",
+  "slide_id": "pqX",
+  "local_xml_path": "source-slides\\slide-01.xml",
+  "shell_shapes": [
+    {
+      "id": 9,
+      "type": "LINE",
+      "left": 1.1111,
+      "top": 4.7708,
+      "width": 3.0556,
+      "height": 0.0139,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.6944,
+      "top": 0.5556,
+      "width": 2.5,
+      "height": 0.5,
+      "text": ""
+    },
+    {
+      "id": 7,
+      "type": "TEXT_BOX",
+      "left": 1.1111,
+      "top": 2.15,
+      "width": 11.1111,
+      "height": 0.9722,
+      "text": "从\"萌新\"到\"信号雷达\""
+    },
+    {
+      "id": 8,
+      "type": "TEXT_BOX",
+      "left": 1.1111,
+      "top": 3.5167,
+      "width": 11.1111,
+      "height": 0.625,
+      "text": "新生心理委员成长之路"
+    },
+    {
+      "id": 10,
+      "type": "TEXT_BOX",
+      "left": 1.1111,
+      "top": 6.2361,
+      "width": 6.9444,
+      "height": 0.4167,
+      "text": "分享人：陆赵苏豫     日期：2026年11月14日"
+    }
+  ],
+  "available_regions": [
+    {
+      "left": 10.0,
+      "top": 5.0,
+      "width": 3.33,
+      "height": 2.5
+    }
+  ],
+  "images_used": [
+    "image1.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

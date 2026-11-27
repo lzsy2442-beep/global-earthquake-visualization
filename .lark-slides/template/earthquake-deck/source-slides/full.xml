@@ -1,0 +1,1199 @@
+<presentation id="NwUQsgS6klmSPPdfRTAcnwotnTd" xmlns="https://www.larkoffice.com/sml/2.0" width="960" height="540">
+  <title>全球地震可视化项目成果分享</title>
+  <theme>
+    <background>
+      <fillColor color="rgba(255, 255, 255, 1)"/>
+    </background>
+    <textStyles>
+      <headline fontColor="rgba(31, 35, 41, 1)"/>
+      <sub-headline fontColor="rgba(31, 35, 41, 1)"/>
+      <body fontColor="rgba(31, 35, 41, 1)"/>
+      <caption fontColor="rgba(155, 158, 162, 1)" fontSize="14"/>
+    </textStyles>
+  </theme>
+  <slide id="pqX">
+    <style>
+      <fill id="fqX">
+        <fillColor color="linear-gradient(135deg,rgba(20, 40, 80, 1) 0%,rgba(30, 58, 110, 1) 50%,rgba(43, 91, 168, 1) 100%)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bJa" src="DTc9bSJ2MoG06SxY925cZBpsnkD" width="180" height="36" topLeftX="50" topLeftY="40">
+        <crop type="rect" leftOffset="0.5578362714320235" rightOffset="0.5578362714319951" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="800" height="70" topLeftX="80" topLeftY="154.8" type="text" id="bJk">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="54" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">从&quot;萌新&quot;到&quot;信号雷达&quot;</span></strong></p>
+        </content>
+      </shape>
+      <shape width="800" height="45" topLeftX="80" topLeftY="253.2" type="text" id="bJP">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(180, 210, 240, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">新生心理委员成长之路</span></strong></p>
+        </content>
+      </shape>
+      <line id="bJK" startX="79.99996600443795" startY="343.999999549826" endX="300.0022387199715" endY="344.000000450174">
+        <border color="rgba(100, 150, 210, 0.5)" width="1" miterLimit="10"/>
+        <startArrow widthScale="med" heightScale="med"/>
+        <endArrow widthScale="med" heightScale="med"/>
+      </line>
+      <shape width="500" height="30" topLeftX="80" topLeftY="449" type="text" id="bJI">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(160, 190, 220, 0.8)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">分享人：陆赵苏豫     日期：2026年11月14日</span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bJJ">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqZ">
+    <style>
+      <fill id="fqZ">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bJY" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="800" height="55" topLeftX="60" topLeftY="90" type="text" id="baa">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">分享目录</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="150" presetHandlers="0" type="round-rect" id="bJb">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="800" height="35" topLeftX="60" topLeftY="170" type="text" id="bJi">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">四个板块，帮你快速上手心委工作</span></p>
+        </content>
+      </shape>
+      <shape width="90" height="55" topLeftX="60" topLeftY="230" type="text" id="bJe">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(232, 114, 12, 1)" fontSize="40" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">01</span></strong></p>
+        </content>
+      </shape>
+      <shape width="280" height="35" topLeftX="155" topLeftY="238" type="text" id="baJ">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">明确心委定位</span></strong></p>
+        </content>
+      </shape>
+      <shape width="280" height="30" topLeftX="155" topLeftY="275" type="text" id="baK">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">心委的工作性质</span></p>
+        </content>
+      </shape>
+      <shape width="90" height="55" topLeftX="500" topLeftY="230" type="text" id="bJv">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(232, 114, 12, 1)" fontSize="40" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">02</span></strong></p>
+        </content>
+      </shape>
+      <shape width="320" height="35" topLeftX="595" topLeftY="238" type="text" id="bJo">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">日常工作如何开展</span></strong></p>
+        </content>
+      </shape>
+      <shape width="320" height="30" topLeftX="595" topLeftY="275" type="text" id="bJd">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">怎么识别同学的心理危机</span></p>
+        </content>
+      </shape>
+      <line id="bJs" startX="60.00001734169314" startY="329.9999323470987" endX="900.0006125795667" endY="330.0000676529013">
+        <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+        <startArrow widthScale="med" heightScale="med"/>
+        <endArrow widthScale="med" heightScale="med"/>
+      </line>
+      <shape width="90" height="55" topLeftX="60" topLeftY="350" type="text" id="baP">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(232, 114, 12, 1)" fontSize="40" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">03</span></strong></p>
+        </content>
+      </shape>
+      <shape width="280" height="35" topLeftX="155" topLeftY="358" type="text" id="bJG">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">遇到紧急情况怎么办</span></strong></p>
+        </content>
+      </shape>
+      <shape width="280" height="30" topLeftX="155" topLeftY="395" type="text" id="bJz">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">哪些情况必须马上上报？</span></p>
+        </content>
+      </shape>
+      <shape width="90" height="55" topLeftX="500" topLeftY="350" type="text" id="bJU">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(232, 114, 12, 1)" fontSize="40" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">04</span></strong></p>
+        </content>
+      </shape>
+      <shape width="320" height="35" topLeftX="595" topLeftY="358" type="text" id="bJh">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">注意自我关怀</span></strong></p>
+        </content>
+      </shape>
+      <shape width="320" height="30" topLeftX="595" topLeftY="395" type="text" id="bak">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">心委也是普通人</span></p>
+        </content>
+      </shape>
+      <shape width="40" height="4" topLeftX="900" topLeftY="500" presetHandlers="0" type="round-rect" id="bJt">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 0.3)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="20" height="4" topLeftX="920" topLeftY="510" presetHandlers="0" type="round-rect" id="bJE">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 0.2)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bJC">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqk">
+    <style>
+      <fill id="fqk">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bJc" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bJw">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">心委不是心理医生</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bJD">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="380" height="35" topLeftX="62.400000000000006" topLeftY="175" type="text" id="bJn">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(150, 150, 150, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">我当初以为的</span></strong></p>
+        </content>
+      </shape>
+      <shape width="380" height="190" topLeftX="62.400000000000006" topLeftY="220" type="text" id="bJX">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">要会&quot;治病&quot;，能诊断心理问题</span></p>
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">要帮同学解决所有烦恼</span></p>
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">要懂好多心理学理论和术语</span></p>
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">出了问题就是我没做好</span></p>
+        </content>
+      </shape>
+      <line id="bJf" startX="479.9999870584217" startY="195.00003853723405" endX="480.0000129415783" endY="430.00216618717536">
+        <border color="rgba(220, 228, 240, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow widthScale="lg" heightScale="lg"/>
+      </line>
+      <shape width="380" height="35" topLeftX="517.6" topLeftY="175" type="text" id="bJZ">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">实际上我们是</span></strong></p>
+        </content>
+      </shape>
+      <shape width="380" height="190" topLeftX="517.6" topLeftY="220" type="text" id="bJx">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(43, 43, 43, 1)" fontSize="20" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">同学身边那个</span><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">愿意听他说话</span></strong><span color="rgba(43, 43, 43, 1)" fontSize="20" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">的人</span></p>
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(43, 43, 43, 1)" fontSize="20" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">最早发现</span><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">&quot;他好像不太对劲&quot;</span></strong><span color="rgba(43, 43, 43, 1)" fontSize="20" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">的人</span></p>
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(43, 43, 43, 1)" fontSize="20" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">帮他</span><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">找到专业帮助</span></strong><span color="rgba(43, 43, 43, 1)" fontSize="20" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">的那个人</span></p>
+        </content>
+      </shape>
+      <shape width="840" height="55" topLeftX="60" topLeftY="445" presetHandlers="0" type="round-rect" id="bJF">
+        <fill>
+          <fillColor color="rgba(240, 245, 251, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="800" height="40" topLeftX="80" topLeftY="453.4" type="text" id="bJu">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">心委不需要会治病，只要“ 在场” 和“ 敏锐” 就够了</span></strong></p>
+        </content>
+      </shape>
+      <shape width="40" height="4" topLeftX="900" topLeftY="500" presetHandlers="0" type="round-rect" id="bJq">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 0.3)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bJm">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqr">
+    <style>
+      <fill id="fqr">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bJg" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bJW">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">三个角色：听人说话、留心观察、帮忙搭桥</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bJQ">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="260" height="290" topLeftX="60" topLeftY="180" presetHandlers="0" type="round-rect" id="bJO">
+        <fill>
+          <fillColor color="rgba(255, 255, 255, 1)"/>
+        </fill>
+        <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="260" height="7" topLeftX="60" topLeftY="180" presetHandlers="0" type="round-rect" id="bJR">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="220" height="40" topLeftX="85" topLeftY="205" type="text" id="bJV">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="24" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">倾听者</span></strong></p>
+        </content>
+      </shape>
+      <shape width="220" height="30" topLeftX="85" topLeftY="250" type="text" id="bJH">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(232, 114, 12, 1)" fontSize="18" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">不急于提建议</span></strong></p>
+        </content>
+      </shape>
+      <shape width="242.6" height="160" topLeftX="70.8" topLeftY="287" type="text" id="bJA">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="fixed:36.00" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">同学吐槽的时候，别说&quot;你应该...&quot;</span></p>
+          <p textAlign="left" lineSpacing="fixed:36.00" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">先回应情绪：&quot;这换谁都难受&quot;</span></p>
+          <p textAlign="left" lineSpacing="fixed:36.00" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">耐心倾听，让TA把话说完</span></p>
+        </content>
+      </shape>
+      <shape width="260" height="290" topLeftX="350" topLeftY="180" presetHandlers="0" type="round-rect" id="bJB">
+        <fill>
+          <fillColor color="rgba(255, 255, 255, 1)"/>
+        </fill>
+        <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="260" height="7" topLeftX="350" topLeftY="180" presetHandlers="0" type="round-rect" id="bJr">
+        <fill>
+          <fillColor color="rgba(43, 91, 168, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="220" height="40" topLeftX="375" topLeftY="205" type="text" id="bJL">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="24" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">观察者</span></strong></p>
+        </content>
+      </shape>
+      <shape width="220" height="30" topLeftX="375" topLeftY="250" type="text" id="bJN">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(232, 114, 12, 1)" fontSize="18" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">注意&quot;变化&quot;</span></strong></p>
+        </content>
+      </shape>
+      <shape width="220" height="160" topLeftX="376.6" topLeftY="287" type="text" id="bJj">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="fixed:36.00" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">情绪：异常沉默、异常易怒</span></p>
+          <p textAlign="left" lineSpacing="fixed:36.00" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">行为：不去上课、不参加活动</span></p>
+          <p textAlign="left" lineSpacing="fixed:36.00" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">作息：熬夜、不吃饭</span></p>
+        </content>
+      </shape>
+      <shape width="260" height="290" topLeftX="640" topLeftY="180" presetHandlers="0" type="round-rect" id="bJT">
+        <fill>
+          <fillColor color="rgba(255, 255, 255, 1)"/>
+        </fill>
+        <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="260" height="7" topLeftX="640" topLeftY="180" presetHandlers="0" type="round-rect" id="bJl">
+        <fill>
+          <fillColor color="rgba(100, 150, 210, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="220" height="40" topLeftX="665" topLeftY="205" type="text" id="bJy">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="24" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">转介者</span></strong></p>
+        </content>
+      </shape>
+      <shape width="220" height="30" topLeftX="665" topLeftY="250" type="text" id="bJp">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(232, 114, 12, 1)" fontSize="18" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">不硬扛，快上报</span></strong></p>
+        </content>
+      </shape>
+      <shape width="220" height="160" topLeftX="666.6" topLeftY="287" type="text" id="bJS">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="fixed:36.00" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">超出能力范围的，不要硬抗</span></p>
+          <p textAlign="left" lineSpacing="fixed:36.00" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">及时寻求辅导员、班主任、心理中心老师等专业人员的帮助</span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bJM">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqN">
+    <style>
+      <fill id="fqN">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="baW" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="baI">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">聊天三步法：怎么开口、怎么听、怎么回应</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bac">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="48" height="48" topLeftX="70" topLeftY="185" type="ellipse" id="baD">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="48" height="32" topLeftX="70.95" topLeftY="191.15" type="text" id="baq">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">1</span></strong></p>
+        </content>
+      </shape>
+      <shape width="180" height="38" topLeftX="130" topLeftY="190" type="text" id="ban">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">怎么开口</span></strong></p>
+        </content>
+      </shape>
+      <shape width="248.1" height="208.1" topLeftX="71.59999999999998" topLeftY="250" type="text" id="baV">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">尽量寻找自然的机会</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">比如吃饭、回宿舍路上</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">从具体小事切入：</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">“ 最近XX课挺难的吧？”</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">“ 看你这几天好像没睡好？”</span></p>
+        </content>
+      </shape>
+      <line id="baZ" startX="254" startY="207" endX="309.6" endY="206.6">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+      <shape width="48" height="48" topLeftX="360" topLeftY="185" type="ellipse" id="baF">
+        <fill>
+          <fillColor color="rgba(43, 91, 168, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="48" height="32" topLeftX="360" topLeftY="191.15" type="text" id="bau">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">2</span></strong></p>
+        </content>
+      </shape>
+      <shape width="180" height="38" topLeftX="420" topLeftY="190" type="text" id="bar">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">怎么听</span></strong></p>
+        </content>
+      </shape>
+      <shape width="248.1" height="208.1" topLeftX="361.6" topLeftY="250" type="text" id="bam">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">放下手机，看着他的眼睛</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">不打断、不评判、不说教</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">用“ 嗯 ” “ 然后呢 ” 引导TA继续说</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">偶尔可以复述一下：</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">“ 你是说……是吗？”</span></p>
+        </content>
+      </shape>
+      <shape width="48" height="48" topLeftX="650" topLeftY="185" type="ellipse" id="baw">
+        <fill>
+          <fillColor color="rgba(70, 120, 180, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="48" height="32" topLeftX="650" topLeftY="191.15" type="text" id="bay">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">3</span></strong></p>
+        </content>
+      </shape>
+      <shape width="180" height="38" topLeftX="710" topLeftY="190" type="text" id="bax">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">怎么回应</span></strong></p>
+        </content>
+      </shape>
+      <shape width="268.75" height="208.1" topLeftX="651.6" topLeftY="250" type="text" id="baX">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">先接情绪，再聊事情</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">别说“ 这有什么大不了的”</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">要说“ 这事换我我也难受”</span></p>
+          <p textAlign="left" lineSpacing="multiple:2.0" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">“ 你愿意说出来就已经很棒了”</span></p>
+        </content>
+      </shape>
+      <line id="bap" startX="531.2" startY="207.4" endX="586.8000000000001" endY="207">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+    </data>
+    <note id="baf">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqC">
+    <style>
+      <fill id="fqC">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bkm" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bkw">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">如何识别同学的心理危机</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bkD">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <group id="bkp">
+        <shape width="261.62503937007875" height="258.25" topLeftX="57.37503937007875" topLeftY="187.89999999999998" presetHandlers="0" type="round-rect" id="bkX">
+          <fill>
+            <fillColor color="rgba(255, 255, 255, 1)"/>
+          </fill>
+          <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="47.51803149606299" topLeftX="82.53125984251969" topLeftY="208.56" type="ellipse" id="bky">
+          <fill>
+            <fillColor color="rgba(30, 58, 110, 1)"/>
+          </fill>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="36.15496062992126" topLeftX="82.53125984251969" topLeftY="216.82401574803148" type="text" id="bkr">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+            <p textAlign="center" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="11" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="161" height="39.2540157480315" topLeftX="142.9062992125984" topLeftY="210.6259842519685" type="text" id="bka">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">情绪变化</span></strong></p>
+          </content>
+        </shape>
+        <shape width="230.9344094488189" height="151.69606299212597" topLeftX="72.87125984251968" topLeftY="276.11818897637795" type="text" id="bkI">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <ul listStyle="pptx-bullet">
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">以前很开朗，突然变沉默了</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">动不动就烦躁、爱哭</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">突然变得什么都无所谓</span></p>
+              </li>
+            </ul>
+            <p textAlign="left" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="16" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="261.62503937007875" height="258.25" topLeftX="349.18755905511813" topLeftY="187.89999999999998" presetHandlers="0" type="round-rect" id="bkc">
+          <fill>
+            <fillColor color="rgba(255, 255, 255, 1)"/>
+          </fill>
+          <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="47.51803149606299" topLeftX="374.34377952755904" topLeftY="208.56" type="ellipse" id="bkq">
+          <fill>
+            <fillColor color="rgba(43, 91, 168, 1)"/>
+          </fill>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="36.15496062992126" topLeftX="374.34377952755904" topLeftY="216.82401574803148" type="text" id="bkn">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+            <p textAlign="center" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="11" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="161" height="39.2540157480315" topLeftX="434.7188188976378" topLeftY="210.6259842519685" type="text" id="bkV">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">行为变化</span></strong></p>
+          </content>
+        </shape>
+        <shape width="253.42409448818898" height="149.5267716535433" topLeftX="358.14314960629923" topLeftY="277.5127559055118" type="text" id="bkJ">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <ul listStyle="pptx-bullet">
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">以前天天上课，突然不去了</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">以前爱参加活动，突然谁也不理</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">朋友圈开始发消极内容</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">易激惹、躯体化症状</span></p>
+              </li>
+            </ul>
+          </content>
+        </shape>
+        <shape width="261.62503937007875" height="258.25" topLeftX="641" topLeftY="187.89999999999998" presetHandlers="0" type="round-rect" id="bkK">
+          <fill>
+            <fillColor color="rgba(255, 255, 255, 1)"/>
+          </fill>
+          <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="47.51803149606299" topLeftX="666.1562992125985" topLeftY="208.56" type="ellipse" id="bkx">
+          <fill>
+            <fillColor color="rgba(100, 150, 210, 1)"/>
+          </fill>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="46.28748031496063" height="36.15496062992126" topLeftX="666.1562992125985" topLeftY="216.82401574803148" type="text" id="bku">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+            <p textAlign="center" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="11" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="161" height="39.2540157480315" topLeftX="726.5312598425197" topLeftY="210.6259842519685" type="text" id="bkf">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">生理变化</span></strong></p>
+          </content>
+        </shape>
+        <shape width="211.31251968503938" height="154.95" topLeftX="666.1562992125985" topLeftY="257.3692125984252" type="text" id="bkW">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <ul listStyle="pptx-bullet">
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">失眠、不吃饭/暴饮暴食</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">总说自己很累、没力气</span></p>
+              </li>
+              <li>
+                <p textAlign="left" lineSpacing="fixed:36.00" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">身体状态是心理的镜子</span></p>
+              </li>
+            </ul>
+          </content>
+        </shape>
+      </group>
+      <shape width="840" height="30" topLeftX="60" topLeftY="473.3" type="text" id="bkS">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><span color="rgba(107, 114, 128, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">看到变化不要慌，不要急于下结论，多观察几天</span></p>
+        </content>
+      </shape>
+      <shape width="34.7" height="33.85" topLeftX="88.35" topLeftY="214.5" type="text" id="bkk">
+        <content verticalAlign="top" paddingTop="3.6" paddingBottom="3.6" paddingLeft="7.2" paddingRight="7.2" fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center" autoFit="shape-auto-fit">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">情</span></strong></p>
+        </content>
+      </shape>
+      <shape width="41.5" height="33.85" topLeftX="376.75" topLeftY="214.5" type="text" id="bkZ">
+        <content verticalAlign="top" paddingTop="3.6" paddingBottom="3.6" paddingLeft="7.2" paddingRight="7.2" fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center" autoFit="shape-auto-fit">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">行</span></strong></p>
+        </content>
+      </shape>
+      <shape width="41.5" height="33.85" topLeftX="669.15" topLeftY="214.5" type="text" id="bkF">
+        <content verticalAlign="top" paddingTop="3.6" paddingBottom="3.6" paddingLeft="7.2" paddingRight="7.2" fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center" autoFit="shape-auto-fit">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">生</span></strong></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bkP">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="宋体" bold="false" italic="false" strikethrough="false" underline="false">例子：这里讲一个我工作中遇到的例子，有一个同学，</span><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">TA</span><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="宋体" bold="false" italic="false" strikethrough="false" underline="false">跟自己最要好的朋友闹掰了，之后一段时间情绪都非常的低落，对于团体活动变得非常消极，然后在朋友圈经常发一些比较忧郁的文案或者是一些回忆高中生活的照片、文字，我发现之后没有贸然行动，我先去跟之前和他玩的好的几个同学了解了一下情况，大概了解原委之后，从我和他的共同爱好切入，约他一起出去打羽毛球，运动之后他就很自然的开始和我倾诉，最后我建议他可以尝试去和辅导员说明一下情况、也可以去西安精卫去约个心理医生聊一聊，之后呢我第一时间跟辅导员通报了他的情况（因为他那段时间经常表述自己有自伤甚至结束生命的倾向），后来他在精卫也是确诊有焦虑症的情况。</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqu">
+    <style>
+      <fill id="fqu">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="baO" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bal">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">这些情况是红线，必须马上上报！</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="baS">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="840" height="30" topLeftX="60" topLeftY="170" type="text" id="baT">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(185, 28, 28, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">拿不准的时候就立即上报</span></strong></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="210" type="text" id="baB">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">① 直接或间接提到不想活了</span></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="248" type="text" id="bat">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">② 把心爱东西送人、突然跟人告别</span></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="286" type="text" id="baj">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">③ 有自伤行为，或明确说想伤害自己</span></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="324" type="text" id="baN">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><strong><span color="rgba(232, 114, 12, 1)" fontSize="18" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">④ 情绪很低落很久，突然变&quot;平静&quot;</span></strong></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="362" type="text" id="baR">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">⑤ 严重失眠或不吃饭，持续两周以上</span></p>
+        </content>
+      </shape>
+      <shape width="420" height="32" topLeftX="60" topLeftY="400" type="text" id="bab">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.8" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">⑥ 遭遇重大打击后明显不对劲</span></p>
+        </content>
+      </shape>
+      <shape width="410.25" height="238.8" topLeftX="478.79999999999995" topLeftY="177.99999999999997" presetHandlers="0" type="round-rect" id="baL">
+        <fill>
+          <fillColor color="rgba(254, 242, 242, 1)"/>
+        </fill>
+        <border color="rgba(252, 165, 165, 1)" width="1" miterLimit="10"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="357.65" height="37.95" topLeftX="503.8" topLeftY="198" type="text" id="baA">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(185, 28, 28, 1)" fontSize="18" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">为什么第④条特别要注意？</span></strong></p>
+        </content>
+      </shape>
+      <shape width="357.65" height="151.95" topLeftX="503.8" topLeftY="243.00000000000003" type="text" id="baM">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">一个人低落了很久，突然变得很平静、很释然——</span></p>
+          <p textAlign="left" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">这往往不是好转，</span></p>
+          <p textAlign="left" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">而是他可能已经做了某个决定。</span></p>
+        </content>
+      </shape>
+      <shape width="840" height="55" topLeftX="60" topLeftY="455" presetHandlers="0" type="round-rect" id="bag">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="800" height="40" topLeftX="80" topLeftY="461.8" type="text" id="baH">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="18" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">及时上报紧急情况不是“ 打小报告”</span></strong></p>
+        </content>
+      </shape>
+    </data>
+    <note id="baQ">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqq">
+    <style>
+      <fill id="fqq">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="baE" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bao">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">陪伴比讲道理有用</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bad">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <group id="baY">
+        <shape width="380" height="264.15" topLeftX="60" topLeftY="180.40000000000003" presetHandlers="0" type="round-rect" id="baG">
+          <fill>
+            <fillColor color="rgba(254, 242, 242, 1)"/>
+          </fill>
+          <border color="rgba(252, 165, 165, 1)" width="1" miterLimit="10"/>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="330" height="38.52188976377953" topLeftX="85" topLeftY="202.41251968503937" type="text" id="bai">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(185, 28, 28, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">千万别这么说</span></strong></p>
+          </content>
+        </shape>
+        <shape width="330" height="176.1" topLeftX="85" topLeftY="251.9406299212598" type="text" id="baz">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">&quot;这有什么大不了的？&quot;</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">&quot;你就是想太多了&quot;</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">&quot;我给你个建议啊...&quot;</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">结果：TA可能再也不跟你说了</span></p>
+          </content>
+        </shape>
+        <shape width="380" height="264.15" topLeftX="520" topLeftY="180.40000000000003" presetHandlers="0" type="round-rect" id="baC">
+          <fill>
+            <fillColor color="rgba(239, 246, 255, 1)"/>
+          </fill>
+          <border color="rgba(147, 197, 253, 1)" width="1" miterLimit="10"/>
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="330" height="38.52188976377953" topLeftX="545" topLeftY="202.41251968503937" type="text" id="baU">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">你可以这么说</span></strong></p>
+          </content>
+        </shape>
+        <shape width="330" height="176.1" topLeftX="545" topLeftY="251.9406299212598" type="text" id="bae">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">&quot;这事换我我也难受&quot;</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">&quot;你能把这些说出来，真的很不容易&quot;</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">&quot;我陪着你呢&quot;</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">结果：TA觉得被理解了</span></p>
+          </content>
+        </shape>
+      </group>
+      <shape width="840" height="50" topLeftX="60" topLeftY="470" presetHandlers="0" type="round-rect" id="bas">
+        <fill>
+          <fillColor color="rgba(240, 245, 251, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="800" height="38" topLeftX="80" topLeftY="476.4" type="text" id="bah">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">学会“ 共情 ”  学会“ 引导 ”</span></strong></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bav">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqP">
+    <style>
+      <fill id="fqP">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bPJ" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bPI">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">发现问题四步走</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bPc">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="195" height="120" topLeftX="60" topLeftY="185" presetHandlers="10.5492" type="round-rect" id="bPq">
+        <fill>
+          <fillColor color="rgba(30, 58, 110, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="165" height="32" topLeftX="75" topLeftY="200" type="text" id="bkd">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="17" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">第一步</span></strong></p>
+        </content>
+      </shape>
+      <shape width="165" height="55" topLeftX="75" topLeftY="238" type="text" id="bks">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(255, 255, 255, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">保证安全，别让TA独处</span></p>
+        </content>
+      </shape>
+      <line id="bPP" startX="260.0000039968034" startY="244.99999780728407" endX="285.01999600319664" endY="245.00000219271593">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+      <shape width="195" height="120" topLeftX="290" topLeftY="185" presetHandlers="11.3496" type="round-rect" id="bPK">
+        <fill>
+          <fillColor color="rgba(43, 91, 168, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="165" height="32" topLeftX="305" topLeftY="200" type="text" id="bPx">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="17" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">第二步</span></strong></p>
+        </content>
+      </shape>
+      <shape width="165" height="55" topLeftX="305" topLeftY="238" type="text" id="bPu">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(255, 255, 255, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">马上联系辅导员或班主任</span></p>
+        </content>
+      </shape>
+      <line id="bkU" startX="490.0000039968034" startY="244.99999780728407" endX="515.0199960031966" endY="245.00000219271593">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+      <shape width="195" height="120" topLeftX="520" topLeftY="185" presetHandlers="13.8" type="round-rect" id="bkh">
+        <fill>
+          <fillColor color="rgba(70, 120, 180, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="165" height="32" topLeftX="535" topLeftY="200" type="text" id="bPk">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="17" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">第三步</span></strong></p>
+        </content>
+      </shape>
+      <shape width="165" height="55" topLeftX="535" topLeftY="238" type="text" id="bPm">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(255, 255, 255, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">配合老师，如实提供信息</span></p>
+        </content>
+      </shape>
+      <line id="bPw" startX="720.0000039968033" startY="244.99999780728407" endX="745.0199960031965" endY="245.00000219271593">
+        <border color="rgba(180, 200, 230, 1)" miterLimit="10"/>
+        <startArrow widthScale="lg" heightScale="lg"/>
+        <endArrow type="arrow" widthScale="lg" heightScale="lg"/>
+      </line>
+      <shape width="160" height="120" topLeftX="750" topLeftY="185" presetHandlers="11.2992" type="round-rect" id="bPX">
+        <fill>
+          <fillColor color="rgba(90, 140, 200, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="130" height="32" topLeftX="765" topLeftY="200" type="text" id="bkY">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="17" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">第四步</span></strong></p>
+        </content>
+      </shape>
+      <shape width="130" height="55" topLeftX="765" topLeftY="238" type="text" id="bPa">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><span color="rgba(255, 255, 255, 1)" fontSize="15" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">继续陪伴、保密</span></p>
+        </content>
+      </shape>
+      <shape width="840" height="38" topLeftX="60" topLeftY="340.2" type="text" id="bPZ">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">几个关键提醒</span></strong></p>
+        </content>
+      </shape>
+      <shape width="840" height="120" topLeftX="60" topLeftY="382.2" type="text" id="bPF">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">· 上报的时候只说事实，不做“ 诊断”</span></p>
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">· 除老师外严格保密，保护他的隐私</span></p>
+          <p textAlign="center" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">· 不私自联系家长</span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bke">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqp">
+    <style>
+      <fill id="fqp">
+        <fillColor color="rgba(248, 250, 253, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bkg" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text" id="bkv">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="32" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">注意自我关怀，别把自己累垮</span></strong></p>
+        </content>
+      </shape>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bko">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="260" height="230" topLeftX="60" topLeftY="220" presetHandlers="0" type="round-rect" id="bkO">
+        <fill>
+          <fillColor color="rgba(255, 255, 255, 1)"/>
+        </fill>
+        <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="210" height="40" topLeftX="85" topLeftY="245" type="text" id="bkl">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">心委不是救世主</span></strong></p>
+        </content>
+      </shape>
+      <shape width="210" height="140" topLeftX="76.44999999999999" topLeftY="311.8" type="text" id="bkG">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <ul listStyle="pptx-bullet">
+            <li>
+              <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">我们只能力所能及地为同学们排忧疏闷</span></p>
+            </li>
+            <li>
+              <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(0, 0, 0, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">保持敏感、真诚倾听、及时求助</span></p>
+            </li>
+          </ul>
+          <p textAlign="left" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="16" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="260" height="230" topLeftX="350" topLeftY="220" presetHandlers="0" type="round-rect" id="bkz">
+        <fill>
+          <fillColor color="rgba(255, 255, 255, 1)"/>
+        </fill>
+        <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="210" height="40" topLeftX="375" topLeftY="245" type="text" id="bkT">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">解决问题有老师</span></strong></p>
+        </content>
+      </shape>
+      <shape width="210" height="140" topLeftX="366.45" topLeftY="283.8" type="text" id="bkB">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <ul listStyle="pptx-bullet">
+            <li>
+              <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">专业的事交给专业的人</span></p>
+            </li>
+            <li>
+              <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">心委任务是发现和陪伴，不是治疗</span></p>
+            </li>
+          </ul>
+        </content>
+      </shape>
+      <shape width="260" height="230" topLeftX="640" topLeftY="220" presetHandlers="0" type="round-rect" id="bkt">
+        <fill>
+          <fillColor color="rgba(255, 255, 255, 1)"/>
+        </fill>
+        <border color="rgba(220, 228, 240, 1)" width="1" miterLimit="10"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="210" height="40" topLeftX="665" topLeftY="245" type="text" id="bkE">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">心委也可以求助</span></strong></p>
+        </content>
+      </shape>
+      <shape width="219.75" height="140" topLeftX="656.45" topLeftY="295.8" type="text" id="bkR">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5"/>
+          <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5"/>
+          <ul listStyle="pptx-bullet">
+            <li>
+              <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">觉得被影响了，可以寻求辅导员、心理中心老师的帮助</span></p>
+            </li>
+            <li>
+              <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5" bulletColor="rgba(0, 0, 0, 1)"><span color="rgba(60, 60, 60, 1)" fontSize="16" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">注意对自我的情绪关怀，不做情绪的垃圾桶</span></p>
+            </li>
+          </ul>
+          <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5"/>
+          <p textAlign="left" lineSpacing="multiple:1.9" marginLeft="22.5" marginRight="0" indent="-22.5"><span color="rgba(0, 0, 0, 1)" fontSize="16" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="840" height="50" topLeftX="60" topLeftY="470" presetHandlers="0" type="round-rect" id="bkb">
+        <fill>
+          <fillColor color="rgba(240, 245, 251, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <shape width="800" height="38" topLeftX="80" topLeftY="476.4" type="text" id="bki">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">先照顾好你自己，才能更好地陪伴同学</span></strong></p>
+        </content>
+      </shape>
+      <shape width="840" height="30" topLeftX="60" topLeftY="170" type="text" id="bkC">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+          <p textAlign="left" marginRight="0"><strong><span color="rgba(185, 28, 28, 1)" fontSize="20" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">不做情绪的垃圾桶</span></strong></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bkM">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+  <slide id="pqa">
+    <style>
+      <fill id="fqa">
+        <fillColor color="linear-gradient(135deg,rgba(20, 42, 84, 1) 0%,rgba(30, 58, 110, 1) 50%,rgba(43, 91, 168, 1) 100%)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bkL" src="DTc9bSJ2MoG06SxY925cZBpsnkD" width="200" height="40" topLeftX="40" topLeftY="30">
+        <crop type="rect" leftOffset="0.6198180793689048" rightOffset="0.6198180793689119" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="58.9" topLeftX="60" topLeftY="130" type="text" id="bkj">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="36" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">三句话送给学弟学妹们</span></strong></p>
+        </content>
+      </shape>
+      <shape width="720" height="50" topLeftX="120" topLeftY="231.60000000000002" type="text" id="bkQ">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:1.8" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">· 保持敏感，善做“ 雷达”，但不要过度紧张</span></strong></p>
+        </content>
+      </shape>
+      <shape width="720" height="50" topLeftX="120" topLeftY="291.6" type="text" id="bkA">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:1.8" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">· 真诚倾听，用心陪伴，以朋友的身份承接情绪</span></strong></p>
+        </content>
+      </shape>
+      <shape width="720" height="50" topLeftX="120" topLeftY="351.6" type="text" id="bkN">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:1.8" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">· 明晰边界，及时求助，成为同学们靠谱的身边人</span></strong></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bkH">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>
+</presentation>

@@ -1,0 +1,151 @@
+{
+  "slide_num": 7,
+  "role": "content",
+  "slide_id": "pqu",
+  "local_xml_path": "source-slides\\slide-07.xml",
+  "shell_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.3889,
+      "width": 2.3611,
+      "height": 0.4722,
+      "text": ""
+    },
+    {
+      "id": 4,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.0556,
+      "width": 0.6944,
+      "height": 0.0556,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.25,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": "这些情况是红线，必须马上上报！"
+    },
+    {
+      "id": 5,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 2.3611,
+      "width": 11.6667,
+      "height": 0.4167,
+      "text": "拿不准的时候就立即上报"
+    },
+    {
+      "id": 6,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 2.9167,
+      "width": 5.8333,
+      "height": 0.4444,
+      "text": "① 直接或间接提到不想活了"
+    },
+    {
+      "id": 7,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 3.4444,
+      "width": 5.8333,
+      "height": 0.4444,
+      "text": "② 把心爱东西送人、突然跟人告别"
+    },
+    {
+      "id": 8,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 3.9722,
+      "width": 5.8333,
+      "height": 0.4444,
+      "text": "③ 有自伤行为，或明确说想伤害自己"
+    },
+    {
+      "id": 9,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 4.5,
+      "width": 5.8333,
+      "height": 0.4444,
+      "text": "④ 情绪很低落很久，突然变\"平静\""
+    },
+    {
+      "id": 10,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 5.0278,
+      "width": 5.8333,
+      "height": 0.4444,
+      "text": "⑤ 严重失眠或不吃饭，持续两周以上"
+    },
+    {
+      "id": 11,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 5.5556,
+      "width": 5.8333,
+      "height": 0.4444,
+      "text": "⑥ 遭遇重大打击后明显不对劲"
+    },
+    {
+      "id": 12,
+      "type": "AUTO_SHAPE",
+      "left": 6.65,
+      "top": 2.4722,
+      "width": 5.6979,
+      "height": 3.3167,
+      "text": ""
+    },
+    {
+      "id": 13,
+      "type": "TEXT_BOX",
+      "left": 6.9972,
+      "top": 2.75,
+      "width": 4.9674,
+      "height": 0.5271,
+      "text": "为什么第④条特别要注意？"
+    },
+    {
+      "id": 14,
+      "type": "TEXT_BOX",
+      "left": 6.9972,
+      "top": 3.375,
+      "width": 4.9674,
+      "height": 2.1104,
+      "text": "一个人低落了很久，突然变得很平静、很释然——\n这往往不是好转，\n而是他可能已经做了某个决定。"
+    },
+    {
+      "id": 15,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 6.3194,
+      "width": 11.6667,
+      "height": 0.7639,
+      "text": ""
+    },
+    {
+      "id": 16,
+      "type": "TEXT_BOX",
+      "left": 1.1111,
+      "top": 6.4139,
+      "width": 11.1111,
+      "height": 0.5556,
+      "text": "及时上报紧急情况不是“ 打小报告”"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image2.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

@@ -1,0 +1,115 @@
+{
+  "slide_num": 3,
+  "role": "content",
+  "slide_id": "pqk",
+  "local_xml_path": "source-slides\\slide-03.xml",
+  "shell_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.3889,
+      "width": 2.3611,
+      "height": 0.4722,
+      "text": ""
+    },
+    {
+      "id": 4,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.0556,
+      "width": 0.6944,
+      "height": 0.0556,
+      "text": ""
+    },
+    {
+      "id": 7,
+      "type": "LINE",
+      "left": 5.0347,
+      "top": 4.3333,
+      "width": 3.2639,
+      "height": 0.0139,
+      "text": ""
+    },
+    {
+      "id": 12,
+      "type": "AUTO_SHAPE",
+      "left": 12.5,
+      "top": 6.9444,
+      "width": 0.5556,
+      "height": 0.0556,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.25,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": "心委不是心理医生"
+    },
+    {
+      "id": 5,
+      "type": "TEXT_BOX",
+      "left": 0.8667,
+      "top": 2.4306,
+      "width": 5.2778,
+      "height": 0.4861,
+      "text": "我当初以为的"
+    },
+    {
+      "id": 6,
+      "type": "TEXT_BOX",
+      "left": 0.8667,
+      "top": 3.0556,
+      "width": 5.2778,
+      "height": 2.6389,
+      "text": "要会\"治病\"，能诊断心理问题\n要帮同学解决所有烦恼\n要懂好多心理学理论和术语\n出了问题就是我没做好"
+    },
+    {
+      "id": 8,
+      "type": "TEXT_BOX",
+      "left": 7.1889,
+      "top": 2.4306,
+      "width": 5.2778,
+      "height": 0.4861,
+      "text": "实际上我们是"
+    },
+    {
+      "id": 9,
+      "type": "TEXT_BOX",
+      "left": 7.1889,
+      "top": 3.0556,
+      "width": 5.2778,
+      "height": 2.6389,
+      "text": "同学身边那个愿意听他说话的人\n最早发现\"他好像不太对劲\"的人\n帮他找到专业帮助的那个人"
+    },
+    {
+      "id": 10,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 6.1806,
+      "width": 11.6667,
+      "height": 0.7639,
+      "text": ""
+    },
+    {
+      "id": 11,
+      "type": "TEXT_BOX",
+      "left": 1.1111,
+      "top": 6.2972,
+      "width": 11.1111,
+      "height": 0.5556,
+      "text": "心委不需要会治病，只要“ 在场” 和“ 敏锐” 就够了"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image2.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

@@ -1,0 +1,60 @@
+{
+  "slide_num": 11,
+  "role": "ending",
+  "slide_id": "pqa",
+  "local_xml_path": "source-slides\\slide-11.xml",
+  "shell_shapes": [],
+  "content_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.4167,
+      "width": 2.7778,
+      "height": 0.5556,
+      "text": ""
+    },
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.8056,
+      "width": 11.6667,
+      "height": 0.8181,
+      "text": "三句话送给学弟学妹们"
+    },
+    {
+      "id": 5,
+      "type": "TEXT_BOX",
+      "left": 1.6667,
+      "top": 3.2167,
+      "width": 10.0,
+      "height": 0.6944,
+      "text": "· 保持敏感，善做“ 雷达”，但不要过度紧张"
+    },
+    {
+      "id": 6,
+      "type": "TEXT_BOX",
+      "left": 1.6667,
+      "top": 4.05,
+      "width": 10.0,
+      "height": 0.6944,
+      "text": "· 真诚倾听，用心陪伴，以朋友的身份承接情绪"
+    },
+    {
+      "id": 7,
+      "type": "TEXT_BOX",
+      "left": 1.6667,
+      "top": 4.8833,
+      "width": 10.0,
+      "height": 0.6944,
+      "text": "· 明晰边界，及时求助，成为同学们靠谱的身边人"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image1.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

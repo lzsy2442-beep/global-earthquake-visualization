@@ -1,0 +1,187 @@
+{
+  "slide_num": 2,
+  "role": "toc",
+  "slide_id": "pqZ",
+  "local_xml_path": "source-slides\\slide-02.xml",
+  "shell_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.3889,
+      "width": 2.3611,
+      "height": 0.4722,
+      "text": ""
+    },
+    {
+      "id": 4,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.0833,
+      "width": 0.6944,
+      "height": 0.0556,
+      "text": ""
+    },
+    {
+      "id": 12,
+      "type": "LINE",
+      "left": 0.8333,
+      "top": 4.5764,
+      "width": 11.6667,
+      "height": 0.0139,
+      "text": ""
+    },
+    {
+      "id": 19,
+      "type": "AUTO_SHAPE",
+      "left": 12.5,
+      "top": 6.9444,
+      "width": 0.5556,
+      "height": 0.0556,
+      "text": ""
+    },
+    {
+      "id": 20,
+      "type": "AUTO_SHAPE",
+      "left": 12.7778,
+      "top": 7.0833,
+      "width": 0.2778,
+      "height": 0.0556,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.25,
+      "width": 11.1111,
+      "height": 0.7639,
+      "text": "分享目录"
+    },
+    {
+      "id": 5,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 2.3611,
+      "width": 11.1111,
+      "height": 0.4861,
+      "text": "四个板块，帮你快速上手心委工作"
+    },
+    {
+      "id": 6,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 3.1944,
+      "width": 1.25,
+      "height": 0.7639,
+      "text": "01"
+    },
+    {
+      "id": 7,
+      "type": "TEXT_BOX",
+      "left": 2.1528,
+      "top": 3.3056,
+      "width": 3.8889,
+      "height": 0.4861,
+      "text": "明确心委定位"
+    },
+    {
+      "id": 8,
+      "type": "TEXT_BOX",
+      "left": 2.1528,
+      "top": 3.8194,
+      "width": 3.8889,
+      "height": 0.4167,
+      "text": "心委的工作性质"
+    },
+    {
+      "id": 9,
+      "type": "TEXT_BOX",
+      "left": 6.9444,
+      "top": 3.1944,
+      "width": 1.25,
+      "height": 0.7639,
+      "text": "02"
+    },
+    {
+      "id": 10,
+      "type": "TEXT_BOX",
+      "left": 8.2639,
+      "top": 3.3056,
+      "width": 4.4444,
+      "height": 0.4861,
+      "text": "日常工作如何开展"
+    },
+    {
+      "id": 11,
+      "type": "TEXT_BOX",
+      "left": 8.2639,
+      "top": 3.8194,
+      "width": 4.4444,
+      "height": 0.4167,
+      "text": "怎么识别同学的心理危机"
+    },
+    {
+      "id": 13,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 4.8611,
+      "width": 1.25,
+      "height": 0.7639,
+      "text": "03"
+    },
+    {
+      "id": 14,
+      "type": "TEXT_BOX",
+      "left": 2.1528,
+      "top": 4.9722,
+      "width": 3.8889,
+      "height": 0.4861,
+      "text": "遇到紧急情况怎么办"
+    },
+    {
+      "id": 15,
+      "type": "TEXT_BOX",
+      "left": 2.1528,
+      "top": 5.4861,
+      "width": 3.8889,
+      "height": 0.4167,
+      "text": "哪些情况必须马上上报？"
+    },
+    {
+      "id": 16,
+      "type": "TEXT_BOX",
+      "left": 6.9444,
+      "top": 4.8611,
+      "width": 1.25,
+      "height": 0.7639,
+      "text": "04"
+    },
+    {
+      "id": 17,
+      "type": "TEXT_BOX",
+      "left": 8.2639,
+      "top": 4.9722,
+      "width": 4.4444,
+      "height": 0.4861,
+      "text": "注意自我关怀"
+    },
+    {
+      "id": 18,
+      "type": "TEXT_BOX",
+      "left": 8.2639,
+      "top": 5.4861,
+      "width": 4.4444,
+      "height": 0.4167,
+      "text": "心委也是普通人"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image2.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

@@ -1,0 +1,171 @@
+{
+  "references": [
+    {
+      "id": 1,
+      "fact": "项目定位：全球地震可视化，基于USGS公开地震目录，覆盖1995年至今M3.0以上地震，支持时间、震级、深度多维筛选，含统计分析与可检索目录",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "首页导语", "evidence": "基于美国地质调查局（USGS）公开地震目录，覆盖全球1995年至今M3.0以上地震事件，支持时间、震级、深度多维筛选，并给出统计分析与可检索目录。"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 2,
+      "fact": "M3.0+全量事件605,435条",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "首页关键数字", "evidence": "605,435 M3.0+ 事件"}],
+      "kind": "direct",
+      "status": "截至2026-11-25"
+    },
+    {
+      "id": 3,
+      "fact": "时间跨度31年，1995-01-01至2026-11-25，统一UTC存储，可按北京时间切换显示",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "首页关键数字/数据与方法", "evidence": "31年时间跨度；时间范围：1995-01-01至2026-11-25，统一UTC存储，可按北京时间切换显示"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 4,
+      "fact": "最大震级9.1",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "首页关键数字", "evidence": "9.1 最大震级"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 5,
+      "fact": "M7.0及以上事件481次",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "首页关键数字", "evidence": "481 M7.0+ 事件"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 6,
+      "fact": "M5.0+数据54,724条，对应文件6.93MB",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "三种视图卡片", "evidence": "54,724条 6.93 MB"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 7,
+      "fact": "三种视图：M5聚类（屏幕空间聚类，放大到一定层级自动拆分单点）、M5全点状（不聚合，每个弧圈一次地震，高震级置顶）、M3全量（60万条，二进制压缩解码，中小地震填补板块边界细节）",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "三种视图", "evidence": "屏幕空间聚类，放大到一定层级后自动拆分为单点；不做聚合，每一个弧圈代表一次地震，按震级分桶绘制并保证高震级始终在最上层；覆盖60万条记录，二进制压缩解码，可看到大量中小地震填补出的板块边界细节。"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 8,
+      "fact": "数据源为USGS FDSN Event Web Service，按月分块抓取、超限自动二分，按事件编号去重",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "数据与方法", "evidence": "数据源：USGS FDSN Event Web Service（earthquake.usgs.gov），按月分块抓取、超限自动二分，按事件编号去重。"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 9,
+      "fact": "每天09:17（北京时间）自动抓取USGS最新地震，并入地图与统计",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "数据与方法", "evidence": "时效性：每天09:17（北京时间）自动抓取USGS最新地震，并入地图与统计"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 10,
+      "fact": "分别构建M5.0+与M3.0+两套数据集",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "数据与方法", "evidence": "震级下限：分别构建M5.0+与M3.0+两套数据集"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 11,
+      "fact": "底图采用天地图（矢量/地形）与高德，均为国内可访问服务",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "数据与方法", "evidence": "底图：天地图（矢量/地形）与高德，均为国内可访问服务"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 12,
+      "fact": "渲染采用MapLibre GL + 主线程Canvas叠加层，规避移动端GeoJSON Worker挂起",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "数据与方法", "evidence": "渲染：MapLibre GL + 主线程Canvas叠加层（规避移动端GeoJSON Worker挂起）"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 13,
+      "fact": "M3数据以18字节/条二进制压缩内联，Base64还原后解码",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "数据与方法", "evidence": "M3数据以18字节/条二进制压缩内联，Base64还原后解码"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 14,
+      "fact": "M5界面统计：事件总数54,743；最大震级9.1（2004年苏门答腊-安达曼群岛地震）；M7.0及以上481次、占比0.88%；平均震源深度56.1km，最浅-3km、最深691.6km",
+      "sources": [{"source": "https://earthquakevisualization.top/m5-cluster.html", "locator": "顶部统计卡", "evidence": "事件总数54,743；最大震级9.1 2004年苏门答腊-安达曼群岛地震；M7.0及以上481次 占比0.88%；平均震源深度56.1km 最浅-3km/最深691.6km"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 15,
+      "fact": "M5占M3比例约9.04%；M7+占M5比例0.879%（约0.88%）",
+      "sources": [{"source": "calculator", "locator": "基于id2/id6/id5计算", "evidence": "54724/605435=9.039%；481/54743=0.879%"}],
+      "kind": "calculated",
+      "status": "已计算",
+      "derivation": "M5占M3：54724/605435×100%=9.039%；M7占M5：481/54743×100%=0.879%。"
+    },
+    {
+      "id": 16,
+      "fact": "统计分析含月度活动时序、年度事件对比、震级分布、震源深度分布、强震纪录Top10",
+      "sources": [{"source": "https://earthquakevisualization.top/m5-cluster.html", "locator": "统计分析标签", "evidence": "月度活动时序、年度事件对比、震级分布、震源深度分布、强震纪录Top10"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 17,
+      "fact": "地震目录为可检索明细表，列含发震时间、震中位置（中英文）、震级、深度、纬度、经度，可排序，共54,743个事件",
+      "sources": [{"source": "https://earthquakevisualization.top/m5-cluster.html", "locator": "地震目录标签", "evidence": "地震事件明细共54,743个事件；发震时间（北京）、震中位置、震级、深度、纬度、经度；时间：新→旧"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 18,
+      "fact": "提供离线单文件版，断网可用，适合课堂分发，M5聚类版6.93MB",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "首页底部", "evidence": "离线单文件版（断网可用，适合课堂分发）：M5聚类版6.93MB"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 19,
+      "fact": "免责声明：用于学习、科研与教学展示，不构成地震预报或预警；地震目录存在定位误差与震级修订；实际灾害信息以中国地震局等官方渠道为准",
+      "sources": [{"source": "https://earthquakevisualization.top/", "locator": "免责声明", "evidence": "本站为公开地震数据的学习、科研与教学展示，不构成地震预报或预警。地震目录存在定位误差与震级修订，实际灾害信息请以中国地震局等官方渠道为准。"}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 20,
+      "fact": "Vibe Coding（氛围编程）是一种AI辅助软件开发方式：开发者用自然语言向大语言模型描述需求与意图，由模型生成源代码，人负责引导、测试与反馈，而非逐行手写",
+      "sources": [{"source": "https://arxiv.org/pdf/2510.17842", "locator": "Introduction/Definition", "evidence": "a developer specifies high-level functional intent ... and an intelligent agent transforms those specifications into executable software；programmer guides, tests, and gives feedback to an LLM-based coding assistance tool."}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 21,
+      "fact": "该术语由计算机科学家Andrej Karpathy（OpenAI联合创始人、前特斯拉AI负责人）于2025年2月提出；2025年3月韦氏词典（Merriam-Webster）收录为流行俚语，并被《柯林斯词典》评为2025年度词汇",
+      "sources": [{"source": "https://cacm.acm.org/news/catching-the-vibe-of-vibe-coding/", "locator": "A new kind of coding", "evidence": "in February 2025, Karpathy coined the term in a post on X；Merriam-Webster listed the term；Collins English Dictionary Word of the Year for 2025."}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 22,
+      "fact": "边界与风险：AI生成的代码可能包含漏洞、错误与安全隐患；若对每行代码都进行了审查、测试与理解，实质是把大模型当作助手而非放任的Vibe Coding，理解与核验不可省略",
+      "sources": [{"source": "https://arxiv.org/pdf/2510.17842", "locator": "Abstract/Challenges", "evidence": "AI-generated code often contains vulnerabilities and may even slow experienced developers；challenges such as ... maintainability, and security."}],
+      "kind": "direct",
+      "status": "已确认"
+    },
+    {
+      "id": 23,
+      "fact": "本项目采用人机协作方式：大模型承担代码生成与补全、报错调试、数据处理脚本与文档解释，开发者负责需求设计、技术选型、地理与地震专业判断以及逐行理解、测试与核验",
+      "sources": [{"source": "用户本轮指令", "locator": "融合AI大模型、vibe coding", "evidence": "用户要求在分享中融合AI大模型与Vibe Coding知识，表明项目借助对话式大模型完成开发，且由本人把关专业内容。"}],
+      "kind": "inferred",
+      "status": "基于用户指令的归纳",
+      "derivation": "由用户确认项目借助大模型开发；具体工具未点名，PPT使用通用表述，不虚构具体产品；专业判断与核验职责依据id22的边界要求归到开发者。"
+    }
+  ],
+  "gaps": [
+    "网站未提供各具体历史事件的中文震级口径细节，PPT不单独罗列可能有口径差异的事件震级，仅引用网站概括值",
+    "未提供项目开发周期与团队信息，PPT不虚构开发过程"
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "slide_num": 9,
+  "role": "content",
+  "slide_id": "pqP",
+  "local_xml_path": "source-slides\\slide-09.xml",
+  "shell_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.3889,
+      "width": 2.3611,
+      "height": 0.4722,
+      "text": ""
+    },
+    {
+      "id": 4,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.0556,
+      "width": 0.6944,
+      "height": 0.0556,
+      "text": ""
+    },
+    {
+      "id": 8,
+      "type": "LINE",
+      "left": 3.6113,
+      "top": 3.3958,
+      "width": 0.3472,
+      "height": 0.0139,
+      "text": ""
+    },
+    {
+      "id": 12,
+      "type": "LINE",
+      "left": 6.8057,
+      "top": 3.3958,
+      "width": 0.3472,
+      "height": 0.0139,
+      "text": ""
+    },
+    {
+      "id": 16,
+      "type": "LINE",
+      "left": 10.0001,
+      "top": 3.3958,
+      "width": 0.3472,
+      "height": 0.0139,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.25,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": "发现问题四步走"
+    },
+    {
+      "id": 5,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.5694,
+      "width": 2.7083,
+      "height": 1.6667,
+      "text": ""
+    },
+    {
+      "id": 6,
+      "type": "TEXT_BOX",
+      "left": 1.0417,
+      "top": 2.7778,
+      "width": 2.2917,
+      "height": 0.4444,
+      "text": "第一步"
+    },
+    {
+      "id": 7,
+      "type": "TEXT_BOX",
+      "left": 1.0417,
+      "top": 3.3056,
+      "width": 2.2917,
+      "height": 0.7639,
+      "text": "保证安全，别让TA独处"
+    },
+    {
+      "id": 9,
+      "type": "AUTO_SHAPE",
+      "left": 4.0278,
+      "top": 2.5694,
+      "width": 2.7083,
+      "height": 1.6667,
+      "text": ""
+    },
+    {
+      "id": 10,
+      "type": "TEXT_BOX",
+      "left": 4.2361,
+      "top": 2.7778,
+      "width": 2.2917,
+      "height": 0.4444,
+      "text": "第二步"
+    },
+    {
+      "id": 11,
+      "type": "TEXT_BOX",
+      "left": 4.2361,
+      "top": 3.3056,
+      "width": 2.2917,
+      "height": 0.7639,
+      "text": "马上联系辅导员或班主任"
+    },
+    {
+      "id": 13,
+      "type": "AUTO_SHAPE",
+      "left": 7.2222,
+      "top": 2.5694,
+      "width": 2.7083,
+      "height": 1.6667,
+      "text": ""
+    },
+    {
+      "id": 14,
+      "type": "TEXT_BOX",
+      "left": 7.4306,
+      "top": 2.7778,
+      "width": 2.2917,
+      "height": 0.4444,
+      "text": "第三步"
+    },
+    {
+      "id": 15,
+      "type": "TEXT_BOX",
+      "left": 7.4306,
+      "top": 3.3056,
+      "width": 2.2917,
+      "height": 0.7639,
+      "text": "配合老师，如实提供信息"
+    },
+    {
+      "id": 17,
+      "type": "AUTO_SHAPE",
+      "left": 10.4167,
+      "top": 2.5694,
+      "width": 2.2222,
+      "height": 1.6667,
+      "text": ""
+    },
+    {
+      "id": 18,
+      "type": "TEXT_BOX",
+      "left": 10.625,
+      "top": 2.7778,
+      "width": 1.8056,
+      "height": 0.4444,
+      "text": "第四步"
+    },
+    {
+      "id": 19,
+      "type": "TEXT_BOX",
+      "left": 10.625,
+      "top": 3.3056,
+      "width": 1.8056,
+      "height": 0.7639,
+      "text": "继续陪伴、保密"
+    },
+    {
+      "id": 20,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 4.725,
+      "width": 11.6667,
+      "height": 0.5278,
+      "text": "几个关键提醒"
+    },
+    {
+      "id": 21,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 5.3083,
+      "width": 11.6667,
+      "height": 1.6667,
+      "text": "· 上报的时候只说事实，不做“ 诊断”\n· 除老师外严格保密，保护他的隐私\n· 不私自联系家长"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image2.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

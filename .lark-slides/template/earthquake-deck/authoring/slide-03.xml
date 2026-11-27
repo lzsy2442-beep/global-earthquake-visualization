@@ -1,0 +1,61 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgba(248, 250, 253, 1)"/>
+    </fill>
+  </style>
+  <data>
+    <img src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28"/>
+    <shape width="840" height="50" topLeftX="60" topLeftY="90" type="text">
+      <content textAlign="left">
+        <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="30" fontFamily="Microsoft YaHei">项目背景：把地震数据变成可查询的地图</span></strong></p>
+      </content>
+    </shape>
+    <shape width="50" height="4" topLeftX="60" topLeftY="148" type="round-rect">
+      <fill><fillColor color="rgba(43, 91, 168, 1)"/></fill>
+    </shape>
+    <shape width="380" height="35" topLeftX="62" topLeftY="172" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(150, 150, 150, 1)" fontSize="20" fontFamily="Microsoft YaHei">原始数据的特点</span></strong></p>
+      </content>
+    </shape>
+    <shape width="380" height="200" topLeftX="62" topLeftY="218" type="text">
+      <content textAlign="center">
+        <p textAlign="center" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="17" fontFamily="Microsoft YaHei">USGS 全球地震目录是公开的事件级数据</span></p>
+        <p textAlign="center" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="17" fontFamily="Microsoft YaHei">每条记录是时间、经纬度、震级、深度的离散条目</span></p>
+        <p textAlign="center" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="17" fontFamily="Microsoft YaHei">数据量大，表格形式难以看出空间分布规律</span></p>
+      </content>
+    </shape>
+    <line startX="480" startY="190" endX="480" endY="425">
+      <border color="rgba(220, 228, 240, 1)" width="1"/>
+    </line>
+    <shape width="380" height="35" topLeftX="517" topLeftY="172" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="20" fontFamily="Microsoft YaHei">本项目的做法</span></strong></p>
+      </content>
+    </shape>
+    <shape width="380" height="200" topLeftX="517" topLeftY="218" type="text">
+      <content textAlign="center">
+        <p textAlign="center" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(43, 43, 43, 1)" fontSize="17" fontFamily="Microsoft YaHei">以地图为载体组织全部地震事件</span></p>
+        <p textAlign="center" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(43, 43, 43, 1)" fontSize="17" fontFamily="Microsoft YaHei">支持时间、震级、深度的多维筛选</span></p>
+        <p textAlign="center" lineSpacing="multiple:1.9" marginRight="0"><span color="rgba(43, 43, 43, 1)" fontSize="17" fontFamily="Microsoft YaHei">叠加统计分析与可检索目录</span></p>
+      </content>
+    </shape>
+    <shape width="840" height="52" topLeftX="60" topLeftY="448" type="round-rect">
+      <fill><fillColor color="rgba(235, 241, 249, 1)"/></fill>
+    </shape>
+    <shape width="800" height="40" topLeftX="80" topLeftY="455" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="19" fontFamily="Microsoft YaHei">核心思路：用地图学方法，让 60 万条记录“说话”</span></strong></p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">先说为什么要做这个项目。美国地质调查局的全球地震目录是公开的，任何人都可以下载，但它本质上是一条条离散的记录。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">每条记录包含发震时间、经纬度、震级和深度，当成千上万条数据堆在表格里时，我们很难直观看出它们在空间上的规律。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">我的做法是把地图作为载体，把所有地震事件组织到地图上，再配上多维筛选、统计分析和可检索目录。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">核心思路就是用地图学的方法，让这六十万条记录自己“说话”。</span></p>
+    </content>
+  </note>
+</slide>

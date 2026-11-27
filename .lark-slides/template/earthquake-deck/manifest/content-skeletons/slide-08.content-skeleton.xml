@@ -1,0 +1,67 @@
+<!-- 内容页骨架 · 由 parse_template.py 自动生成 · 仅保留跨 3+ 页复用的 brand_assets。Step 5.2 应 cp 本文件到 authoring/slide-NN.xml, 然后 Write 填内容 shape。 -->
+<slide xmlns="https://www.larkoffice.com/sml/2.0" id="pqq"><style>
+      <fill id="fqq">
+        <fillColor color="rgba(248, 250, 253, 1)" />
+      </fill>
+    </style>
+    <data><img id="baE" src="RMOwb64MWoTMY1xnvZfcaOmenAb" width="170" height="34" topLeftX="40" topLeftY="28">
+        <crop type="rect" leftOffset="0.5268453674635794" rightOffset="0.5268453674635509" topOffset="0" bottomOffset="0" />
+      </img>
+      <shape width="50" height="4" topLeftX="60" topLeftY="148" presetHandlers="0" type="round-rect" id="bad">
+        <fill>
+          <fillColor color="rgba(232, 114, 12, 1)" />
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+          <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+        </content>
+      </shape>
+      <group id="baY">
+        <shape width="380" height="264.15" topLeftX="60" topLeftY="180.40000000000003" presetHandlers="0" type="round-rect" id="baG">
+          <fill>
+            <fillColor color="rgba(254, 242, 242, 1)" />
+          </fill>
+          <border color="rgba(252, 165, 165, 1)" width="1" miterLimit="10" />
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="330" height="38.52188976377953" topLeftX="85" topLeftY="202.41251968503937" type="text" id="bai">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(185, 28, 28, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">千万别这么说</span></strong></p>
+          </content>
+        </shape>
+        <shape width="330" height="176.1" topLeftX="85" topLeftY="251.9406299212598" type="text" id="baz">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">"这有什么大不了的？"</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">"你就是想太多了"</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">"我给你个建议啊..."</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(80, 80, 80, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">结果：TA可能再也不跟你说了</span></p>
+          </content>
+        </shape>
+        <shape width="380" height="264.15" topLeftX="520" topLeftY="180.40000000000003" presetHandlers="0" type="round-rect" id="baC">
+          <fill>
+            <fillColor color="rgba(239, 246, 255, 1)" />
+          </fill>
+          <border color="rgba(147, 197, 253, 1)" width="1" miterLimit="10" />
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)">
+            <p textAlign="center" lineSpacing="multiple:1.2" marginRight="0"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false"> </span></p>
+          </content>
+        </shape>
+        <shape width="330" height="38.52188976377953" topLeftX="545" topLeftY="202.41251968503937" type="text" id="baU">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" marginRight="0"><strong><span color="rgba(30, 58, 110, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">你可以这么说</span></strong></p>
+          </content>
+        </shape>
+        <shape width="330" height="176.1" topLeftX="545" topLeftY="251.9406299212598" type="text" id="bae">
+          <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="left">
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">"这事换我我也难受"</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">"你能把这些说出来，真的很不容易"</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">"我陪着你呢"</span></p>
+            <p textAlign="left" lineSpacing="multiple:2.1" marginRight="0"><span color="rgba(60, 60, 60, 1)" fontSize="18" fontFamily="Microsoft YaHei" bold="false" italic="false" strikethrough="false" underline="false">结果：TA觉得被理解了</span></p>
+          </content>
+        </shape>
+      </group>
+      <!-- 此片段仅提供候选外框；整页/组件复用请读取完整 source-slides，保留所选完整元素组。同族新建也先补齐源页标题字阶和适用装饰；替换示例内容，不按共享 ID 比例删除设计。 --></data><animation>
+      <transition type="morph" durationMs="1250" />
+    </animation>
+  </slide>

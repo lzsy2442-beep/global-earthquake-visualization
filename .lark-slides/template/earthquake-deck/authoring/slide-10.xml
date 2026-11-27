@@ -1,0 +1,55 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="linear-gradient(135deg,rgba(20, 40, 80, 1) 0%,rgba(30, 58, 110, 1) 50%,rgba(43, 91, 168, 1) 100%)"/>
+    </fill>
+  </style>
+  <data>
+    <img src="DTc9bSJ2MoG06SxY925cZBpsnkD" width="180" height="36" topLeftX="40" topLeftY="30"/>
+    <shape width="840" height="52" topLeftX="60" topLeftY="105" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="34" fontFamily="Microsoft YaHei">项目总结</span></strong></p>
+      </content>
+    </shape>
+    <shape width="60" height="4" topLeftX="450" topLeftY="165" type="round-rect">
+      <fill><fillColor color="rgba(140, 180, 240, 1)"/></fill>
+    </shape>
+
+    <shape width="760" height="40" topLeftX="100" topLeftY="195" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="20" fontFamily="Microsoft YaHei">把 60 万条原始目录，做成可交互、可分析的可视化平台</span></strong></p>
+      </content>
+    </shape>
+    <shape width="760" height="40" topLeftX="100" topLeftY="245" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="20" fontFamily="Microsoft YaHei">用真实数据印证板块构造与地震带分布规律</span></strong></p>
+      </content>
+    </shape>
+    <shape width="760" height="40" topLeftX="100" topLeftY="295" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="20" fontFamily="Microsoft YaHei">兼顾教学、科研与离线场景，保持每日自动更新</span></strong></p>
+      </content>
+    </shape>
+
+    <shape width="840" height="40" topLeftX="60" topLeftY="360" type="text">
+      <content textAlign="center">
+        <p textAlign="center" marginRight="0"><span color="rgba(150, 190, 245, 1)" fontSize="24" fontFamily="Arial">earthquakevisualization.top</span></p>
+      </content>
+    </shape>
+
+    <shape width="800" height="60" topLeftX="80" topLeftY="430" type="text">
+      <content textAlign="center">
+        <p textAlign="center" lineSpacing="multiple:1.5" marginRight="0"><span color="rgba(180, 200, 230, 1)" fontSize="13" fontFamily="Microsoft YaHei">本平台仅供学习、科研与教学使用，不构成地震预报或预警；目录存在定位误差与震级修订，</span></p>
+        <p textAlign="center" lineSpacing="multiple:1.5" marginRight="0"><span color="rgba(180, 200, 230, 1)" fontSize="13" fontFamily="Microsoft YaHei">灾害信息以中国地震局等官方渠道为准。</span></p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">最后用三句话总结这个项目。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">第一，它把60万条原始目录，做成了一个可交互、可分析的可视化平台；第二，用真实数据印证了课堂上的板块构造和地震带分布规律；第三，它兼顾教学、科研和离线场景，并且每天自动更新。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">网站地址在屏幕上，大家课后可以直接打开。</span></p>
+      <p lineSpacing="multiple:1.3"><span fontSize="16" fontFamily="Microsoft YaHei">需要特别说明的是，它只用于学习和科研，不构成预报或预警，真正的灾害信息要以中国地震局等官方渠道为准。我的分享就到这里，谢谢大家。</span></p>
+    </content>
+  </note>
+</slide>

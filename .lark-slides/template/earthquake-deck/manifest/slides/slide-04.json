@@ -1,0 +1,178 @@
+{
+  "slide_num": 4,
+  "role": "content",
+  "slide_id": "pqr",
+  "local_xml_path": "source-slides\\slide-04.xml",
+  "shell_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.3889,
+      "width": 2.3611,
+      "height": 0.4722,
+      "text": ""
+    },
+    {
+      "id": 4,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.0556,
+      "width": 0.6944,
+      "height": 0.0556,
+      "text": ""
+    },
+    {
+      "id": 6,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.5,
+      "width": 3.6111,
+      "height": 0.0972,
+      "text": ""
+    },
+    {
+      "id": 11,
+      "type": "AUTO_SHAPE",
+      "left": 4.8611,
+      "top": 2.5,
+      "width": 3.6111,
+      "height": 0.0972,
+      "text": ""
+    },
+    {
+      "id": 16,
+      "type": "AUTO_SHAPE",
+      "left": 8.8889,
+      "top": 2.5,
+      "width": 3.6111,
+      "height": 0.0972,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.25,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": "三个角色：听人说话、留心观察、帮忙搭桥"
+    },
+    {
+      "id": 5,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.5,
+      "width": 3.6111,
+      "height": 4.0278,
+      "text": ""
+    },
+    {
+      "id": 7,
+      "type": "TEXT_BOX",
+      "left": 1.1806,
+      "top": 2.8472,
+      "width": 3.0556,
+      "height": 0.5556,
+      "text": "倾听者"
+    },
+    {
+      "id": 8,
+      "type": "TEXT_BOX",
+      "left": 1.1806,
+      "top": 3.4722,
+      "width": 3.0556,
+      "height": 0.4167,
+      "text": "不急于提建议"
+    },
+    {
+      "id": 9,
+      "type": "TEXT_BOX",
+      "left": 0.9833,
+      "top": 3.9861,
+      "width": 3.3694,
+      "height": 2.2222,
+      "text": "同学吐槽的时候，别说\"你应该...\"\n先回应情绪：\"这换谁都难受\"\n耐心倾听，让TA把话说完"
+    },
+    {
+      "id": 10,
+      "type": "AUTO_SHAPE",
+      "left": 4.8611,
+      "top": 2.5,
+      "width": 3.6111,
+      "height": 4.0278,
+      "text": ""
+    },
+    {
+      "id": 12,
+      "type": "TEXT_BOX",
+      "left": 5.2083,
+      "top": 2.8472,
+      "width": 3.0556,
+      "height": 0.5556,
+      "text": "观察者"
+    },
+    {
+      "id": 13,
+      "type": "TEXT_BOX",
+      "left": 5.2083,
+      "top": 3.4722,
+      "width": 3.0556,
+      "height": 0.4167,
+      "text": "注意\"变化\""
+    },
+    {
+      "id": 14,
+      "type": "TEXT_BOX",
+      "left": 5.2306,
+      "top": 3.9861,
+      "width": 3.0556,
+      "height": 2.2222,
+      "text": "情绪：异常沉默、异常易怒\n行为：不去上课、不参加活动\n作息：熬夜、不吃饭"
+    },
+    {
+      "id": 15,
+      "type": "AUTO_SHAPE",
+      "left": 8.8889,
+      "top": 2.5,
+      "width": 3.6111,
+      "height": 4.0278,
+      "text": ""
+    },
+    {
+      "id": 17,
+      "type": "TEXT_BOX",
+      "left": 9.2361,
+      "top": 2.8472,
+      "width": 3.0556,
+      "height": 0.5556,
+      "text": "转介者"
+    },
+    {
+      "id": 18,
+      "type": "TEXT_BOX",
+      "left": 9.2361,
+      "top": 3.4722,
+      "width": 3.0556,
+      "height": 0.4167,
+      "text": "不硬扛，快上报"
+    },
+    {
+      "id": 19,
+      "type": "TEXT_BOX",
+      "left": 9.2583,
+      "top": 3.9861,
+      "width": 3.0556,
+      "height": 2.2222,
+      "text": "超出能力范围的，不要硬抗\n及时寻求辅导员、班主任、心理中心老师等专业人员的帮助"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image2.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}

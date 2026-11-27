@@ -1,0 +1,40 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0" id="pqa">
+    <style>
+      <fill id="fqa">
+        <fillColor color="linear-gradient(135deg,rgba(20, 42, 84, 1) 0%,rgba(30, 58, 110, 1) 50%,rgba(43, 91, 168, 1) 100%)"/>
+      </fill>
+    </style>
+    <data>
+      <img id="bkL" src="DTc9bSJ2MoG06SxY925cZBpsnkD" width="200" height="40" topLeftX="40" topLeftY="30">
+        <crop type="rect" leftOffset="0.6198180793689048" rightOffset="0.6198180793689119" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="840" height="58.9" topLeftX="60" topLeftY="130" type="text" id="bkj">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="36" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">三句话送给学弟学妹们</span></strong></p>
+        </content>
+      </shape>
+      <shape width="720" height="50" topLeftX="120" topLeftY="231.60000000000002" type="text" id="bkQ">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:1.8" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">· 保持敏感，善做“ 雷达”，但不要过度紧张</span></strong></p>
+        </content>
+      </shape>
+      <shape width="720" height="50" topLeftX="120" topLeftY="291.6" type="text" id="bkA">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:1.8" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">· 真诚倾听，用心陪伴，以朋友的身份承接情绪</span></strong></p>
+        </content>
+      </shape>
+      <shape width="720" height="50" topLeftX="120" topLeftY="351.6" type="text" id="bkN">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)" textAlign="center">
+          <p textAlign="center" lineSpacing="multiple:1.8" marginRight="0"><strong><span color="rgba(255, 255, 255, 1)" fontSize="22" fontFamily="Microsoft YaHei" italic="false" strikethrough="false" underline="false">· 明晰边界，及时求助，成为同学们靠谱的身边人</span></strong></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bkH">
+      <content>
+        <p textAlign="left" lineSpacing="multiple:1.2" defaultTabSize="72"><span color="rgba(0, 0, 0, 1)" fontSize="14" fontFamily="Arial" bold="false" italic="false" strikethrough="false" underline="false">单击此处添加文本</span></p>
+      </content>
+    </note>
+    <animation>
+      <transition type="morph" durationMs="1250"/>
+    </animation>
+  </slide>

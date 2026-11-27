@@ -1,0 +1,113 @@
+{
+  "ok": true,
+  "schema_version": 1,
+  "source_pptx": "D:\\LZSY\\地震汇编\\.lark-slides\\template\\earthquake-deck\\manifest\\presentation-input\\地科院_陆赵苏豫（9）.importable.pptx",
+  "data_policy": {
+    "sample_values_included": false,
+    "series_names_role": "source_style_labels",
+    "omitted": [
+      "category_labels",
+      "cached_values",
+      "formulas",
+      "axis_bounds",
+      "sample_titles"
+    ],
+    "reuse_instruction": "Reuse source chart types, colors and geometry; replace all data and labels with current task inputs."
+  },
+  "total_slides": 11,
+  "total_charts": 0,
+  "parsed_chart_count": 0,
+  "chart_part_count": 0,
+  "unreferenced_chart_parts": [],
+  "warnings": [],
+  "slides": [
+    {
+      "slide_num": 1,
+      "source_page_id": "256",
+      "source_slide_part": "ppt/slides/slide1.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 2,
+      "source_page_id": "257",
+      "source_slide_part": "ppt/slides/slide2.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 3,
+      "source_page_id": "258",
+      "source_slide_part": "ppt/slides/slide3.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 4,
+      "source_page_id": "259",
+      "source_slide_part": "ppt/slides/slide4.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 5,
+      "source_page_id": "261",
+      "source_slide_part": "ppt/slides/slide5.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 6,
+      "source_page_id": "260",
+      "source_slide_part": "ppt/slides/slide6.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 7,
+      "source_page_id": "263",
+      "source_slide_part": "ppt/slides/slide7.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 8,
+      "source_page_id": "262",
+      "source_slide_part": "ppt/slides/slide8.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 9,
+      "source_page_id": "264",
+      "source_slide_part": "ppt/slides/slide9.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 10,
+      "source_page_id": "265",
+      "source_slide_part": "ppt/slides/slide10.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    },
+    {
+      "slide_num": 11,
+      "source_page_id": "266",
+      "source_slide_part": "ppt/slides/slide11.xml",
+      "chart_count": 0,
+      "charts": [],
+      "small_multiple_groups": []
+    }
+  ]
+}

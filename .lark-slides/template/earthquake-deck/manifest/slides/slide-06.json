@@ -1,0 +1,88 @@
+{
+  "slide_num": 6,
+  "role": "content",
+  "slide_id": "pqC",
+  "local_xml_path": "source-slides\\slide-06.xml",
+  "shell_shapes": [
+    {
+      "id": 2,
+      "type": "PICTURE",
+      "left": 0.5556,
+      "top": 0.3889,
+      "width": 2.3611,
+      "height": 0.4722,
+      "text": ""
+    },
+    {
+      "id": 4,
+      "type": "AUTO_SHAPE",
+      "left": 0.8333,
+      "top": 2.0556,
+      "width": 0.6944,
+      "height": 0.0556,
+      "text": ""
+    },
+    {
+      "id": 22,
+      "type": "GROUP",
+      "left": 0.7969,
+      "top": 2.6097,
+      "width": 11.7396,
+      "height": 3.5868,
+      "text": ""
+    }
+  ],
+  "content_shapes": [
+    {
+      "id": 3,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 1.25,
+      "width": 11.6667,
+      "height": 0.6944,
+      "text": "如何识别同学的心理危机"
+    },
+    {
+      "id": 21,
+      "type": "TEXT_BOX",
+      "left": 0.8333,
+      "top": 6.5736,
+      "width": 11.6667,
+      "height": 0.4167,
+      "text": "看到变化不要慌，不要急于下结论，多观察几天"
+    },
+    {
+      "id": 23,
+      "type": "TEXT_BOX",
+      "left": 1.2271,
+      "top": 2.9792,
+      "width": 0.4819,
+      "height": 0.4701,
+      "text": "情"
+    },
+    {
+      "id": 24,
+      "type": "TEXT_BOX",
+      "left": 5.2326,
+      "top": 2.9792,
+      "width": 0.5764,
+      "height": 0.4701,
+      "text": "行"
+    },
+    {
+      "id": 25,
+      "type": "TEXT_BOX",
+      "left": 9.2937,
+      "top": 2.9792,
+      "width": 0.5764,
+      "height": 0.4701,
+      "text": "生"
+    }
+  ],
+  "available_regions": [],
+  "images_used": [
+    "image2.png"
+  ],
+  "native_charts": [],
+  "small_multiple_groups": []
+}
