@@ -40,7 +40,11 @@ def region_of(place):
         s = s.split(", ")[-1].strip()
         s = _PREFIX.sub("", s).strip()
     s = _SUFFIX.sub("", s).strip()
-    return _ALIAS.get(s, s)
+    s = _ALIAS.get(s, s)
+    # 兜底：任何仍带 Taiwan 字样的地区（如 Taiwan Strait）也归入中国
+    if s != "China" and "taiwan" in s.lower():
+        return "China"
+    return s
 
 
 # 补充译名：COUNTRY_CN 没覆盖到的常见海域、洋中脊、岛屿
