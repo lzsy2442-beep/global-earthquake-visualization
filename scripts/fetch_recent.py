@@ -24,6 +24,7 @@ OUT_DIR = os.path.join(BASE, "site", "data")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from place_translate import translate_place  # noqa: E402
+from regions import region_of, region_cn  # noqa: E402
 
 USGS = "https://earthquake.usgs.gov/fdsnws/event/1/query"
 KEEP_DAYS = 30          # 滚动保留天数
@@ -31,8 +32,8 @@ OVERLAP_HOURS = 6       # 与上次同步点重叠，避免边界漏事件
 UA = "earthquake-visualization/1.0 (daily refresh)"
 
 TARGETS = [
-    {"key": "m5", "minmag": 5.0, "out": "recent-m5.json"},
-    {"key": "m3", "minmag": 3.0, "out": "recent-m3.json"},
+    {"key": "m5", "minmag": 5.0, "out": "recent-m5.json", "region_level": False},
+    {"key": "m3", "minmag": 3.0, "out": "recent-m3.json", "region_level": True},
 ]
 
 
@@ -61,7 +62,7 @@ def query(minmag, start_ms, end_ms):
     raise RuntimeError("USGS 请求失败: %s" % last)
 
 
-def to_rows(geo, minmag):
+def to_rows(geo, minmag, region_level=False):
     rows = []
     for feat in geo.get("features") or []:
         prop = feat.get("properties") or {}
@@ -73,10 +74,16 @@ def to_rows(geo, minmag):
         if t_ms is None or mag is None or float(mag) < minmag - 1e-9:
             continue
         place = (prop.get("place") or "").strip()
-        try:
-            zh = translate_place(place) if place else ""
-        except Exception:  # noqa: BLE001
-            zh = ""
+        if region_level:
+            # 与历史数据保持同一口径：只存「国家 / 地区」
+            reg = region_of(place)
+            en, zh = reg, region_cn(reg)
+        else:
+            try:
+                zh = translate_place(place) if place else ""
+            except Exception:  # noqa: BLE001
+                zh = ""
+            en = place
         depth = coord[2]
         rows.append([
             int(t_ms),
@@ -85,10 +92,18 @@ def to_rows(geo, minmag):
             None if depth is None else round(float(depth), 1),
             round(float(mag), 1),
             prop.get("magType") or "",
-            place,
+            en,
             zh,
         ])
     return rows
+
+
+def normalize_regions(row):
+    """把早期存了完整地名的旧记录统一改成地区级（幂等）。"""
+    reg = region_of(row[6] or "")
+    row = list(row)
+    row[6], row[7] = reg, region_cn(reg)
+    return row
 
 
 def load_existing(path):
@@ -122,8 +137,11 @@ def run(target):
     path = os.path.join(OUT_DIR, target["out"])
     now_ms = int(time.time() * 1000)
     cutoff = now_ms - KEEP_DAYS * 86400000
+    region_level = target.get("region_level", False)
 
     existing = load_existing(path)
+    if region_level:
+        existing = [normalize_regions(r) for r in existing]
     last_t = max((r[0] for r in existing), default=0)
     start = max(last_t - OVERLAP_HOURS * 3600000, cutoff) if last_t else cutoff
     # 首次运行或断更太久时，直接拉满整个窗口
@@ -131,7 +149,7 @@ def run(target):
         start = cutoff
 
     geo = query(target["minmag"], start, now_ms)
-    fresh = to_rows(geo, target["minmag"])
+    fresh = to_rows(geo, target["minmag"], region_level)
     events = merge(existing, fresh, cutoff)
 
     os.makedirs(OUT_DIR, exist_ok=True)
